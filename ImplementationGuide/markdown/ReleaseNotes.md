@@ -12,6 +12,7 @@ Datum: tbd.
 
 * Erneute Änderung der Anforderung für Suchanfrage zu Terminblöcken aus Kalendern im Sinne einer Verfeinerung der Anforderung und Anpassung an Stufe 3 und 4 https://github.com/gematik/spec-ISiK-Terminplanung/pull/202
 * Kardinalität für Schedule.actor.display geschwächt https://github.com/gematik/spec-ISiK-Terminplanung/pull/217 
+* Änderung des Slicings der .specialty auf .specialty.coding für ISiKKalender, ISiKMedizinischeBehandlungseinheit und ISiKTermin + Schedule Schwächung des MS für ISiKNachricht https://github.com/gematik/spec-ISiK-Terminplanung/pull/222
 
 ----
 
