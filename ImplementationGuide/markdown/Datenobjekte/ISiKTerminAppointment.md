@@ -131,7 +131,7 @@ Insbesondere ist die Kodierung der Fachrichtung des Termins notwendig im Kontext
 
 ### `Appointment.participant`
 
-**Bedeutung:** TeilnehmerInnen des Termins
+**Bedeutung:** Teilnehmer des Termins
 
 **Hinweis:** Mindestens eine Patient-Referenz MUSS angegeben werden. Dies MUSS durch das Termin-Repository während der Buchung des Termins geprüft werden. Weitere Leistungserbringer KÖNNEN angegeben werden.
 
