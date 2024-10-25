@@ -9,7 +9,7 @@ Es ist zu beachten, dass in vielen Fällen ein Terminmangementsystem aus untersc
 
 # Search Includes and Reverse Includes
 
-Damit diese Akteure sinnvoll miteinander kommunizieren, wird im Folgenden ein grafischer Überblick über die in diesem Modul zu inlduierenden Suchparameter und Operationen gegeben.
+Damit diese Akteure sinnvoll miteinander kommunizieren, wird im Folgenden ein grafischer Überblick über die in diesem Modul zu definierten Suchparameter und Operationen gegeben.
 Da es sich um eine Zusammenfassung handelt, gelten Bedingungen für die gezeigten Inhalte:
 * Alle Must-Support Elemente einer Componente müssen von den entsprechenden Systemen suchbar sein. Diese sind hier nicht erneut aufgezählt.
 * Ein Doppelpunkt meint den Zugriff auf ein Element des beinhaltenden Profils.
