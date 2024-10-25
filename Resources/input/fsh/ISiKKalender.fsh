@@ -4,6 +4,7 @@ Id: ISiKKalender
 * insert Meta
 * active 1..1 MS
 * serviceType 1..* MS
+  * text MS
 * specialty 1..* MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
