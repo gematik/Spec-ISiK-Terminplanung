@@ -88,15 +88,12 @@ Alle Statuswerte MÜSSEN durch ein bestätigungsrelevantes System unterstützt w
 
 **Hinweis:** Dies SOLL der Kodierung des serviceType eines Schedules entsprechen, der innerhalb des Termins gebucht wird. Ein Termin-Repository SOLL einen Termin abweisen, falls unbekannte Kodierungen in .serviceType durch den Termin-Requestor übermittelt werden, sodass ein Termin-Repository sicherstellen kann, dass alle Ressourcen für die Behandlungsleistung(en) bereitgestellt werden können. Hierzu ist eine Interpretation der Behandlungsleistung notwendig. Ein Termin KANN für mehrere Behandlungsleistungen gebucht werden, falls dies durch die Fachlogik des Termin-Repositories unterstüzt wird.
 
-
-
 ### `Appointment.specialty`
 
 **Bedeutung:** Kodierung der Fachrichtung des Termins
 
 **Hinweis:** Sofern aus den auf der Appointment-Ressource aufsetzenden Anwendungsfällen eine weitere Verarbeitung der Ressource durch einen menschlichen Nutzer nicht ausgeschlossen werden kann, MUSS das bestätigungsrelevante System mit dem Termin verbundenen Ressourcen (insb. `Appointment.slot`, `Appointment.slot.schedule`, `Appointment.participant:AkteurMedizinischeBehandlungseinheit.actor`) oder aus dem spezifischen Kontext verfügbare Informationen auswerten und das Element `Appointment.specialty` mit einem sinnvollen Wert kodieren (eine Ausnahme bildet hier zum Beispiel die fachrichtungs-unabhängige Terminplanung durch krankenhausinterne, zentrale Organisationseinheiten).
 Insbesondere ist die Kodierung der Fachrichtung des Termins notwendig im Kontext der Bereitstellung einer graphischen Oberfläche, wie sie Endnutzenden in einem Zuweiserportal/Patientenportal zur Ansicht gebracht wird.
- 
 
 ### `Appointment.priority.extension:Priority`
 
@@ -115,7 +112,6 @@ Insbesondere ist die Kodierung der Fachrichtung des Termins notwendig im Kontext
 **Bedeutung:** Endzeitpunkt des Termins
 
 **Hinweis:** Sofern der Termin an einen Slot gebunden ist, SOLL der Endzeitpunkt des Termins dem Endzeitpunkt des letzten Slots des Termins entsprechen.
-
 
 ### `Appointment.slot`
 
@@ -163,7 +159,7 @@ Für die Ressource Appointment MÜSSEN die REST-Interaktionen "READ" und "PATCH"
 
     ```GET [base]/Appointment?service-type=http://example.org/fhir/CodeSystem/ScheduleServiceType|CT```
 
-    Anwendungshinweise: Bei einer Suche mit dem ":not"-Modifier MÜSSEN Ressourcen, die keinen Wert für "Appointment.serviceType" enthalten, im Suchergebnis enthalten sein. Bei einer Suche ohne den ":not"-Modifier DÜRFEN Ressourcen, die keinen Wert für "Appointment.serviceType" enthalten, NICHT im Suchergebnis enthalten sein. Weitere Informationen zur Suche nach "Appointment.serviceType" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Appointment.serviceType" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
 1. Der Suchparameter "specialty" MUSS unterstützt werden:
 
@@ -171,7 +167,7 @@ Für die Ressource Appointment MÜSSEN die REST-Interaktionen "READ" und "PATCH"
 
     ```GET [base]/Appointment?specialty=urn:oid:1.2.276.0.76.5.114|535```
 
-    Anwendungshinweise: Bei einer Suche mit dem ":not"-Modifier MÜSSEN Ressourcen, die keinen Wert für "Appointment.specialty" enthalten, im Suchergebnis enthalten sein. Bei einer Suche ohne den ":not"-Modifier DÜRFEN Ressourcen, die keinen Wert für "Appointment.specialty" enthalten, NICHT im Suchergebnis enthalten sein. Weitere Informationen zur Suche nach "Appointment.specialty" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
+    Anwendungshinweise: Weitere Informationen zur Suche nach "Appointment.specialty" finden sich in der [FHIR-Basisspezifikation - Abschnitt "Token Search"](https://hl7.org/fhir/R4/search.html#token).
 
 
 1. Der Suchparameter "date" MUSS unterstützt werden:
