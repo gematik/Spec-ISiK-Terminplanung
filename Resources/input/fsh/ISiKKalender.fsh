@@ -3,11 +3,11 @@ Parent: Schedule
 Id: ISiKKalender
 * insert Meta
 * active 1..1 MS
-  * ^comment = "Begründung Kardinalität und Must-Support-Flag (MS): Die Kardinalität 1..1 und das Must-Support-Flag (MS) für das 'active'-Element stellen sicher, dass jeder Kalender eindeutig als aktiv oder inaktiv gekennzeichnet ist. Dies ist entscheidend für die Ressourcenplanung und Verfügbarkeit von Terminen, um zu verhindern, dass Termine nur für verfügbare Termine herausgegeben werden."
+  * ^comment = "Begründung Kardinalität und Must-Support-Flag (MS): Die Kardinalität 1..1 und das Must-Support-Flag (MS) für das 'active'-Element stellen sicher, dass jeder Kalender eindeutig als aktiv oder inaktiv gekennzeichnet ist. Dies ist entscheidend für die Ressourcenplanung und Verfügbarkeit von Terminen."
 * serviceType 1..* MS
   * ^comment = "Begründung Kardinalität Must-Support-Flag (MS): Die Kardinalität 1..* und das Must-Support-Flag (MS) für das 'serviceType'-Element stellen sicher, dass jeder Kalender mindestens eine Dienstleistungsart angibt. Dies ist wichtig für die Ressourcenplanung und die Verfügbarkeit von Terminen, indem angefragte Termine einem Kalender zugeordnet werden können."
 * specialty 1..* MS
-  * ^comment = "Hinweis: Ein Kalender kann für einen Akteur gepflegt werden. Dieser Akteur kann in einer oder mehreren Fachrichtungen agieren. Für die Ressourcenplanung (z.B. welche Akteure sind für einen Termin verfügbar) sollte auch auf die Speciality des Akteurs zurückgegriffen werden für den Fall, dass ein Kalender pro Fachbereich, d.h. Akteur-übergreifend gepflegt wird. 
+  * ^comment = "Hinweis: Ein Kalender kann für ein Akteur gepflegt werden. Dieser Akteur kann in einer oder mehreren Fachrichtungen agieren. Für die Ressourcenplanung (z.B. welche Akteure sind für einen Termin verfügbar) sollte auch auf die Speciality des Akteurs zurückgegriffen werden für den Fall, dass ein Kalender pro Fachbereich - d.h. Akteur-übergreifend - gepflegt wird. 
   
   Begründung Kardinalität Must-Support-Flag (MS): Die Kardinalität 1..* und das Must-Support-Flag (MS) für das 'specialty'-Element stellen sicher, dass jeder Kalender mindestens eine Fachrichtung angibt. Dies ist wichtig für die Ressourcenplanung und die Verfügbarkeit von Terminen, sodass angefragte Termine einem Fachbereich zugeordnet werden können.
 
@@ -29,13 +29,13 @@ Id: ISiKKalender
   * ^comment = "Dieses ValueSet KANN über ein Mapping (siehe Abschnitt https://wiki.hl7.de/index.php?title=IG:Value_Sets_f%C3%BCr_XDS#DocumentEntry.practiceSettingCode) mit dem ValueSet der Fachrichtung verknüpft werden und darüber ggf. die Integration von Systemen erleichtern."  
 * actor MS
   * ^comment = "Begründung Must-Support-Flag (MS): Das MS-Flag für das 'actor'-Element stellt sicher, dass Systeme in der Lage sind, einen Akteur zu unterstützen, wenn er vorhanden ist. Dies ist wichtig für die Ressourcenplanung und die Verfügbarkeit von Terminen, da jeder Termin nach FHIR-Kernspezifikation einem spezifischen Akteur zugeordnet werden muss. Ohne diese Zuordnung wäre es schwierig, die Verfügbarkeit und Zuständigkeit der Akteure zu verwalten."
-  * identifier 0..1 MS
-    * ^comment = "Begründung Kardinalität und Must-Support-Flag (MS): Die Kardinalität der identifier-Eigenschaft wird auf 0..1 festgelegt, um sicherzustellen, dass optional ein Identifier vorhanden ist, da nicht davon ausgegangen werden kann, dass jeder Akteur mittels einer FHIR-Ressource repräsentiert wird.
+  * identifier MS
+    * ^comment = "Begründung Must-Support-Flag (MS):
   Das Must-Support-Flag (MS) für das 'identifier'-Element stellt sicher, dass Systeme in der Lage sind, einen Identifier zu unterstützen, wenn er vorhanden ist. Dies ist wichtig für die eindeutige Identifizierung und Verknüpfung von Akteuren in verschiedenen Systemen."
-  * display 0..1 MS
+  * display MS
     * ^comment = "Hinweis und Begründung zum Must Support: Für alle Target-Ressourcen SOLL ein Displaywert für die Referenz angegeben werden, sodass Systeme eine Übersicht der am Termin beteiligten Akteure anzeigen können ohne die Referenzen auflösen zu müssen. Somit kann ein Termin-Consumer direkt anzeigen für welche Akteure ein Terminkalender existiert.
     
-    Begründung Kardinalität: Die Kardinalität der display-Eigenschaft wird auf 0..1 festgelegt, um sicherzustellen, dass ein Displaywert eindeutig ist, falls dieser vorhanden ist."  
+"  
   * ^slicing.discriminator.type = #type
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
