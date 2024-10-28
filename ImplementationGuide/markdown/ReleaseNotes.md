@@ -10,6 +10,7 @@ Datum: tbd.
 
 * Implizites ValueSet expandiert https://github.com/gematik/spec-ISiK-Terminplanung/pull/207
 * Kardinalität für Schedule.actor.display geschwächt https://github.com/gematik/spec-ISiK-Terminplanung/pull/206
+* Anforderungen an die Kodierung von Appointment/Schedule.serviceType geschwächt https://github.com/gematik/spec-ISiK-Terminplanung/pull/227
 ----
 
 Version 4.0.0
