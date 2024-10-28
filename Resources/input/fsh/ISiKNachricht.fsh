@@ -3,14 +3,14 @@ Parent: Communication
 Id: ISiKNachricht
 * insert Meta
 * inResponseTo MS
- * ^comment = "Begründung Must Support: Es wird hierdurch ermöglicht auf Nachrichten die der Patient vorab übermittelt hat zu beantworten."
+  * ^comment = "Begründung Must Support: Es wird hierdurch ermöglicht auf Nachrichten die der Patient vorab übermittelt hat zu beantworten."
 * status MS
 * subject 1.. MS
 * subject ^comment = "Begründung Kardinalität: Das Element 'subject' ist obligatorisch (1..1) und muss immer angegeben werden, um sicherzustellen, dass jede Nachricht eindeutig auf einen Patienten bezogen wird."
 * subject only Reference(Patient)
 * subject ^comment = "Im ISIK-Kontext MUSS der referenzierte Patient konform zum [ISIKPatient](https://gematik.de/fhir/isik/StructureDefinition/ISiKPatient) des Basismoduls sein."
 * sent MS
- * ^comment = "Begründung Must Support: Eine zeitlich korrekte Darstellung der Nachrichten wird hierdurch ermöglicht"
+  * ^comment = "Begründung Must Support: Eine zeitlich korrekte Darstellung der Nachrichten wird hierdurch ermöglicht"
 * recipient 1..* MS
   * ^comment = "Begründung Kardinalität: Die Kardinalität der recipient-Eigenschaft wird auf 1..* festgelegt, um sicherzustellen, dass mindestens ein Empfänger vorhanden ist." 
   * identifier 0..1 MS
