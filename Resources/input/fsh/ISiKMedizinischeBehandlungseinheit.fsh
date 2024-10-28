@@ -11,25 +11,22 @@ Id: ISiKMedizinischeBehandlungseinheit
 * type 1.. MS
 * type ^comment = "**Bedeutung:** Klassifikation der Behandlungsleistung welche durch den HealthcareService erbracht wird
 
-**Hinweis:** Diese Klassifikation SOLL stets auch in Appointment.serviceType und Schedule.serviceType angegeben werden. Seitens der aktuellen Spezifikation werden keine Vorgaben bezüglich der zu verwendenden Terminologie gemacht. Entsprechend verwendete Kataloge müssen als CodeSystem- und ValueSet-Ressourcen exponiert werden. Siehe [Suchparameter 'context-type-value' in ISiK Basis - Datenobjekt ValueSet](https://simplifier.net/guide/isik-basis-v4/ImplementationGuide-markdown-Datenobjekte-Datenobjekte_ValueSet?version=current).
+**Hinweis:** Diese Klassifikation SOLL stets auch in Appointment.serviceType und Schedule.serviceType angegeben werden. Seitens der aktuellen Spezifikation werden keine Vorgaben bezüglich der zu verwendenden Terminologie gemacht. Entsprechend verwendete Kataloge müssen als CodeSystem- und ValueSet-Ressourcen exponiert werden. Siehe [Suchparameter 'context-type-value' in ISiK Basis - Datenobjekt ValueSet](https://simplifier.net/resolve?&scope=isik-basis-v4@current&canonical=https://gematik.de/fhir/isik/StructureDefinition/ISiKValueSet).
 
-**Begründung Kardinalität:** Eine Behandlungseinheit muss mindestens einen Typ haben."
+**Begründung Kardinalität:** Eine Behandlungseinheit muss mindestens einen Typ haben, sodass im Rahmen der Terminplanung ermittelt werden kann welcher Akteur für die Durchführung eines Termins zur Verfügung steht."
 * specialty 1.. MS
   * ^comment = "**Bedeutung:** Fachrichtung der Behandlungsleistung welche durch den HealthcareService erbracht wird
 
 **Hinweis:** Diese Fachrichtung SOLL stets auch in Appointment.specialty und Schedule.specialty angegeben werden.
   
-**Begründung Kardinalität:** Eine Behandlungseinheit kann multiprofessionell sein und mehere Fachbereiche abdecken. Sie muss jedoch mindestens einem Fachbereich zugeordnet sein."
+**Begründung Kardinalität:** Eine Behandlungseinheit kann multiprofessionell sein und mehere Fachbereiche abdecken. Sie muss jedoch mindestens einem Fachbereich zugeordnet sein, sodass die Behandlungseinheit während der Terminplanung als Akteur miteinbezogen werden für passende Termine."
 * specialty.coding 1.. MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-  * ^comment = "Begründung Kardinalität: Eine Behandlungseinheit kann mehrere Codierungen haben, muss jedoch mindestens eine Codierung besitzen.
+  * ^comment = "Begründung Kardinalität Fachrichtung: Die Kardinalität der Fachrichtung-Eigenschaft wird auf 1..1 festgelegt, um sicherzustellen, dass genau eine Fachrichtung per IHE-XDS-Kodierung vorhanden ist. Dies ist notwendig, um die Spezialisierung der Behandlungseinheit eindeutig zu definieren und eine korrekte Zuordnung zu gewährleisten.
   
-  Begründung Kardinalität Fachrichtung: Eine Fachrichtung muss als Code eindeutig zugeordnet sein.
-
-  Begründung Kardinalität ErweiterterFachabteilungsschluessel: Eine erweiterte Fachabteilungsschlüssel kann als Code optional zugeordnet sein.
-  "
+  Begründung Kardinalität ErweiterterFachabteilungsschluessel: Die Kardinalität der ErweiterterFachabteilungsschluessel-Eigenschaft wird auf 0..1 festgelegt, um sicherzustellen, dass optional ein erweiterter Fachabteilungsschlüssel vorhanden sein kann."
 * specialty.coding contains 
   Fachrichtung 1..1 MS and
   ErweiterterFachabteilungsschluessel 0..1
@@ -42,7 +39,7 @@ Id: ISiKMedizinischeBehandlungseinheit
 
 **Hinweis:** Es wird im Rahmen dieser Spezifikation davon ausgegangen, dass für einen HealthcareService keine natürlichen Identifier vorliegen, die in einem realen Kontext vergeben werden. Somit kann durch den Namen ein informeller, jedoch identifizierender Bezeichner vergeben werden.
 
-**Begründung Kardinalität:** Eine Behandlungseinheit muss mindestens einen Namen haben." 
+**Begründung Kardinalität:** Eine Behandlungseinheit muss mindestens einen Namen haben, um eine Wiedererkennbarkeit im Rahmen der Terminplanung zu gewährleisten." 
 
 Instance: ISiKMedizinischeBehandlungseinheitExample
 InstanceOf: ISiKMedizinischeBehandlungseinheit
