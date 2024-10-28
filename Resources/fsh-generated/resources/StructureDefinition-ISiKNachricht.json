@@ -67,7 +67,7 @@
       {
         "id": "Communication.recipient.identifier",
         "path": "Communication.recipient.identifier",
-        "comment": "Begründung Kardinalität und Must-Support-Flag (MS): Die Kardinalität der identifier-Eigenschaft wird auf 0..1 festgelegt, um sicherzustellen, dass optional ein Identifier vorhanden ist, da nicht davon ausgegangen werden kann, dass jeder Empfänger einer Nachricht mittels einer FHIR-Ressource repräsentiert wird.",
+        "comment": "Begründung Kardinalität und Must-Support-Flag (MS): Die Kardinalität der identifier-Eigenschaft wird auf 0..1 festgelegt, um sicherzustellen, dass ein Empfänger über einen eindeutigen Identifier referenzierbar ist.",
         "mustSupport": true
       },
       {
@@ -116,7 +116,7 @@
       {
         "id": "Communication.sender.identifier",
         "path": "Communication.sender.identifier",
-        "comment": "Begründung Kardinalität und Must-Support-Flag (MS): Die Kardinalität der identifier-Eigenschaft wird auf 0..1 festgelegt, um sicherzustellen, dass optional ein Identifier vorhanden ist, da nicht davon ausgegangen werden kann, dass jeder Sender einer Nachricht mittels einer FHIR-Ressource repräsentiert wird.",
+        "comment": "Begründung Kardinalität und Must-Support-Flag (MS): Die Kardinalität der identifier-Eigenschaft wird auf 0..1 festgelegt, um sicherzustellen, dass höchstens ein Identifier vorhanden ist, damit ein Sender eindeutig über einen Identifier referenzierbar ist.",
         "mustSupport": true
       },
       {

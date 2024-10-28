@@ -102,13 +102,13 @@
       {
         "id": "Appointment.status",
         "path": "Appointment.status",
-        "comment": "Begründung zu Kardinalität und Must Support : Im ISiK Kontext ist der Status eines Termins von entscheidender Bedeutung, um den aktuellen Stand und die Verfügbarkeit des Termins zu kommunizieren. Daher ist dieses Feld verpflichtend (1..1) und muss unterstützt werden (MS).",
+        "comment": "Begründung zu Must Support : Im ISiK Kontext ist der Status eines Termins von entscheidender Bedeutung, um den aktuellen Stand und die Verfügbarkeit des Termins zu kommunizieren.",
         "mustSupport": true
       },
       {
         "id": "Appointment.cancelationReason",
         "path": "Appointment.cancelationReason",
-        "comment": "Begründung zu Kardinalität und Must Support: Dieses Feld ist optional (0..1), muss jedoch implemtiert werden (MS), um die Möglichkeit zu bieten, einen Grund für die Absage eines Termins zu hinterlegen.",
+        "comment": "Begründung zu Must Support: Dieses Feld ist optional (0..1), muss jedoch implementiert werden (MS), um die Möglichkeit zu bieten, einen Grund für die Absage eines Termins zu hinterlegen.",
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -171,7 +171,7 @@
       {
         "id": "Appointment.priority",
         "path": "Appointment.priority",
-        "comment": "Begründung zu Kardinalität und Must Support: Die Priorität eines Termins ist von entscheidender Bedeutung, um die Dringlichkeit und Relevanz des Termins zu kommunizieren und zu priorisieren. Eeine Priorität ist nicht zweingend erforderlich, muss jedoch implementiert werden (MS), um die Möglichkeit zu bieten, die Dringlichkeit und Relevanz des Termins abzurufen.",
+        "comment": "Begründung Must Support: Die Priorität eines Termins ist von entscheidender Bedeutung, um die Dringlichkeit und Relevanz des Termins zu kommunizieren und zu priorisieren. Eine Priorität ist nicht zwingend erforderlich, muss jedoch implementiert werden (MS), um die Möglichkeit zu bieten, die Dringlichkeit und Relevanz des Termins abzurufen.",
         "mustSupport": true
       },
       {
@@ -213,7 +213,7 @@
       {
         "id": "Appointment.slot",
         "path": "Appointment.slot",
-        "comment": "Begründung zu Kardinalität und Must Support: Die Kardinalität der slot-Eigenschaft wird auf 0..* festgelegt, sodass ein Termin-Requestor bei der Terminbuchung nur einen Termin und ein Verweis auf ein ISiKKalender übergeben kann. Es ist dann die Aufgabe des Termin-Repositories in Abhängigkeit der gebuchten Dienstleistung freie Terminblöcke zu finden. Diese sind im Appointment zu referenzieren.",
+        "comment": "Begründung zu Kardinalität und Must Support: Die Kardinalität der slot-Eigenschaft bleibt 0..*, sodass ein Termin-Requestor bei der Terminbuchung nur einen Termin und ein Verweis auf ein ISiKKalender übergeben kann. Es ist dann die Aufgabe des Termin-Repositories in Abhängigkeit der gebuchten Dienstleistung freie Terminblöcke zu finden. Diese sind im Appointment zu referenzieren.",
         "mustSupport": true
       },
       {
@@ -246,7 +246,7 @@
           ],
           "rules": "open"
         },
-        "comment": "Hinweis: Die Kardinalität von actor.display und das MS-Flag von .status wird an die Slices vererbt und diese sind entsprechend zu implementieren.\n\nBegründung zu Kardinalität und Must Support: Die Teilnehmer eines Termins sind von entscheidender Bedeutung, um die Verfügbarkeit und Planung des Termins zu gewährleisten. Daher ist dieses Feld verpflichtend (1..*) und muss unterstützt werden (MS).",
+        "comment": "Hinweis: Die Kardinalität von actor.display und das MS-Flag von .status wird an die Slices vererbt und diese sind entsprechend zu implementieren.\n\nBegründung zu Kardinalität und Must Support: Die Teilnehmer eines Termins sind von entscheidender Bedeutung, um die Verfügbarkeit und Planung des Termins zu gewährleisten. Daher muss dieses Feld unterstützt werden (MS).",
         "mustSupport": true
       },
       {
