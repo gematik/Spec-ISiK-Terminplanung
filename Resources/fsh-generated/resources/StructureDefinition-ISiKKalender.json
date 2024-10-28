@@ -150,7 +150,7 @@
       {
         "id": "Schedule.actor.identifier",
         "path": "Schedule.actor.identifier",
-        "comment": "Begründung Kardinalität und Must-Support-Flag (MS): Die Kardinalität der identifier-Eigenschaft wird auf 0..1 festgelegt, um sicherzustellen, dass optional ein Identifier vorhanden ist, da nicht davon ausgegangen werden kann, dass jeder Akteur mittels einer Practitioner- / Location- / HealthcareService-Ressource repräsentiert wird.\n  Das Must-Support-Flag (MS) für das 'identifier'-Element stellt sicher, dass Systeme in der Lage sind, einen Identifier zu unterstützen, wenn er vorhanden ist. Dies ist wichtig für die eindeutige Identifizierung und Verknüpfung von Akteuren in verschiedenen Systemen.",
+        "comment": "Begründung Kardinalität und Must-Support-Flag (MS): Die Kardinalität der identifier-Eigenschaft wird auf 0..1 festgelegt, um sicherzustellen, dass optional ein Identifier vorhanden ist, da nicht davon ausgegangen werden kann, dass jeder Akteur mittels einer FHIR-Ressource repräsentiert wird.\n  Das Must-Support-Flag (MS) für das 'identifier'-Element stellt sicher, dass Systeme in der Lage sind, einen Identifier zu unterstützen, wenn er vorhanden ist. Dies ist wichtig für die eindeutige Identifizierung und Verknüpfung von Akteuren in verschiedenen Systemen.",
         "mustSupport": true
       },
       {
