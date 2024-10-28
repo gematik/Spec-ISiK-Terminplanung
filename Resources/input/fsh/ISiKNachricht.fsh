@@ -34,18 +34,13 @@ Id: ISiKNachricht
     * url 1.. MS
     * creation 1.. MS
 * sender 1.. MS
-  * ^comment = "Begründung Kardinalität und Must Support: Die Kardinalität der sender-Eigenschaft wird auf 1..* festgelegt, um sicherzustellen, dass mindestens ein Sender vorhanden ist. Das Must Support wird auf 'true' gesetzt, um sicherzustellen, dass Systeme in der Lage sind, einen Sender zu unterstützen, wenn er vorhanden ist."
+  * ^comment = "Begründung Kardinalität und Must Support: Die Kardinalität der sender-Eigenschaft wird auf 1..1 festgelegt, um sicherzustellen, dass mindestens ein Sender vorhanden ist. Das Must Support wird auf 'true' gesetzt, um sicherzustellen, dass Systeme in der Lage sind, einen Sender zu unterstützen, wenn er vorhanden ist."
+  * reference 0..1 MS
+    * ^comment = "Im ISIK-Kontext MUSS die referenzierte Practitioner-Ressource konform zum [ISiKPersonImGesundheitsberuf](https://gematik.de/fhir/isik/StructureDefinition/ISiKPersonImGesundheitsberuf) des Basismoduls sein. Im ISIK-Kontext MUSS die referenzierte RelatedPerson-Ressource konform zum [ISiKAngehoeriger](https://gematik.de/fhir/isik/StructureDefinition/ISiKAngehoeriger) des Basismoduls sein. Im ISIK-Kontext MUSS die referenzierte RelatedPerson-Ressource konform zum [ISiKPatient](https://gematik.de/fhir/isik/StructureDefinition/ISiKPatient) des Basismoduls sein."
   * identifier 0..1 MS
     * ^comment = "Begründung Kardinalität und Must-Support-Flag (MS): Die Kardinalität der identifier-Eigenschaft wird auf 0..1 festgelegt, um sicherzustellen, dass optional ein Identifier vorhanden ist, da nicht davon ausgegangen werden kann, dass jeder Sender einer Nachricht mittels einer FHIR-Ressource repräsentiert wird."
   * display 1..1 MS
     * ^comment = "Begründung Kardinalität und Must Support: Die Kardinalität der display-Eigenschaft wird auf 1..1 festgelegt, um sicherzustellen, dass ein Sender immer eindeutig benannt wird. Das Must Support wird auf 'true' gesetzt, um sicherzustellen, dass Systeme in der Lage sind, einen Empfänger anzuzeigen, ohne die Referenzen auflösen zu müssen.  Somit kann ein Termin-Consumer direkt anzeigen welche Sender eine Nachricht verfasst haben."
-  * ^slicing.discriminator.type = #type
-  * ^slicing.discriminator.path = "$this"
-  * ^slicing.rules = #open
-* sender contains ISiKSender 1.. MS
-* recipient[ISiKSender] only Reference(Patient or RelatedPerson or Practitioner or HealthcareService)
-  * reference 1..1 MS
-    * ^comment = "Im ISIK-Kontext MUSS die referenzierte Practitioner-Ressource konform zum [ISiKPersonImGesundheitsberuf](https://gematik.de/fhir/isik/StructureDefinition/ISiKPersonImGesundheitsberuf) des Basismoduls sein. Im ISIK-Kontext MUSS die referenzierte RelatedPerson-Ressource konform zum [ISiKAngehoeriger](https://gematik.de/fhir/isik/StructureDefinition/ISiKAngehoeriger) des Basismoduls sein. Im ISIK-Kontext MUSS die referenzierte RelatedPerson-Ressource konform zum [ISiKPatient](https://gematik.de/fhir/isik/StructureDefinition/ISiKPatient) des Basismoduls sein."
 
 Instance: ISiKNachrichtExample
 InstanceOf: ISiKNachricht
