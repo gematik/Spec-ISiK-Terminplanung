@@ -33,7 +33,7 @@ Id: ISiKKalender
     * ^comment = "Begründung Kardinalität und Must-Support-Flag (MS): Die Kardinalität der identifier-Eigenschaft wird auf 0..1 festgelegt, um sicherzustellen, dass optional ein Identifier vorhanden ist, da nicht davon ausgegangen werden kann, dass jeder Akteur mittels einer Practitioner- / Location- / HealthcareService-Ressource repräsentiert wird.
   Das Must-Support-Flag (MS) für das 'identifier'-Element stellt sicher, dass Systeme in der Lage sind, einen Identifier zu unterstützen, wenn er vorhanden ist. Dies ist wichtig für die eindeutige Identifizierung und Verknüpfung von Akteuren in verschiedenen Systemen."
   * display 0..1 MS
-    * ^comment = "Hinweis und Begründung zum Must Support: Für alle Target-Ressourcen SOLL ein Displaywert für die Referenz angegeben werden, sodass Systeme eine Übersicht der am Termin beteiligten Akteure anzeigen können ohne die Referenzen auflösen zu müssen.
+    * ^comment = "Hinweis und Begründung zum Must Support: Für alle Target-Ressourcen SOLL ein Displaywert für die Referenz angegeben werden, sodass Systeme eine Übersicht der am Termin beteiligten Akteure anzeigen können ohne die Referenzen auflösen zu müssen. Somit kann ein Termin-Consumer direkt anzeigen für welche Akteure ein Terminkalender existiert.
     
     Begründung Kardinalität: Die Kardinalität der display-Eigenschaft wird auf 0..1 festgelegt, um sicherzustellen, dass ein Displaywert eindeutig ist, falls dieser vorhanden ist."  
   * ^slicing.discriminator.type = #type
