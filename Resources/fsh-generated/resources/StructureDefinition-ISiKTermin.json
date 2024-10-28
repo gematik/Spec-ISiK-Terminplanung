@@ -32,6 +32,7 @@
       {
         "id": "Appointment.meta",
         "path": "Appointment.meta",
+        "comment": "Ein Tag kann verwendet werden um zu kennzeichnen, dass die Ressource von Extern erstellt worden ist.",
         "mustSupport": true
       },
       {
@@ -63,7 +64,7 @@
       {
         "id": "Appointment.extension",
         "path": "Appointment.extension",
-        "definition": "Conditional Must Support - Einschränkung der übergreifenden MS-Definition: Falls ein bestätigungsrelevantes System das ISiK-Profil ISiKNachricht implementiert, MUSS das System auch dieses Element unterstützten. Andernfalls KANN das System dieses Element unterstützen.",
+        "comment": "Begründung zum Must Support: Termineabsagen sollten verkettbar sein, da am originalen Termin noch weitere Informationen hängen können.",
         "mustSupport": true
       },
       {
@@ -205,14 +206,14 @@
       {
         "id": "Appointment.end",
         "path": "Appointment.end",
-        "comment": "Begründung zu Kardinalität und Must Support : Der Endzeitpunkt eines Termins ist von entscheidender Bedeutung, um die Verfügbarkeit und Planung des Termins zu gewährleisten. Daher ist dieses Feld verpflichtend (1..1) und muss unterstützt werden (MS).",
+        "comment": "Begründung zu Kardinalität und Must Support: Der Endzeitpunkt eines Termins ist von entscheidender Bedeutung, um die Verfügbarkeit und Planung des Termins zu gewährleisten. Daher ist dieses Feld verpflichtend (1..1) und muss unterstützt werden (MS).",
         "min": 1,
         "mustSupport": true
       },
       {
         "id": "Appointment.slot",
         "path": "Appointment.slot",
-        "comment": "Hinweis: Zur Referenzierung auf eine Slot-Ressource MUSS eine Reference.reference mit einer URL verwendet werden. Das Termin-Repository muss so gestaltet sein, dass es aus Perspektive des Clients nur eine Service-BaseUrl gibt. \n\nBegründung der Kardinalität: verschiedene Referenzierungs-Arten (z.B. mit Business-Identifiern) sind ggf. nicht interoperabel.",
+        "comment": "Begründung zu Kardinalität und Must Support: Die Kardinalität der slot-Eigenschaft wird auf 0..* festgelegt, sodass ein Termin-Requestor bei der Terminbuchung nur einen Termin und ein Verweis auf ein ISiKKalender übergeben kann. Es ist dann die Aufgabe des Termin-Repositories in Abhängigkeit der gebuchten Dienstleistung freie Terminblöcke zu finden. Diese sind im Appointment zu referenzieren.",
         "mustSupport": true
       },
       {
