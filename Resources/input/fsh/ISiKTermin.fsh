@@ -8,12 +8,14 @@ Id: ISiKTermin
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
   * tag contains Source 0..1 MS
+  * ^comment = "Ein Tag kann verwendet werden um zu kennzeichnen, dass die Ressource von Extern erstellt worden ist."
   * tag[Source] from http://fhir.de/ValueSet/common-meta-tag-de (required)
 * insert Meta
 * extension MS
 * extension contains ISiKNachrichtExtension named Nachricht 0..* MS
-  * ^definition = "Conditional Must Support - Einschränkung der übergreifenden MS-Definition: Falls ein bestätigungsrelevantes System das ISiK-Profil ISiKNachricht implementiert, MUSS das System auch dieses Element unterstützten. Andernfalls KANN das System dieses Element unterstützen."
+  * ^comment = "Conditional Must Support - Einschränkung der übergreifenden MS-Definition: Falls ein bestätigungsrelevantes System das ISiK-Profil ISiKNachricht implementiert, MUSS das System auch dieses Element unterstützten. Andernfalls KANN das System dieses Element unterstützen. Begründung zum Must Support: Nachrichten die für diesen Termin verfasst wurden können somit direkt abgerufen werden."
 * extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-Appointment.replaces named replaces 0..1 MS
+  * ^comment = "Begründung zum Must Support: Termineabsagen sollten verkettbar sein, da am originalen Termin noch weitere Informationen hängen können."
 * status 1..1 MS
   * ^comment = "Begründung zu Kardinalität und Must Support : Im ISiK Kontext ist der Status eines Termins von entscheidender Bedeutung, um den aktuellen Stand und die Verfügbarkeit des Termins zu kommunizieren. Daher ist dieses Feld verpflichtend (1..1) und muss unterstützt werden (MS)."
 * cancelationReason 0..1 MS
@@ -22,12 +24,10 @@ Id: ISiKTermin
 * start 1..1 MS
   * ^comment = "Begründung zu Kardinalität und Must Support: Der Startzeitpunkt eines Termins ist von entscheidender Bedeutung, um die Verfügbarkeit und Planung des Termins zu gewährleisten. Daher ist dieses Feld verpflichtend (1..1) und muss unterstützt werden (MS)."
 * end 1..1 MS
-  * ^comment = "Begründung zu Kardinalität und Must Support : Der Endzeitpunkt eines Termins ist von entscheidender Bedeutung, um die Verfügbarkeit und Planung des Termins zu gewährleisten. Daher ist dieses Feld verpflichtend (1..1) und muss unterstützt werden (MS)."
+  * ^comment = "Begründung zu Kardinalität und Must Support: Der Endzeitpunkt eines Termins ist von entscheidender Bedeutung, um die Verfügbarkeit und Planung des Termins zu gewährleisten. Daher ist dieses Feld verpflichtend (1..1) und muss unterstützt werden (MS)."
 * slot 0..* MS
   * reference 1.. MS
-* slot ^comment = "Hinweis: Zur Referenzierung auf eine Slot-Ressource MUSS eine Reference.reference mit einer URL verwendet werden. Das Termin-Repository muss so gestaltet sein, dass es aus Perspektive des Clients nur eine Service-BaseUrl gibt. 
-
-Begründung der Kardinalität: verschiedene Referenzierungs-Arten (z.B. mit Business-Identifiern) sind ggf. nicht interoperabel."
+* slot ^comment = "Begründung zu Kardinalität und Must Support: Die Kardinalität der slot-Eigenschaft wird auf 0..* festgelegt, sodass ein Termin-Requestor bei der Terminbuchung nur einen Termin und ein Verweis auf ein ISiKKalender übergeben kann. Es ist dann die Aufgabe des Termin-Repositories in Abhängigkeit der gebuchten Dienstleistung freie Terminblöcke zu finden. Diese sind im Appointment zu referenzieren."
 * comment MS
   * ^comment = "Hinweis: Im ISiK Kontext sollte dieses Feld zur internen Kommunikation zwischen Leistungserbringern verwendet werden, z.B. für interne Notizen rund um den Termin.
 
