@@ -51,7 +51,9 @@ Es gilt weiterhin der Hinweis der FHIR Kernspezifikation:
 'Note that FHIR strings SHALL NOT exceed 1MB in size'"
 * participant MS
   * actor 1..1 MS
-  * actor.display 1..1 MS
+  * actor.display 0..1 MS
+    * display 0..1 MS
+      * ^comment = "Hinweis: Für alle Target-Ressourcen SOLL ein Displaywert für die Referenz angegeben werden, sodass Systeme eine Übersicht der am Termin beteiligten Akteure anzeigen können ohne die Referenzen auflösen zu müssen."
   * status 1..1 MS
   * ^slicing.discriminator.type = #type
   * ^slicing.discriminator.path = "actor.resolve()"
