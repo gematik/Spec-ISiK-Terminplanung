@@ -258,7 +258,7 @@
       {
         "id": "Appointment.participant.actor.display",
         "path": "Appointment.participant.actor.display",
-        "min": 1,
+        "comment": "Hinweis: Für alle Target-Ressourcen SOLL ein Displaywert für die Referenz angegeben werden, sodass Systeme eine Übersicht der am Termin beteiligten Akteure anzeigen können ohne die Referenzen auflösen zu müssen.",
         "mustSupport": true
       },
       {
