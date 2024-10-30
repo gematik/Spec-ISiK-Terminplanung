@@ -78,7 +78,7 @@
       {
         "id": "Schedule.serviceType",
         "path": "Schedule.serviceType",
-        "comment": "Begründung zu Kardinalität und Must Support: Die Dienstleistungsart eines Termins ist von entscheidender Bedeutung, um die Verfügbarkeit und Planung des Termins zu gewährleisten. Daher ist dieses Feld verpflichtend (1..*) und muss unterstützt werden (MS). Augrund der Heterogenität von Dienstleistungen ist eine standardisierte Kodierung nicht zwingend notwendig, keine Freitextbeschreibung ist ausreichend.",
+        "comment": "Begründung zu Kardinalität und Must Support: Die Dienstleistungsart eines Termins ist von entscheidender Bedeutung, um die Verfügbarkeit und Planung des Termins zu gewährleisten. Daher ist dieses Feld verpflichtend (1..*) und muss unterstützt werden (MS). Aufgrund der Heterogenität von Dienstleistungen ist eine standardisierte Kodierung nicht zwingend notwendig, eine Freitextbeschreibung ist ausreichend.",
         "min": 1,
         "mustSupport": true
       },
