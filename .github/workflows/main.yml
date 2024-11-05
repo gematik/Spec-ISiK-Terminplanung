@@ -3,7 +3,7 @@ name: Use Tool Update Workflow
 on:
   push:
     branches:
-      - file-reference-basis
+      - main-stufe-4
 
   # Allows you to run this workflow manually from the Actions tab      
   workflow_dispatch: 
