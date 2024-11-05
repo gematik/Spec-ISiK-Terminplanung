@@ -8,10 +8,11 @@ on:
   # Allows you to run this workflow manually from the Actions tab      
   workflow_dispatch: 
 
+    
 jobs:
   call-tool-update:
     uses: gematik/spec-isik-basismodul/.github/workflows/main.yml@Update-dependency-trigger
     secrets:
       SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
       SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
-      WORKFLOW_PERMISSION_GITHUB: ${{ secrets.WORKFLOW_PERMISSION_GITHUB }}     
+      WORKFLOW_PERMISSION_GITHUB: ${{ secrets.WORKFLOW_PERMISSION_GITHUB }}      
