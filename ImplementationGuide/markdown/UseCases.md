@@ -9,3 +9,4 @@ Dies umfasst:
 - Abfrage von verfügbaren Terminen
 - Buchungsmanagement von verfügbaren Terminen (Zusage, Absage, Temporäre Buchung, Wiederholende Termine)
 - Benachrichtigungen bei Terminänderungen
+- Anlage eines neues Patienten im KIS
