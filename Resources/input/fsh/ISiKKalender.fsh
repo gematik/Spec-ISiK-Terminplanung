@@ -5,7 +5,8 @@ Id: ISiKKalender
 * active 1..1 MS
   * ^comment = "Begründung Kardinalität und Must-Support-Flag (MS): Die Kardinalität 1..1 und das Must-Support-Flag (MS) für das 'active'-Element stellen sicher, dass jeder Kalender eindeutig als aktiv oder inaktiv gekennzeichnet ist. Dies ist entscheidend für die Ressourcenplanung und Verfügbarkeit von Terminen."
 * serviceType 1..* MS
-  * ^comment = "Begründung Kardinalität Must-Support-Flag (MS): Die Kardinalität 1..* und das Must-Support-Flag (MS) für das 'serviceType'-Element stellen sicher, dass jeder Kalender mindestens eine Dienstleistungsart angibt. Dies ist wichtig für die Ressourcenplanung und die Verfügbarkeit von Terminen, indem angefragte Termine einem Kalender zugeordnet werden können."
+  * ^comment = "Begründung zu Kardinalität und Must Support: Die Dienstleistungsart eines Termins ist von entscheidender Bedeutung, um die Verfügbarkeit und Planung des Termins zu gewährleisten. Daher ist dieses Feld verpflichtend (1..*) und muss unterstützt werden (MS). Aufgrund der Heterogenität von Dienstleistungen ist eine standardisierte Kodierung nicht zwingend notwendig, eine Freitextbeschreibung ist ausreichend."
+  * text MS
 * specialty 1..* MS
   * ^comment = "Hinweis: Ein Kalender kann für ein Akteur gepflegt werden. Dieser Akteur kann in einer oder mehreren Fachrichtungen agieren. Für die Ressourcenplanung (z.B. welche Akteure sind für einen Termin verfügbar) sollte auch auf die Speciality des Akteurs zurückgegriffen werden für den Fall, dass ein Kalender pro Fachbereich - d.h. Akteur-übergreifend - gepflegt wird. 
   

@@ -80,8 +80,13 @@
       {
         "id": "Schedule.serviceType",
         "path": "Schedule.serviceType",
-        "comment": "Begründung Kardinalität Must-Support-Flag (MS): Die Kardinalität 1..* und das Must-Support-Flag (MS) für das 'serviceType'-Element stellen sicher, dass jeder Kalender mindestens eine Dienstleistungsart angibt. Dies ist wichtig für die Ressourcenplanung und die Verfügbarkeit von Terminen, indem angefragte Termine einem Kalender zugeordnet werden können.",
+        "comment": "Begründung zu Kardinalität und Must Support: Die Dienstleistungsart eines Termins ist von entscheidender Bedeutung, um die Verfügbarkeit und Planung des Termins zu gewährleisten. Daher ist dieses Feld verpflichtend (1..*) und muss unterstützt werden (MS). Aufgrund der Heterogenität von Dienstleistungen ist eine standardisierte Kodierung nicht zwingend notwendig, eine Freitextbeschreibung ist ausreichend.",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Schedule.serviceType.text",
+        "path": "Schedule.serviceType.text",
         "mustSupport": true
       },
       {
