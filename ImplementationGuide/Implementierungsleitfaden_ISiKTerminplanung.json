@@ -32,6 +32,18 @@
           "generation": "markdown"
         },
         {
+          "nameUrl": "ImplementationGuide/markdown/UseCases.md",
+          "title": "Use Cases",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "ImplementationGuide/markdown/UseCases/UseCases.md",
+              "title": "Anwendungsfälle (Use Cases)",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
           "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen.md",
           "title": "Übergreifende Festlegungen",
           "generation": "markdown",
