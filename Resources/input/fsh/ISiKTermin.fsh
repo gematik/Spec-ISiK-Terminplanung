@@ -65,6 +65,8 @@ Id: ISiKTermin
 * specialty.coding[ErweiterterFachabteilungsschluessel] from $FachabteilungsschluesselErweitertVS (required)
   * ^comment = "Dieses ValueSet KANN über ein Mapping (siehe Abschnitt https://wiki.hl7.de/index.php?title=IG:Value_Sets_f%C3%BCr_XDS#DocumentEntry.practiceSettingCode) mit dem ValueSet der Fachrichtung verknüpft werden und darüber ggf. die Integration von Systemen erleichtern."  
 * serviceType 1..* MS 
+  * text MS
+    * ^comment = "Must-Support-Flag: Aufgrund der Bandbreite möglicher Codierungen, soll in jedem Fall der serviceType als Text implementiert werden."
 * priority MS
 * priority.extension MS
 * priority.extension contains ISiKTerminPriorityExtension named Priority 0..1 MS

@@ -13,6 +13,8 @@ Datum: tbd.
 * Kardinalität für Schedule.actor.display geschwächt https://github.com/gematik/spec-ISiK-Terminplanung/pull/216
 * Änderung des Slicings der .specialty auf .specialty.coding für ISiKKalender, ISiKMedizinischeBehandlungseinheit und ISiKTermin + Schwächung Schedule.actor.display + Zulassen der .actor Reference auf Location + Schedule Schwächung des MS für ISiKNachricht https://github.com/gematik/spec-ISiK-Terminplanung/pull/215
 * Revinclude nicht verpflichtend https://github.com/gematik/spec-ISiK-Terminplanung/pull/225
+* Klarstellung, dass Freitextbeschreibung der Dienstleistung ausreichend ist https://github.com/gematik/spec-ISiK-Terminplanung/pull/228
+
 
 ----
 
