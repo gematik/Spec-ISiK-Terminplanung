@@ -121,6 +121,7 @@
       {
         "id": "Appointment.serviceType.text",
         "path": "Appointment.serviceType.text",
+        "comment": "Must-Support-Flag: Aufgrund der Bandbreite möglicher Codierungen, soll in jedem Fall der serviceType als Text implementiert werden.",
         "mustSupport": true
       },
       {

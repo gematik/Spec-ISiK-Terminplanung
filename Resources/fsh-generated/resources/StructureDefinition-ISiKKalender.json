@@ -84,6 +84,7 @@
       {
         "id": "Schedule.serviceType.text",
         "path": "Schedule.serviceType.text",
+        "comment": "Must-Support-Flag: Aufgrund der Bandbreite möglicher Kodierungen, soll in jedem Fall der serviceType als Text implementiert werden.",
         "mustSupport": true
       },
       {
