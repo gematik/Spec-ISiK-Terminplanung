@@ -60,10 +60,10 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchRevInclude = "Communication:subject"
 * rest.resource[=].searchRevInclude[=].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchRevInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchRevInclude[=].extension.valueCode = #MAY
 * rest.resource[=].searchRevInclude = "Appointment:actor"
 * rest.resource[=].searchRevInclude[=].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchRevInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchRevInclude[=].extension.valueCode = #MAY
 * rest.resource[0].extension.url = $capabilitystatement-expectation
 * rest.resource[=].extension.valueCode = #SHALL
 * rest.resource[=].type = #Practitioner
@@ -130,10 +130,10 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchRevInclude = "Slot:schedule"
 * rest.resource[=].searchRevInclude[=].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchRevInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchRevInclude[=].extension.valueCode = #MAY
 * rest.resource[=].searchInclude = "Schedule:actor"
 * rest.resource[=].searchInclude[=].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchInclude[=].extension.valueCode = #MAY
 * rest.resource[+].extension.url = $capabilitystatement-expectation
 * rest.resource[=].extension.valueCode = #SHALL
 * rest.resource[=].type = #Slot
@@ -166,10 +166,10 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchInclude = "Slot:schedule"
 * rest.resource[=].searchInclude[=].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchInclude[=].extension.valueCode = #MAY
 * rest.resource[=].searchRevInclude = "Appointment:slot"
 * rest.resource[=].searchRevInclude[=].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchRevInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchRevInclude[=].extension.valueCode = #MAY
 * rest.resource[+].extension.url = $capabilitystatement-expectation
 * rest.resource[=].extension.valueCode = #SHALL
 * rest.resource[=].type = #Appointment
@@ -310,13 +310,13 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #string
 * rest.resource[=].searchRevInclude = "Schedule:actor"
 * rest.resource[=].searchRevInclude[=].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchRevInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchRevInclude[=].extension.valueCode = #MAY
 * rest.resource[=].searchRevInclude[+] = "Communication:recipient"
 * rest.resource[=].searchRevInclude[=].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchRevInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchRevInclude[=].extension.valueCode = #MAY
 * rest.resource[=].searchRevInclude[+] = "Appointment:actor"
 * rest.resource[=].searchRevInclude[=].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchRevInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchRevInclude[=].extension.valueCode = #MAY
 * rest.resource[+]
   * extension.url = $capabilitystatement-expectation
   * extension.valueCode = #SHALL
