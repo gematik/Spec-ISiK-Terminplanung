@@ -4,6 +4,8 @@ Id: ISiKKalender
 * insert Meta
 * active 1..1 MS
 * serviceType 1..* MS
+  * text MS
+    * ^comment = "Must-Support-Flag: Aufgrund der Bandbreite möglicher Kodierungen, soll in jedem Fall der serviceType als Text implementiert werden."
 * specialty 1..* MS
   * ^comment = "Ein Kalender kann für einen Akteur gepflegt werden. Dieser Akteur kann in einer oder mehreren Fachrichtungen agieren. Für die Ressourcenplanung (z.B. welche Akteure sind für einen Termin verfügbar) sollte auch auf die Speciality des Akteurs zurückgegriffen werden für den Fall, dass ein Kalender pro Fachbereich gepflegt wird."
 * specialty.coding 1..* MS
