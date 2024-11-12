@@ -119,6 +119,11 @@
         "mustSupport": true
       },
       {
+        "id": "Appointment.serviceType.text",
+        "path": "Appointment.serviceType.text",
+        "mustSupport": true
+      },
+      {
         "id": "Appointment.specialty",
         "path": "Appointment.specialty",
         "comment": "Optionale Angabe aller Fachbereiche aus denen ein oder mehrere Akteure für die Durchführung des Termins benötigt werden. KANN auch anhand des Kalenders, in dem ein Termin gebucht wird, ermittelt werden.",
