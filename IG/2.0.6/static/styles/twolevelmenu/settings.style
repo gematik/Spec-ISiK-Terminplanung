@@ -1,0 +1,6 @@
+{
+  "Name": "Two Level Menu",
+  "Include": [ "styles/common", "styles/twolevelmenu" ],
+  "CanCopy": true,
+  "Description": "This style only shows the actual content of a page. All navigation is in the top level menu which has dropdown menus."
+}

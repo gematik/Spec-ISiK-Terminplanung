@@ -1,0 +1,181 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ISiKNachricht",
+  "url": "https://gematik.de/fhir/isik/v2/Terminplanung/StructureDefinition/ISiKNachricht",
+  "version": "2.0.6",
+  "name": "ISiKNachricht",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-11-12",
+  "publisher": "gematik GmbH",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Communication",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Communication",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Communication.inResponseTo",
+        "path": "Communication.inResponseTo",
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.status",
+        "path": "Communication.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.subject",
+        "path": "Communication.subject",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.sent",
+        "path": "Communication.sent",
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.recipient",
+        "path": "Communication.recipient",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.recipient.identifier",
+        "path": "Communication.recipient.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.recipient.display",
+        "path": "Communication.recipient.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.recipient:ISiKRecipient",
+        "path": "Communication.recipient",
+        "sliceName": "ISiKRecipient",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.recipient:ISiKRecipient.reference",
+        "path": "Communication.recipient.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.sender",
+        "path": "Communication.sender",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.sender.reference",
+        "path": "Communication.sender.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.payload",
+        "path": "Communication.payload",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.payload.content[x]",
+        "path": "Communication.payload.content[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.payload.content[x]:contentString",
+        "path": "Communication.payload.content[x]",
+        "sliceName": "contentString",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.payload.content[x]:contentAttachment",
+        "path": "Communication.payload.content[x]",
+        "sliceName": "contentAttachment",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.payload.content[x]:contentAttachment.contentType",
+        "path": "Communication.payload.content[x].contentType",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.payload.content[x]:contentAttachment.data",
+        "path": "Communication.payload.content[x].data",
+        "max": "0"
+      },
+      {
+        "id": "Communication.payload.content[x]:contentAttachment.url",
+        "path": "Communication.payload.content[x].url",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Communication.payload.content[x]:contentAttachment.creation",
+        "path": "Communication.payload.content[x].creation",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}
