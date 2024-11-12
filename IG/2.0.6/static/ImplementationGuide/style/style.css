@@ -1,0 +1,43 @@
+html, body {
+  padding: 0;
+  margin: 0; }
+
+.container {
+  padding-bottom: 15px;
+}
+
+#ig-viewer {
+  position: relative;
+  height: 100%; }
+  #ig-viewer .ig-view-content {
+    overflow: hidden;
+    min-height: 100%;
+    position: relative;
+    height: auto !important;
+    margin-bottom: -155px;
+    padding-bottom: 155px; }
+    #ig-viewer .ig-view-content #ig-view-twolevelmenu .header {
+      background: #f9f9f9;
+      border-bottom: 1px solid #e0e0e0; }
+      #ig-viewer .ig-view-content #ig-view-twolevelmenu .header .navbar {
+        background: #f9f9f9 !important;
+        margin-bottom: 0px; }
+        #ig-viewer .ig-view-content #ig-view-twolevelmenu .header .navbar a {
+          color: #333 !important;
+          font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
+        #ig-viewer .ig-view-content #ig-view-twolevelmenu .header .navbar .navbar-header {
+          margin-bottom: 0;
+          width: 35% }
+        #ig-viewer .ig-view-content #ig-view-twolevelmenu .header .navbar .navbar-nav > li > a {
+          padding-top: 15px; }
+    #ig-viewer .ig-view-content #ig-view-twolevelmenu .content {
+      margin-top: 10px; }
+      #ig-viewer .ig-view-content #ig-view-twolevelmenu .content .nav-pills > li > a {
+        overflow: hidden;
+        text-overflow: ellipsis; }
+  #ig-viewer .ig-view-footer {
+    background-color: #636363;
+    color: #E0E0E0;
+    height: 155px;
+    position: relative;
+    padding-top: 40px; }

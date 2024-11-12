@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Implementierungsleitfaden ISiK-Modul Terminplanung</title>
+
+        <link rel="icon" href="static/styles/common/favicon.ico" />
+
+        <script src="static/styles/common/jquery/jquery.min.js"></script>
+        <script src="static/styles/common/bootstrap/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="static/styles/common/main.min.css" />
+        <link rel="stylesheet" href="static/styles/common/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="static/styles/common/rendering/rendering.min.css" />
+
+        <script src="static/styles/common/rendering/stu3TreeTable.min.js"></script>
+        <script src="static/styles/common/rendering/baseTreetable.min.js"></script>
+
+        <link rel="stylesheet" href="static/ImplementationGuide/style/style.css?v=1db350900164d80" />
+
+    </head>
+
+    <body>
+
+        <div id="ig-viewer">
+
+            <div class="ig-view-content">
+
+                <div id="ig-view-twolevelmenu">
+
+                    <div class="header" role="banner" aria-label="Header">
+                        
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+                <a class="navbar-brand" href="ImplementationGuide-markdown-Einfuehrung.html">
+                    Implementierungsleitfaden ISiK-Modul Terminplanung
+                </a>
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ImplementationGuide-markdown-Einfuehrung.html">
+                            Einf&#xFC;hrung
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ImplementationGuide-markdown-ReleaseNotes.html">
+                                Release Notes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ImplementationGuide-markdown-Motivation.html">
+                                Motivation
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                &#xDC;bergreifende Festlegungen <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-UebergreifendeFestlegungen.html">
+                                            &#xDC;bergreifende Festlegungen
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-BestaetigungsrelevanteSysteme.html">
+                                            Best&#xE4;tigungsrelevante Systeme
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-Kompatibilitaet.html">
+                                            Kompatibilit&#xE4;t
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-Akteure.html">
+                                            Akteure
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-Interaktionen.html">
+                                            Interaktionen
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Datenobjekte <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte.html">
+                                            Datenobjekte
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-CapabilityStatement.html">
+                                            CapabilityStatement
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Operations.html">
+                                            Operations
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKKalenderSchedule.html">
+                                            ISiKKalender (Schedule)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKTerminblockSlot.html">
+                                            ISiKTerminblock (Slot)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKTerminAppointment.html">
+                                            ISiKTermin (Appointment)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKNachrichtCommunication.html">
+                                            ISiKNachricht (Communication)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKMedizinischeBehandlungseinheitHealthcareService.html">
+                                            ISiKMedizinischeBehandlungseinheit (HealthcareService)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKBinary.html">
+                                            ISiKBinary (Binary)
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+                    </div>
+
+                    <div class="content container" role="main" aria-label="Main content">
+                        
+
+
+<div class="row">
+
+
+    <div class="col-md-24">
+
+        <div id="preview-content">
+
+            <h1 id="release-notes">Release Notes</h1>
+<p>Im Rahmen der ISiK-Veröffentlichungen wird das <a href="https://semver.org/lang/de/">Semantic Versioning</a> verwendet.</p>
+<p>Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von Releases. Die dritte Ziffer Y (Release x.0.y) bezeichnet eine technische Korrektur und versioniert kleinere Änderungen (Packages) während eines Jahres, z. B. 1.0.1.</p>
+<hr />
+<p>Version 2.0.6</p>
+<p>Datum: 12.11.2024</p>
+<ul>
+<li>Erneute Änderung der Anforderung für Suchanfrage zu Terminblöcken aus Kalendern im Sinne einer Verfeinerung der Anforderung und Anpassung an Stufe 3 und 4 <a href="https://github.com/gematik/spec-ISiK-Terminplanung/pull/202">https://github.com/gematik/spec-ISiK-Terminplanung/pull/202</a></li>
+<li>Revinclude nicht verpflichtend <a href="https://github.com/gematik/spec-ISiK-Terminplanung/pull/226">https://github.com/gematik/spec-ISiK-Terminplanung/pull/226</a></li>
+<li>Kardinalität für Schedule.actor.display geschwächt <a href="https://github.com/gematik/spec-ISiK-Terminplanung/pull/217">https://github.com/gematik/spec-ISiK-Terminplanung/pull/217</a></li>
+<li>Änderung des Slicings der .specialty auf .specialty.coding für ISiKKalender, ISiKMedizinischeBehandlungseinheit und ISiKTermin + Schedule Schwächung des MS für ISiKNachricht <a href="https://github.com/gematik/spec-ISiK-Terminplanung/pull/222">https://github.com/gematik/spec-ISiK-Terminplanung/pull/222</a></li>
+<li>Implizites zu explizitem ValueSet geändert <a href="https://github.com/gematik/spec-ISiK-Terminplanung/pull/223">https://github.com/gematik/spec-ISiK-Terminplanung/pull/223</a></li>
+<li>Klarstellung, dass Freitextbeschreibung der Dienstleistung ausreichend ist - Stufe 2 by @alexzautke in <a href="https://github.com/gematik/spec-ISiK-Terminplanung/pull/229">https://github.com/gematik/spec-ISiK-Terminplanung/pull/229</a></li>
+</ul>
+<hr />
+<p>Version 2.0.5</p>
+<p>Datum: 20.06.2024</p>
+<ul>
+<li>Ändern der ValueSets von IHE <a href="https://github.com/gematik/spec-ISiK-Terminplanung/pull/186">https://github.com/gematik/spec-ISiK-Terminplanung/pull/186</a></li>
+<li>Änderung der Anforderung für Suchanfrage zu Terminblöcken aus Kalendern <a href="https://github.com/gematik/spec-ISiK-Terminplanung/pull/190">https://github.com/gematik/spec-ISiK-Terminplanung/pull/190</a></li>
+</ul>
+<hr />
+<p>Version: 2.0.4</p>
+<p>Datum: 29.11.2023</p>
+<ul>
+<li>remove releasematrix by @f-peverali in <a href="https://github.com/gematik/spec-ISiK-Terminplanung/pull/106">https://github.com/gematik/spec-ISiK-Terminplanung/pull/106</a></li>
+<li>Link fix stufe2 by @f-peverali in <a href="https://github.com/gematik/spec-ISiK-Terminplanung/pull/117">https://github.com/gematik/spec-ISiK-Terminplanung/pull/117</a></li>
+<li>fix parameter name by @f-peverali in <a href="https://github.com/gematik/spec-ISiK-Terminplanung/pull/119">https://github.com/gematik/spec-ISiK-Terminplanung/pull/119</a></li>
+<li>reference to R4 by @MaxMTheilig in <a href="https://github.com/gematik/spec-ISiK-Terminplanung/pull/152">https://github.com/gematik/spec-ISiK-Terminplanung/pull/152</a></li>
+</ul>
+<p><strong>Full Changelog</strong>: <a href="https://github.com/gematik/spec-ISiK-Terminplanung/compare/v.2.0.3...v2.0.4">https://github.com/gematik/spec-ISiK-Terminplanung/compare/v.2.0.3...v2.0.4</a></p>
+<hr />
+<p>Version: 2.0.3</p>
+<p>Datum: 24.03.2023</p>
+<ul>
+<li>enhancement: backport extension r5 by @f-peverali in <a href="https://github.com/gematik/spec-ISiK-Terminplanung/pull/61">https://github.com/gematik/spec-ISiK-Terminplanung/pull/61</a>
+<ul>
+<li>ISiKKalender - Harmonisierung mit den Empfehlungen der Basisprofile DE</li>
+</ul>
+</li>
+<li>quickfix: typo IG by @f-peverali in <a href="https://github.com/gematik/spec-ISiK-Terminplanung/pull/63">https://github.com/gematik/spec-ISiK-Terminplanung/pull/63</a></li>
+</ul>
+<p><strong>Full Changelog</strong>: <a href="https://github.com/gematik/spec-ISiK-Terminplanung/compare/v2.0.2...v.2.0.3">https://github.com/gematik/spec-ISiK-Terminplanung/compare/v2.0.2...v.2.0.3</a></p>
+<hr />
+<p>Version: 2.0.2</p>
+<p>Datum: 31.01.2023</p>
+<ul>
+<li>ISiKTerminblock
+<ul>
+<li>Reference(Schedule) statt Reference(ISiKKalender). Reference-Element erweitert auf die Kernspezifikation (entspricht allgemeinem Design-Prinzip), damit die Profile auch außerhalb des ISiK-Kontextes nutzbar sind.</li>
+</ul>
+</li>
+<li>Update Basismodul Dependency -&gt; 2.0.4</li>
+<li>weitere Änderungen an IG (informativ)</li>
+</ul>
+<hr />
+<p>Version: 2.0.2</p>
+<p>Datum: 31.01.2023</p>
+<ul>
+<li>ISiKTerminblock
+<ul>
+<li>Reference(Schedule) statt Reference(ISiKKalender). Reference-Element erweitert auf die Kernspezifikation (entspricht allgemeinem Design-Prinzip), damit die Profile auch außerhalb des ISiK-Kontextes nutzbar sind.</li>
+</ul>
+</li>
+<li>Update Basismodul Dependency -&gt; 2.0.4</li>
+<li>weitere Änderungen an IG (informativ)</li>
+</ul>
+<hr />
+<p>Version: 2.0.1</p>
+<p>Datum: 31.10.2022</p>
+<ul>
+<li>Update Basismodul Dependency -&gt; 2.0.2</li>
+</ul>
+<hr />
+<p>Version: 2.0.0</p>
+<p>Datum: 30.06.2022</p>
+<ul>
+<li>Initialer Release</li>
+</ul>
+<hr />
+<p>Version: 2.0.0 (Ballotierung)</p>
+<p>Datum: 31.03.2022</p>
+<ul>
+<li>Initiale Ballotierungsversion für ISiK Stufe 2</li>
+</ul>
+<hr />
+
+
+
+        </div>
+
+    </div>
+</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="ig-view-footer" role="contentinfo" aria-label="Footer">
+                
+<div class="container">
+    <div class="row">
+        <p>Powered by <b>SIMPLIFIER.NET</b></p>
+        <div>
+            HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven International
+        </div>
+    </div>
+</div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
