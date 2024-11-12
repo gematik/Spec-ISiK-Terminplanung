@@ -25,7 +25,7 @@ HTML_TEMPLATE = """
     </tr>
 """
 VERSION_PATTERN = re.compile(
-    r'<tr>\s*<td>\d{2}\.\d{2}\.\d{4}</td>\s*<td>\s*<a href="https://gematik.github.io/spec-ISiK-Terminplanung/IG/(\d+\.\d+\.\d+(-\w+)?)/ImplementationGuide-markdown-Einfuehrung.html">\s*\1\s*</a>\s*</td>'
+    r'<tr>\s*<td>\d{2}\.\d{2}\.\d{4}</td>\s*<td>\s*<a href="https://gematik.github.io/.*/IG/(\d+\.\d+\.\d+(-\w+)?)/ImplementationGuide-markdown-Einfuehrung.html">\s*\1\s*</a>\s*</td>'
 )
 
 def get_current_date_str():
