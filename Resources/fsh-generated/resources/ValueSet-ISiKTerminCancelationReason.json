@@ -8,7 +8,7 @@
   "url": "https://gematik.de/fhir/isik/v2/Terminplanung/ValueSet/ISiKTerminCancelationReason",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2024-10-18",
+  "date": "2024-11-12",
   "compose": {
     "include": [
       {

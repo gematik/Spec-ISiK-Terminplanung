@@ -6,7 +6,7 @@
   "experimental": false,
   "version": "2.0.6",
   "publisher": "gematik GmbH",
-  "date": "2024-10-18",
+  "date": "2024-11-12",
   "implementationGuide": [
     "https://gematik.de/fhir/isik/v2/Terminplanung/ImplementationGuide|2.0.6"
   ],
