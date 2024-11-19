@@ -6,7 +6,7 @@ Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von R
 
 Version: 3.0.6
 
-Datum: tbd.
+Datum: 19.11.2024
 
 * Implizites ValueSet expandiert https://github.com/gematik/spec-ISiK-Terminplanung/pull/220
 * Änderung der Anforderung für Suchanfrage zu Terminblöcken aus Kalendern (u.a. in Bezug auf Start-Vorgabe) https://github.com/gematik/spec-ISiK-Terminplanung/pull/200
