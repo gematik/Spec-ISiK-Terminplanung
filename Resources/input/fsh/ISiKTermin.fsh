@@ -12,6 +12,7 @@ Id: ISiKTermin
 * insert Meta
 * extension MS
 * extension contains ISiKNachrichtExtension named Nachricht 0..* MS
+  * ^definition = "Bedingtes Must Support - Einschränkung der übergreifenden MS-Definition: Falls ein bestätigungsrelevantes System das ISiK-Profil ISiKNachricht implementiert, MUSS das System auch dieses Element unterstützten. Andernfalls KANN das System dieses Element unterstützen."
 * extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-Appointment.replaces named replaces 0..1 MS
 * status 1..1 MS
 * cancelationReason 0..1 MS
@@ -45,23 +46,27 @@ Id: ISiKTermin
 * participant[AkteurMedizinischeBehandlungseinheit].actor MS
 * participant[AkteurMedizinischeBehandlungseinheit].actor.reference 1..1 MS
 * specialty 0..* MS
+  * ^comment = "Optionale Angabe aller Fachbereiche aus denen ein oder mehrere Akteure für die Durchführung des Termins benötigt werden. KANN auch anhand des Kalenders, in dem ein Termin gebucht wird, ermittelt werden."
+* specialty.coding 1..* MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-* specialty contains 
+* specialty.coding contains 
   Fachrichtung 0..1 MS and 
   Fachspezialisierung 0..1 and 
   ErweiterterFachabteilungsschluessel 0..1
-* specialty[Fachrichtung] from $IHEpracticeSettingVS (required)
+* specialty.coding[Fachrichtung] from $IHEpracticeSettingVS (required)
   * ^definition = "Einschränkung der übergreifenden MS-Definition: ein bestätigungsrelevantes System SOLL das ValueSet (http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode) implementieren, MUSS es jedoch NICHT."
   * ^comment = "Hintergrund zum MS: die MS-Änderung erfolgt als Technical Correction in Stufe 3 während der Implementierungsphase, daher ist die Abbildung dieses ValueSets nicht verpflichtend.
 
   Hintergrund zum ValueSet: Die Wahl des hinterlegten ValueSets (http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode) wurde mit einem Mitglied der IHE Deutschland Arbeitsgruppe XDS ValueSets (https://www.ihe-d.de/projekte/xds-value-sets-fuer-deutschland/) sowie mit der KBV abgestimmt (Stand:13.06.2024)."
-* specialty[Fachspezialisierung] from $authorSpecialtyVS (required)
+* specialty.coding[Fachspezialisierung] from $authorSpecialtyVS (required)
   * ^comment = "Dieses Slice SOLL NICHT genutzt werden und ist nur aufgrund der Kompatibilität beibehalten worden. Es SOLL dagegen das  ValueSet durch den Slice 'Fachrichtung' (http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode) umgesetzt werden (Stand:13.06.2024)."
-* specialty[ErweiterterFachabteilungsschluessel] from $FachabteilungsschluesselErweitertVS (required)
+* specialty.coding[ErweiterterFachabteilungsschluessel] from $FachabteilungsschluesselErweitertVS (required)
   * ^comment = "Dieses ValueSet KANN über ein Mapping (siehe Abschnitt https://wiki.hl7.de/index.php?title=IG:Value_Sets_f%C3%BCr_XDS#DocumentEntry.practiceSettingCode) mit dem ValueSet der Fachrichtung verknüpft werden und darüber ggf. die Integration von Systemen erleichtern."  
 * serviceType 1..* MS 
+  * text MS
+    * ^comment = "Must-Support-Flag: Aufgrund der Bandbreite möglicher Codierungen, soll in jedem Fall der serviceType als Text implementiert werden."
 * priority MS
 * priority.extension MS
 * priority.extension contains ISiKTerminPriorityExtension named Priority 0..1 MS
@@ -92,7 +97,7 @@ Usage: #example
 * status = $appointmentStatus#proposed
 * start = "2022-12-10T09:00:00Z"
 * end = "2022-12-10T11:00:00Z"
-* slot = Reference(ISiKSlotExample)
+* slot = Reference(ISiKTerminblockExample)
 * priority
   * extension[ISiKTerminPriorityExtension].valueCodeableConcept = http://snomed.info/sct#25876001
 * comment = "Dies ist ein Test Kommentar!"
@@ -112,12 +117,12 @@ Usage: #example
 * status = $appointmentStatus#proposed
 * start = "2022-12-10T09:00:00Z"
 * end = "2022-12-10T09:30:00Z"
-* slot = Reference(ISiKSlotExample)
+* slot = Reference(ISiKTerminblockExample)
 * priority
   * extension[ISiKTerminPriorityExtension].valueCodeableConcept = http://snomed.info/sct#25876001
 * serviceType = http://terminology.hl7.org/CodeSystem/service-type#174
-* specialty[Fachrichtung] = $IHEAerztlicheFachrichtungen#INTM
-* specialty[ErweiterterFachabteilungsschluessel] = $FachabteilungsschluesselErweitertCS#3600
+* specialty.coding[Fachrichtung] = $IHEAerztlicheFachrichtungen#INTM
+* specialty.coding[ErweiterterFachabteilungsschluessel] = $FachabteilungsschluesselErweitertCS#3600
 * participant
   * actor.display = "Test Patient"
   * actor.reference = "Patient/example"

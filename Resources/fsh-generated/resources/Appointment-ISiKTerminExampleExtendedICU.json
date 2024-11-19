@@ -25,7 +25,7 @@
   "end": "2022-12-10T09:30:00Z",
   "slot": [
     {
-      "reference": "ISiKSlotExample"
+      "reference": "Slot/ISiKTerminblockExample"
     }
   ],
   "serviceType": [
@@ -44,11 +44,7 @@
         {
           "code": "INTM",
           "system": "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen"
-        }
-      ]
-    },
-    {
-      "coding": [
+        },
         {
           "code": "3600",
           "system": "http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert"

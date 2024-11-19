@@ -6,9 +6,15 @@ Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von R
 
 Version: 3.0.6
 
-Datum: tbd.
+Datum: 19.11.2024
 
+* Implizites ValueSet expandiert https://github.com/gematik/spec-ISiK-Terminplanung/pull/220
 * Änderung der Anforderung für Suchanfrage zu Terminblöcken aus Kalendern (u.a. in Bezug auf Start-Vorgabe) https://github.com/gematik/spec-ISiK-Terminplanung/pull/200
+* Kardinalität für Schedule.actor.display geschwächt https://github.com/gematik/spec-ISiK-Terminplanung/pull/216
+* Änderung des Slicings der .specialty auf .specialty.coding für ISiKKalender, ISiKMedizinischeBehandlungseinheit und ISiKTermin + Schwächung Schedule.actor.display + Zulassen der .actor Reference auf Location + Schedule Schwächung des MS für ISiKNachricht https://github.com/gematik/spec-ISiK-Terminplanung/pull/215
+* Revinclude nicht verpflichtend https://github.com/gematik/spec-ISiK-Terminplanung/pull/225
+* Klarstellung, dass Freitextbeschreibung der Dienstleistung ausreichend ist https://github.com/gematik/spec-ISiK-Terminplanung/pull/228
+
 
 ----
 

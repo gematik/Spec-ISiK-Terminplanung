@@ -25,7 +25,7 @@
   "end": "2022-12-10T11:00:00Z",
   "slot": [
     {
-      "reference": "ISiKSlotExample"
+      "reference": "Slot/ISiKTerminblockExample"
     }
   ],
   "comment": "Dies ist ein Test Kommentar!",
