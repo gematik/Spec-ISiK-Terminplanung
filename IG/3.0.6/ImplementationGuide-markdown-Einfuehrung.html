@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Implementierungsleitfaden ISiK-Modul Terminplanung</title>
+
+    <link rel="icon" href="static/styles/common/favicon.ico" />
+
+    <script src="static/styles/common/jquery/jquery.min.js"></script>
+    <script src="static/styles/common/bootstrap/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="static/styles/common/main.min.css" />
+    <link rel="stylesheet" href="static/styles/common/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="static/styles/common/rendering/rendering.min.css" /> 
+
+    <script src="static/styles/common/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/common/rendering/baseTreetable.min.js"></script>
+
+    <link rel="stylesheet" href="static/styles/twolevelmenu/style.css?v=1db3a89868ed200" />
+
+</head>
+
+<body>
+
+    <div id="ig-viewer">
+
+        <div class="ig-view-content">
+
+            <div id="ig-view-twolevelmenu">
+
+                <div class="header" role="banner" aria-label="Header">
+                    
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+                <a class="navbar-brand" href="ImplementationGuide-markdown-Einfuehrung.html">
+                    Implementierungsleitfaden ISiK-Modul Terminplanung
+                </a>
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ImplementationGuide-markdown-Einfuehrung.html">
+                            Einf&#xFC;hrung
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ImplementationGuide-markdown-ReleaseNotes.html">
+                                Release Notes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ImplementationGuide-markdown-Motivation.html">
+                                Motivation
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                &#xDC;bergreifende Festlegungen <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-UebergreifendeFestlegungen.html">
+                                            &#xDC;bergreifende Festlegungen
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-BestaetigungsrelevanteSysteme.html">
+                                            Best&#xE4;tigungsrelevante Systeme
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-Kompatibilitaet.html">
+                                            Kompatibilit&#xE4;t
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-Akteure.html">
+                                            Akteure
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-Interaktionen.html">
+                                            Interaktionen
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Datenobjekte <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte.html">
+                                            Datenobjekte
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-CapabilityStatement.html">
+                                            CapabilityStatement
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Operations.html">
+                                            Operations
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKKalenderSchedule.html">
+                                            ISiKKalender (Schedule)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKTerminblockSlot.html">
+                                            ISiKTerminblock (Slot)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKTerminKontaktMitGesundheitseinrichtung.html">
+                                            ISiKTerminKontaktMitGesundheitseinrichtung (Encounter)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKTerminAppointment.html">
+                                            ISiKTermin (Appointment)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKNachrichtCommunication.html">
+                                            ISiKNachricht (Communication)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKMedizinischeBehandlungseinheitHealthcareService.html">
+                                            ISiKMedizinischeBehandlungseinheit (HealthcareService)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKBinary.html">
+                                            ISiKBinary (Binary)
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+                </div>
+
+                <div class="content container" role="main" aria-label="Main content">
+                    
+
+
+<div class="row">
+
+
+    <div class="col-md-24">
+
+        <div id="preview-content">
+
+            <img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Terminplanung/main-stufe-3/Material/images/Gematik_Logo_Flag.svg" alt="gematik logo" width="400"/>
+<hr />
+<p>Version: 3.0.6</p>
+<p>Datum: 19.11.2024</p>
+<p>Status: Aktiv</p>
+<p>Realm: Deutschland</p>
+<hr />
+<h1 id="interoperabler-datenaustausch-durch-informationssysteme-im-krankenhaus-isik">Interoperabler Datenaustausch durch Informationssysteme im Krankenhaus (ISiK)</h1>
+<p>Die gematik wurde vom Gesetzgeber beauftragt, im Benehmen mit der Deutschen Krankenhausgesellschaft (DKG) und den maßgeblichen Bundesverbänden der Industrie im Gesundheitswesen, verbindliche Standards für den Austausch von Gesundheitsdaten mit Informationssystemen im Krankenhaus zu erarbeiten. Dieser FHIR ImplementationGuide (IG) beschreibt die für diesen Zweck entwickelten FHIR Profile und das <a href="https://de.wikipedia.org/wiki/Representational_State_Transfer">REST</a>-basierte Application Programming Interface (API). Die REST-API wird im Wesentlichen <a href="https://www.hl7.org/fhir/R4/http.html">vom FHIR Standard vorgegeben</a>. Dieser Leitfaden konkretisiert die ISiK-relevanten Funktionen der Standard-REST-API und trifft inhaltliche Festlegungen zu den ISiK-relevanten Ressourcen in Form von Ressourcen-Profilen.</p>
+<p>Hersteller bestätigungsrelevanter Systeme sollen durch diesen IG in die Lage versetzt werden, eine konforme Implementierung zu erstellen und das Bestätigungsverfahren der gematik erfolgreich zu absolvieren.</p>
+<p>Weitere Informationen siehe <a href="https://www.gesetze-im-internet.de/sgb_5/__373.html">§373 SGB V</a>.</p>
+<p>Hinweis: Sowohl für die Implementierung der ISiK-Spezifikation als auch für den Betrieb eines Produktes, das die ISiK-Spezifikation implementiert, ist eine SNOMED-CT-Lizenz notwendig. Diese kann beim <a href="https://www.bfarm.de/DE/Kodiersysteme/Terminologien/SNOMED-CT/_node.html">National Release Center für SNOMED CT in Deutschland</a> beantragt werden.</p>
+<p><strong>Kontakt</strong></p>
+<p>Bringen Sie allgemeine Fragen und Anmerkungen gerne über unser Anfrageportal ein: <a href="https://service.gematik.de/servicedesk/customer/portal/16">Anfragen ISiK + ISiP</a></p>
+<p>Falls Sie keinen Zugang zum Anfrageportal haben und dieses nutzen wollen, senden Sie uns bitte eine Nachricht an die Adresse isik [ at ] gematik.de mit dem Betreff &quot;Portalzugang&quot;.</p>
+<p><strong>Herausgeber</strong></p>
+<p>gematik GmbH</p>
+<p><a href="https://www.gematik.de/impressum/">Impressum</a></p>
+<p><strong>Gender-Hinweis</strong></p>
+<p>Zugunsten des Leseflusses wird in dieser Publikation meist die
+männliche Form verwendet. Wir bitten, dies nicht als Zeichen einer
+geschlechtsspezifischen Wertung zu deuten. Diese Variante deckt auch alle
+weiteren Geschlechter, neben männlich und weiblich, ab.</p>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="ig-view-footer" role="contentinfo" aria-label="Footer">
+            
+<div class="container">
+    <div class="row">
+        <p>Powered by <b>SIMPLIFIER.NET</b></p>
+        <div>
+            HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven International
+        </div>
+    </div>
+</div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

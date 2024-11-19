@@ -1,0 +1,49 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "AppointmentReplaces",
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Appointment.replaces",
+  "version": "3.0.6",
+  "name": "AppointmentReplaces",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-11-19",
+  "publisher": "gematik GmbH",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Appointment.replaces"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Appointment"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

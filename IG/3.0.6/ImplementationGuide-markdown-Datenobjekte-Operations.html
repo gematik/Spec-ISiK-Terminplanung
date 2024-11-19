@@ -1,0 +1,480 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Implementierungsleitfaden ISiK-Modul Terminplanung</title>
+
+    <link rel="icon" href="static/styles/common/favicon.ico" />
+
+    <script src="static/styles/common/jquery/jquery.min.js"></script>
+    <script src="static/styles/common/bootstrap/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="static/styles/common/main.min.css" />
+    <link rel="stylesheet" href="static/styles/common/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="static/styles/common/rendering/rendering.min.css" /> 
+
+    <script src="static/styles/common/rendering/stu3TreeTable.min.js"></script>
+    <script src="static/styles/common/rendering/baseTreetable.min.js"></script>
+
+    <link rel="stylesheet" href="static/styles/twolevelmenu/style.css?v=1db3a89868ed200" />
+
+</head>
+
+<body>
+
+    <div id="ig-viewer">
+
+        <div class="ig-view-content">
+
+            <div id="ig-view-twolevelmenu">
+
+                <div class="header" role="banner" aria-label="Header">
+                    
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+                <a class="navbar-brand" href="ImplementationGuide-markdown-Einfuehrung.html">
+                    Implementierungsleitfaden ISiK-Modul Terminplanung
+                </a>
+
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+                    <li>
+                        <a href="ImplementationGuide-markdown-Einfuehrung.html">
+                            Einf&#xFC;hrung
+                        </a>
+                    </li>
+
+                        <li>
+                            <a href="ImplementationGuide-markdown-ReleaseNotes.html">
+                                Release Notes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ImplementationGuide-markdown-Motivation.html">
+                                Motivation
+                            </a>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                &#xDC;bergreifende Festlegungen <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-UebergreifendeFestlegungen.html">
+                                            &#xDC;bergreifende Festlegungen
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-BestaetigungsrelevanteSysteme.html">
+                                            Best&#xE4;tigungsrelevante Systeme
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-Kompatibilitaet.html">
+                                            Kompatibilit&#xE4;t
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-Akteure.html">
+                                            Akteure
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-UebergreifendeFestlegungen-Interaktionen.html">
+                                            Interaktionen
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Datenobjekte <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte.html">
+                                            Datenobjekte
+                                        </a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-CapabilityStatement.html">
+                                            CapabilityStatement
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-Operations.html">
+                                            Operations
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKKalenderSchedule.html">
+                                            ISiKKalender (Schedule)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKTerminblockSlot.html">
+                                            ISiKTerminblock (Slot)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKTerminKontaktMitGesundheitseinrichtung.html">
+                                            ISiKTerminKontaktMitGesundheitseinrichtung (Encounter)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKTerminAppointment.html">
+                                            ISiKTermin (Appointment)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKNachrichtCommunication.html">
+                                            ISiKNachricht (Communication)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKMedizinischeBehandlungseinheitHealthcareService.html">
+                                            ISiKMedizinischeBehandlungseinheit (HealthcareService)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ImplementationGuide-markdown-Datenobjekte-ISiKBinary.html">
+                                            ISiKBinary (Binary)
+                                        </a>
+                                    </li>
+
+                            </ul>
+                        </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+                </div>
+
+                <div class="content container" role="main" aria-label="Main content">
+                    
+
+
+<div class="row">
+
+
+    <div class="col-md-24">
+
+        <div id="preview-content">
+
+            <h3 id="page-title">Operations</h3>
+<p>Es gelten die allgemeinen Vorgaben der FHIR-Kernspezifikation für die Ausführung von <a href="https://www.hl7.org/fhir/R4/operations.html">Custom Operations</a>.</p>
+<hr />
+<h3 id="buchung-eines-termins">Buchung eines Termins</h3>
+<p><div xmlns="http://www.w3.org/1999/xhtml"><h3>Invocations</h3><pre><code>URL: [base]/Appointment/$book
+</code></pre><p>This operation changes content</p><p><h3>Parameters (In)</h3></p><table class="regular"><tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Documentation</b></td></tr><tr><td>appt-resource</td><td>1..1</td><td>Appointment</td><td xmlns=""><p>Eine Appointment-Ressource entsprechend dem dazugehörigen ISiK-Profil MUSS übergeben werden. Falls das Parameter-Element 'Appointment' als einziges Parameter-Element verwendet wird, SOLL die Appointment-Ressource direkt im HTTP Body übergeben werden, alternativ zu einer Parameter-Ressource inklusive dem eingebetteten Appointment-Element. Invalide Ressourcen MÜSSEN abgelehnt werden durch das Termin Repository (zur Form der Ablehnung s.u.). Das Appointment MUSS den Status 'proposed' enthalten.</p></td></tr><tr><td>cancelled-appt-id</td><td>0..1</td><td>uri</td><td xmlns=""><p>Für die vorliegende Spezifikation ist die Verschiebung eines Termin eins zwei-stufiger Prozess, bei dem ein Termin storniert und ein neuer Termin neu gebucht wird. Dieser Parameter repräsentiert die Ressourcen-Id des stornierten Appointments. Der uri-Parameter kann eine absoulte URL enthalten, Server SOLLEN jedoch nur Termine für ihre eigene Domäne verwalten. Im neu-angelegten Appointment MUSS eine Reference auf den abgesagten Termin hinterlegt werden (vgl. Appointment.extension:replaces). Der Status der abgesagten Ressource MUSS durch den Server angepasst werden. Die Verschiebung ist als transaktionale Operation zu verstehen, d.h. die Absage des originalen Termins ist durch den Server nur bestätigt werden, wenn der neue vorgeschlagene Termin angenommen werden kann. Andernfalls ist die Terminverschiebung mit einem entsprechenden Hinweis abzulehnen.</p></td></tr><tr><td>schedule</td><td>0..1</td><td>Reference(<a href="artifacts/Resources/fsh-generated/resources/StructureDefinition-ISiKKalender.json" title="An instance of StructureDefinition">ISiKKalender</a>)</td><td xmlns=""><p>Im Falle dass ein Appointment keine Referenz auf ein oder mehrere Slots enthält, MUSS der Server die benötigten Slots auf Basis der Referenz auf Schedule, sowie dem Start- und Endzeitpunkt im Appointment ermitteln.</p></td></tr></table><p><h3>Return Values (Out)</h3></p><table class="regular"><tr><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Documentation</b></td></tr><tr><td>return</td><td>0..1</td><td>Appointment</td><td xmlns=""><p>Falls die Interaktion erfolgreich ist, ist der Status Code HTTP 201 - Created zurückzugeben. Im Erfolgsfall MUSS als Return-Parameter eine Appointment-Ressource (entsprechend dem dazugehörigen ISiK-Profil) zurückgegeben werden. Das id-Element der Appointment-Ressource MUSS korrekt gefüllt werden. Der Server MUSS den Status der Appointment-Ressource auf 'booked' oder 'pending' ändern. Der Server MUSS die verwendeten Slot-Ressourcen als Referenz im Appointment angeben. Die Appointment-Ressource SOLL direkt im HTTP Body zurückgegeben werden, falls es sich um den einzigen Rückgabewert handelt. Alternativ kann die Appointment-Ressource innerhalb einer Parameter-Ressource zurückgegeben werden. Als Teil der Parameter-Ressource können zusätzlich Hinweise zum Termin als OperationOutcome zurückgegeben werden.</p></td></tr><tr><td>return</td><td>0..1</td><td>OperationOutcome</td><td xmlns=""><p>Falls die Interaktion fehlschlägt, MUSS als Return-Parameter eine OperationOutcome-Ressource zurückgegeben werden. Syntaktische Fehler in der Appointment-Ressource MUSS mit einem HTTP Status-Code 400 - Bad Request zurückgewiesen werden. Anderweitig invalide Appointment-Ressourcen MÜSSEN mit einer OperationOutcome-Ressource abgewiesen werden. In diesem Fall SOLL der HTTP Status-Code HTTP 422 - Unprocessable Entity verwendet werden. Eine OperationOutcome-Ressource KANN zu informativen Zwecken in jedem Fall zurückgegeben werden (s.o.).</p></td></tr></table></div></p>
+<h3 id="ubersicht-interaktion-termin-requestor-mit-termin-repository">Übersicht Interaktion Termin-Requestor mit Termin-Repository</h3>
+<p>Folgende Schritte KÖNNEN notwendig sein, sodass ein Termin durch einen Termin-Requestor innerhalb eines Termin-Repository eingestellt wird. Es ist zu beachten, dass für spezielle Implementierungen nicht alle Schritte hiervon relevant sind und übersprungen werden können.</p>
+<p>Generell wird darauf hingewiesen, dass abhängig davon, welcher Client oder Benutzer eine Interaktion ausführt, unterschiedliche Ergebnisse zurückgeliefert werden können. Die vorliegende Spezifikation macht keine Vorgaben, wie eine Authentifizierung und Autorisierung zu implementieren ist. Es wird hierzu auf das <a href="https://simplifier.net/guide/implementierungsleitfaden-isik-sicherheit-stufe-3?version=current">ISiK-Modul 'Sicherheit'</a> verwiesen.</p>
+<p>User Story für die folgenden Beispiele: Ein Patient bucht über ein externes Patientenportal einen Termin in der allgemeinmedizinischen Ambulanz eines Krankenhauses. Da der Patient seit Tagen Bauchschmerzen hat, die in den letzten Stunden stärker werden, wählt er die Priorität &quot;Notfall&quot;.</p>
+<ol>
+<li>Abfrage aller Kodierungen der Behandlungsleistungen durch den Termin-Requestor: <code>GET https://example.org/fhir/CodeSystem?context-type-value=https://gematik.de/fhir/isik/v3/Terminplanung/CodeSystem/ContextType|ResourceUsage$http://hl7.org/fhir/resource-types|HealthcareService</code></li>
+</ol>
+<p>Das Termin-Repository MUSS alle CodeSysteme exponieren, welche für die Kodierung eines HealthcareService relevant sind. Die Anfrage ist nicht auf HealthcareService beschränkt, weitere Ressourcen-Kontexte können abgefragt werden. Alle verwendeten CodeSysteme MÜSSEN exponiert werden, insoweit diese sich als CodeSystem-Ressourcen ausdrücken lassen.</p>
+<p>Hinweis: Diese Abfrage ist für eine Initialisierung des Termin-Requestors gedacht. Es ist davon auszugehen, dass diese Auswahlliste nicht dynamisch angepasst wird durch das Termin-Repository und nicht bei jeder Terminbuchung erneut abgefragt werden muss.</p>
+<ol start="2">
+<li>Abfrage aller verfügbaren Kalender durch den Termin-Requestor: <code>GET https://example.org/fhir/Schedule</code></li>
+</ol>
+<p>Der Termin-Requestor KANN durch die Abfrage aller verfügbaren Kalender alle Ressourcen abfragen, für die eine Termin-Buchung zur Verfügung steht.</p>
+<ol start="3">
+<li>Abfrage aller verfügbaren Slots für einen Kalender durch den Termin-Requestor: <code>GET https://example.org/fhir/Slot?schedule=&lt;Schedule/ISiKKalenderExample&gt;&amp;status=free</code></li>
+</ol>
+<p>In diesem Fall ist auch ein Chaining auf weitere verknüpfte Akteure möglich: <code>GET https://example.org/fhir/Slot?schedule.actor:HealthcareService.type=http://dicom.nema.org/resources/ontology/DCM|CT</code></p>
+<ol start="4">
+<li>Anlage einer Patient-Ressource durch den Termin-Requestor: <code>POST https://example.org/fhir/Patient</code></li>
+</ol>
+<div class="lang-json editor-colors"><div style="color:Black;background-color:White;"><pre>
+{
+    <span style="color:#A31515;">&quot;resourceType&quot;</span>: <span style="color:#A31515;">&quot;Patient&quot;</span>,
+    <span style="color:#A31515;">&quot;meta&quot;</span>: {
+        <span style="color:#A31515;">&quot;tag&quot;</span>: [
+            {
+                <span style="color:#A31515;">&quot;system&quot;</span>: <span style="color:#A31515;">&quot;http://fhir.de/CodeSystem/common-meta-tag-de&quot;</span>,
+                <span style="color:#A31515;">&quot;code&quot;</span>: <span style="color:#A31515;">&quot;external&quot;</span>
+            }
+        ]
+    }
+    [...]
+}
+
+</pre></div>
+</div>
+<ol start="5">
+<li>Aufruf der $book-Operation durch den Termin-Requestor: <code>POST https://example.org/fhir/Appointment/$book</code></li>
+</ol>
+<div class="lang-json editor-colors"><div style="color:Black;background-color:White;"><pre>
+{
+  <span style="color:#A31515;">&quot;resourceType&quot;</span>: <span style="color:#A31515;">&quot;Appointment&quot;</span>,
+  <span style="color:#A31515;">&quot;id&quot;</span>: <span style="color:#A31515;">&quot;ISiKTerminExample&quot;</span>,
+  <span style="color:#A31515;">&quot;meta&quot;</span>: {
+    <span style="color:#A31515;">&quot;tag&quot;</span>: [
+      {
+        <span style="color:#A31515;">&quot;code&quot;</span>: <span style="color:#A31515;">&quot;external&quot;</span>,
+        <span style="color:#A31515;">&quot;system&quot;</span>: <span style="color:#A31515;">&quot;http://fhir.de/CodeSystem/common-meta-tag-de&quot;</span>
+      }
+    ],
+    <span style="color:#A31515;">&quot;profile&quot;</span>: [
+      <span style="color:#A31515;">&quot;https://gematik.de/fhir/isik/v3/Terminplanung/StructureDefinition/ISiKTermin&quot;</span>
+    ]
+  },
+  <span style="color:#A31515;">&quot;extension&quot;</span>: [
+    {
+      <span style="color:#A31515;">&quot;url&quot;</span>: <span style="color:#A31515;">&quot;https://gematik.de/fhir/isik/v3/Terminplanung/StructureDefinition/ISiKNachrichtExtension&quot;</span>,
+      <span style="color:#A31515;">&quot;valueReference&quot;</span>: {
+        <span style="color:#A31515;">&quot;reference&quot;</span>: <span style="color:#A31515;">&quot;Communication/ISiKNachrichtExample&quot;</span>
+      }
+    }
+  ],
+  <span style="color:#A31515;">&quot;status&quot;</span>: <span style="color:#A31515;">&quot;proposed&quot;</span>,
+  <span style="color:#A31515;">&quot;start&quot;</span>: <span style="color:#A31515;">&quot;2022-12-10T09:00:00Z&quot;</span>,
+  <span style="color:#A31515;">&quot;end&quot;</span>: <span style="color:#A31515;">&quot;2022-12-10T09:30:00Z&quot;</span>,
+  <span style="color:#A31515;">&quot;slot&quot;</span>: [
+    {
+      <span style="color:#A31515;">&quot;reference&quot;</span>: <span style="color:#A31515;">&quot;ISiKSlotExample&quot;</span>
+    }
+  ],
+  <span style="color:#A31515;">&quot;serviceType&quot;</span>: [
+    {
+      <span style="color:#A31515;">&quot;coding&quot;</span>: [
+        {
+          <span style="color:#A31515;">&quot;code&quot;</span>: <span style="color:#A31515;">&quot;124&quot;</span>,
+          <span style="color:#A31515;">&quot;system&quot;</span>: <span style="color:#A31515;">&quot;http://terminology.hl7.org/CodeSystem/service-type&quot;</span>
+        }
+      ]
+    }
+  ],
+  <span style="color:#A31515;">&quot;specialty&quot;</span>: [
+    {
+      <span style="color:#A31515;">&quot;coding&quot;</span>: [
+        {
+          <span style="color:#A31515;">&quot;code&quot;</span>: <span style="color:#A31515;">&quot;010&quot;</span>,
+          <span style="color:#A31515;">&quot;system&quot;</span>: <span style="color:#A31515;">&quot;urn:oid:1.2.276.0.76.5.114&quot;</span>
+        }
+      ]
+    }
+  ],
+  <span style="color:#A31515;">&quot;participant&quot;</span>: [
+    {
+      <span style="color:#A31515;">&quot;actor&quot;</span>: {
+        <span style="color:#A31515;">&quot;display&quot;</span>: <span style="color:#A31515;">&quot;Test Patient&quot;</span>,
+        <span style="color:#A31515;">&quot;reference&quot;</span>: <span style="color:#A31515;">&quot;Patient/example&quot;</span>
+      },
+      <span style="color:#A31515;">&quot;status&quot;</span>: <span style="color:#A31515;">&quot;accepted&quot;</span>
+    }
+  ],
+  <span style="color:#A31515;">&quot;_priority&quot;</span>: {
+    <span style="color:#A31515;">&quot;extension&quot;</span>: [
+      {
+        <span style="color:#A31515;">&quot;url&quot;</span>: <span style="color:#A31515;">&quot;https://gematik.de/fhir/isik/v3/Terminplanung/StructureDefinition/ISiKTerminPriorityExtension&quot;</span>,
+        <span style="color:#A31515;">&quot;valueCodeableConcept&quot;</span>: {
+          <span style="color:#A31515;">&quot;coding&quot;</span>: [
+            {
+              <span style="color:#A31515;">&quot;code&quot;</span>: <span style="color:#A31515;">&quot;25876001&quot;</span>,
+              <span style="color:#A31515;">&quot;system&quot;</span>: <span style="color:#A31515;">&quot;http://snomed.info/sct&quot;</span>
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+</pre></div>
+</div>
+<p>Antwort des Termin-Repository:</p>
+<div class="lang-json editor-colors"><div style="color:Black;background-color:White;"><pre>
+{
+  <span style="color:#A31515;">&quot;resourceType&quot;</span>: <span style="color:#A31515;">&quot;Appointment&quot;</span>,
+  <span style="color:#A31515;">&quot;id&quot;</span>: <span style="color:#A31515;">&quot;ISiKTerminExample&quot;</span>,
+  <span style="color:#A31515;">&quot;meta&quot;</span>: {
+    <span style="color:#A31515;">&quot;tag&quot;</span>: [
+      {
+        <span style="color:#A31515;">&quot;code&quot;</span>: <span style="color:#A31515;">&quot;external&quot;</span>,
+        <span style="color:#A31515;">&quot;system&quot;</span>: <span style="color:#A31515;">&quot;http://fhir.de/CodeSystem/common-meta-tag-de&quot;</span>
+      }
+    ],
+    <span style="color:#A31515;">&quot;profile&quot;</span>: [
+      <span style="color:#A31515;">&quot;https://gematik.de/fhir/isik/v3/Terminplanung/StructureDefinition/ISiKTermin&quot;</span>
+    ]
+  },
+  <span style="color:#A31515;">&quot;extension&quot;</span>: [
+    {
+      <span style="color:#A31515;">&quot;url&quot;</span>: <span style="color:#A31515;">&quot;https://gematik.de/fhir/isik/v3/Terminplanung/StructureDefinition/ISiKNachrichtExtension&quot;</span>,
+      <span style="color:#A31515;">&quot;valueReference&quot;</span>: {
+        <span style="color:#A31515;">&quot;reference&quot;</span>: <span style="color:#A31515;">&quot;Communication/ISiKNachrichtExample&quot;</span>
+      }
+    }
+  ],
+  <span style="color:#A31515;">&quot;status&quot;</span>: <span style="color:#A31515;">&quot;booked&quot;</span>,
+  <span style="color:#A31515;">&quot;start&quot;</span>: <span style="color:#A31515;">&quot;2022-12-10T09:00:00Z&quot;</span>,
+  <span style="color:#A31515;">&quot;end&quot;</span>: <span style="color:#A31515;">&quot;2022-12-10T09:30:00Z&quot;</span>,
+  <span style="color:#A31515;">&quot;slot&quot;</span>: [
+    {
+      <span style="color:#A31515;">&quot;reference&quot;</span>: <span style="color:#A31515;">&quot;ISiKSlotExample&quot;</span>
+    }
+  ],
+  <span style="color:#A31515;">&quot;serviceType&quot;</span>: [
+    {
+      <span style="color:#A31515;">&quot;coding&quot;</span>: [
+        {
+          <span style="color:#A31515;">&quot;code&quot;</span>: <span style="color:#A31515;">&quot;124&quot;</span>,
+          <span style="color:#A31515;">&quot;system&quot;</span>: <span style="color:#A31515;">&quot;http://terminology.hl7.org/CodeSystem/service-type&quot;</span>
+        }
+      ]
+    }
+  ],
+  <span style="color:#A31515;">&quot;specialty&quot;</span>: [
+    {
+      <span style="color:#A31515;">&quot;coding&quot;</span>: [
+        {
+          <span style="color:#A31515;">&quot;code&quot;</span>: <span style="color:#A31515;">&quot;010&quot;</span>,
+          <span style="color:#A31515;">&quot;system&quot;</span>: <span style="color:#A31515;">&quot;urn:oid:1.2.276.0.76.5.114&quot;</span>
+        }
+      ]
+    }
+  ],
+  <span style="color:#A31515;">&quot;participant&quot;</span>: [
+    {
+      <span style="color:#A31515;">&quot;actor&quot;</span>: {
+        <span style="color:#A31515;">&quot;display&quot;</span>: <span style="color:#A31515;">&quot;Test Patient&quot;</span>,
+        <span style="color:#A31515;">&quot;reference&quot;</span>: <span style="color:#A31515;">&quot;Patient/example&quot;</span>
+      },
+      <span style="color:#A31515;">&quot;status&quot;</span>: <span style="color:#A31515;">&quot;accepted&quot;</span>
+    }
+  ],
+  <span style="color:#A31515;">&quot;_priority&quot;</span>: {
+    <span style="color:#A31515;">&quot;extension&quot;</span>: [
+      {
+        <span style="color:#A31515;">&quot;url&quot;</span>: <span style="color:#A31515;">&quot;https://gematik.de/fhir/isik/v3/Terminplanung/StructureDefinition/ISiKTerminPriorityExtension&quot;</span>,
+        <span style="color:#A31515;">&quot;valueCodeableConcept&quot;</span>: {
+          <span style="color:#A31515;">&quot;coding&quot;</span>: [
+            {
+              <span style="color:#A31515;">&quot;code&quot;</span>: <span style="color:#A31515;">&quot;25876001&quot;</span>,
+              <span style="color:#A31515;">&quot;system&quot;</span>: <span style="color:#A31515;">&quot;http://snomed.info/sct&quot;</span>
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+</pre></div>
+</div>
+<p>Für den Fall, dass ein Termin-Repository zum aktuellen Zeitpunkt keine Terminbestätigung geben kann, wird in der Antwortnachricht zurückgegebenen Appointment-Ressource der Wert von &quot;Appointment.status&quot; auf &quot;pending&quot; gesetzt. Als HTTP-Status-Code MUSS das Termin-Repository &quot;202 - Accepted&quot; zurückgeben.
+Beispielsweise kann dies der Fall sein, falls ein Termin zunächst manuell im Termin-Repository bestätigt werden muss. Sobald ein Termin im Status &quot;pending&quot; seitens des Termin-Repository bestätigt oder abgesagt wurde, MUSS das Termin-Repository den Status des Termins auf &quot;booked&quot; bzw. &quot;canceled&quot; stellen. Sofern dieses unterstützt wird, SOLL eine Benachrichtigung des Termin-Consumers per Push-Mechanismus erfolgen (siehe auch nächster Abschnitt). In jedem Fall MUSS der Termin-Consumer über eine Lese- oder Such-Anfrage jederzeit den aktuellen Status der Terminbuchung ermitteln können.</p>
+<hr />
+<h3 id="aktualisierung-absage-eines-termins">Aktualisierung / Absage eines Termins</h3>
+<p>Es ist zu beachten, dass es aus Effizienzgründen für bestimmte Implementierungen sinnvoll sein kann, dass Updates einer Appointment-Ressource ausgelöst durch das Termin-Repository mittels eines Push-Mechanismus an Termin-Consumer / Termin-Requestor übermittelt werden. Im Standard-Fall müssen diese Akteure die Ressourcen mittels des entsprechenden Endpunktes eigenständig abfragen und auf Updates überprüfen. Für einen Push-Mechanismus wird auf <a href="https://www.hl7.org/fhir/R4/subscription.html">FHIR Subscriptions</a> verwiesen. Die vorliegende Spezifikation macht jedoch KEINE Vorgaben für die Verwendung einer solchen Methodik.</p>
+<p>Eine Aktualisierung der Ressource erfolgt mittels einer <a href="https://www.hl7.org/fhir/R4/http.html#patch">HTTP PATCH-Interaktion</a>. Updates einer Appointment-Ressource MUSS das Termin Repository unterstützen. Es MUSS mindestens die PATCH-Interaktion auf Basis einer FHIRPath-Patch-Parameter Ressource unterstützt werden.</p>
+<p>Folgende Elemente DÜRFEN NICHT durch ein Update der Ressourcen verändert werden:</p>
+<ul>
+<li>Appointment.slot</li>
+<li>Appointment.start</li>
+<li>Appointment.end</li>
+<li>Appointment.participant.actor.where(resolve() is Patient)</li>
+</ul>
+<p><strong>Hinweis:</strong> Hinweis: Ein Termin Repository MUSS einen Termin ablehnen, falls der Termin auf einen nicht vorhandenen (gelöscht oder inkativ) Patienten referenziert. Dies gilt insbesondere auch nachträglich für vorläufig angelegte Patienten-Ressourcen.</p>
+<p>Sollte die PATCH-Parameter-Ressource eins dieser Elemente verändern, MUSS die Operation mit einem Status Code &quot;HTTP 400 - Bad Request&quot; zurückgewiesen werden. Eine OperationOutcome Ressource MUSS zurückgegeben werden, die in kodierter Form den entsprechenden Fehler beschreibt.</p>
+<p>Beispiel: Absage eines Termins</p>
+<div class="lang-json editor-colors"><div style="color:Black;background-color:White;"><pre>
+{
+    <span style="color:#A31515;">&quot;resourceType&quot;</span>: <span style="color:#A31515;">&quot;Parameters&quot;</span>,
+    <span style="color:#A31515;">&quot;parameter&quot;</span>: [{
+        <span style="color:#A31515;">&quot;name&quot;</span>: <span style="color:#A31515;">&quot;operation&quot;</span>,
+        <span style="color:#A31515;">&quot;part&quot;</span>: [
+            {
+                <span style="color:#A31515;">&quot;name&quot;</span>: <span style="color:#A31515;">&quot;type&quot;</span>,
+                <span style="color:#A31515;">&quot;valueCode&quot;</span>: <span style="color:#A31515;">&quot;replace&quot;</span>
+            },
+            {
+                <span style="color:#A31515;">&quot;name&quot;</span>: <span style="color:#A31515;">&quot;path&quot;</span>,
+                <span style="color:#A31515;">&quot;valueString&quot;</span>: <span style="color:#A31515;">&quot;Appointment.status&quot;</span>
+            },
+            {
+                <span style="color:#A31515;">&quot;name&quot;</span>: <span style="color:#A31515;">&quot;value&quot;</span>,
+                <span style="color:#A31515;">&quot;valueCode&quot;</span>: <span style="color:#A31515;">&quot;canceled&quot;</span>
+            }
+        ]
+    }]
+}
+
+</pre></div>
+</div>
+<hr />
+<h3 id="anlage-einer-patient-ressource">Anlage einer Patient-Ressource</h3>
+<p>Ein Termin Repository MUSS die Anlage (Create-Interaktion) einer Patient-Ressource entsprechend der Vorgaben des <a href="https://simplifier.net/guide/Implementierungsleitfaden-ISiK-Basismodul-Stufe-3/markdown-UebergreifendeFestlegungen-UebergreifendeFestlegungen-Rest?version=current">ISiK-Basismoduls</a> unterstützen.</p>
+<hr />
+<h3 id="asynchrone-ausfuhrung-book">Asynchrone Ausführung $book</h3>
+<p>Die Operation zur Buchung eines Termin MUSS ebenfalls asynchron ausgeführt werden können, für den Fall, dass ein Termin-Repository keine Zusagen zu Antwortzeiten machen kann und so dass Problem besteht, dass der Client in einen Timeout läuft. Beispielsweise kann dies der Fall sein, wenn die Buchungsanfrage im Termin-Repository asynchrone Anfragen an andere Systeme auslöst und der Termin erst bestätigt werden kann, wenn diese durchgelaufen sind. Es gelten die Regeln der <a href="https://www.hl7.org/fhir/r4/operations.html">FHIR Kernspezifikation - Abschnitt 3.2.0.7 Executing an Operation Asynchronously</a>:</p>
+<ul>
+<li>Der Aufruf der $book-Operation erfolgte auch im asynchronen Fall durch einen POST-Request</li>
+<li>Ein HTTP-Header mit dem Namen &quot;Prefer&quot; und dem Inhalt &quot;respond-async&quot; MUSS im Aufruf der Operation enthalten sein</li>
+<li>Als HTTP-Status-Code MUSS das Termin-Repository 202 - Accepted zurückgeben</li>
+<li>Im Fehlerfall MUSS ein 4XX- oder 5XX-HTTP-Status-Code zurückgeben werden</li>
+<li>Zudem MUSS das Termin-Repository einen &quot;Content-Location&quot;-Header zurückliefern indem eine valide absolute URL enthalten ist unter welcher die oben beschriebene Appointment- bzw OperationOutcome-Ressource als Antwort auf die Buchung des Termins abgerufen werden kann</li>
+</ul>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="ig-view-footer" role="contentinfo" aria-label="Footer">
+            
+<div class="container">
+    <div class="row">
+        <p>Powered by <b>SIMPLIFIER.NET</b></p>
+        <div>
+            HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven International
+        </div>
+    </div>
+</div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

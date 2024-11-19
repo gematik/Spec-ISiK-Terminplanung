@@ -1,0 +1,99 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ISiKMedizinischeBehandlungseinheit",
+  "url": "https://gematik.de/fhir/isik/v3/Terminplanung/StructureDefinition/ISiKMedizinischeBehandlungseinheit",
+  "version": "3.0.6",
+  "name": "ISiKMedizinischeBehandlungseinheit",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-11-19",
+  "publisher": "gematik GmbH",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "HealthcareService",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/HealthcareService",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "HealthcareService.active",
+        "path": "HealthcareService.active",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.type",
+        "path": "HealthcareService.type",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.specialty",
+        "path": "HealthcareService.specialty",
+        "comment": "Kodierung aller Fachbereiche unter die die Behandlungseinheit fällt. Eine Behandlungseinheit kann multiprofessionell sein und mehere Fachbereiche abdecken.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.specialty.coding",
+        "path": "HealthcareService.specialty.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "HealthcareService.specialty.coding:Fachrichtung",
+        "path": "HealthcareService.specialty.coding",
+        "sliceName": "Fachrichtung",
+        "definition": "Einschränkung der übergreifenden MS-Definition: ein bestätigungsrelevantes System SOLL das ValueSet (http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode) implementieren, MUSS es jedoch NICHT.",
+        "comment": "Hintergrund zum MS: die MS-Änderung erfolgt als Technical Correction in Stufe 3 während der Implementierungsphase, daher ist die Abbildung dieses ValueSets nicht verpflichtend.\n\n  Hintergrund zum ValueSet: Die Wahl des hinterlegten ValueSets (http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode) wurde mit einem Mitglied der IHE Deutschland Arbeitsgruppe XDS ValueSets (https://www.ihe-d.de/projekte/xds-value-sets-fuer-deutschland/) sowie mit der KBV abgestimmt (Stand:13.06.2024).",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode"
+        }
+      },
+      {
+        "id": "HealthcareService.specialty.coding:Fachspezialisierung",
+        "path": "HealthcareService.specialty.coding",
+        "sliceName": "Fachspezialisierung",
+        "comment": "Dieses Slice SOLL NICHT genutzt werden und ist nur aufgrund der Kompatibilität beibehalten worden. Es SOLL dagegen das  ValueSet durch den Slice 'Fachrichtung' (http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode) umgesetzt werden (Stand:13.06.2024).",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ihe-d.de/ValueSets/IHEXDSauthorSpeciality"
+        }
+      },
+      {
+        "id": "HealthcareService.specialty.coding:ErweiterterFachabteilungsschluessel",
+        "path": "HealthcareService.specialty.coding",
+        "sliceName": "ErweiterterFachabteilungsschluessel",
+        "comment": "Dieses ValueSet KANN über ein Mapping (siehe Abschnitt https://wiki.hl7.de/index.php?title=IG:Value_Sets_f%C3%BCr_XDS#DocumentEntry.practiceSettingCode) mit dem ValueSet der Fachrichtung verknüpft werden und darüber ggf. die Integration von Systemen erleichtern.",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel-erweitert"
+        }
+      },
+      {
+        "id": "HealthcareService.name",
+        "path": "HealthcareService.name",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}

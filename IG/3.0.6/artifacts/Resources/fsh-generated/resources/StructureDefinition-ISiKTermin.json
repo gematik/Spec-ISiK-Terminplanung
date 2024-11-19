@@ -1,0 +1,365 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ISiKTermin",
+  "url": "https://gematik.de/fhir/isik/v3/Terminplanung/StructureDefinition/ISiKTermin",
+  "version": "3.0.6",
+  "name": "ISiKTermin",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-11-19",
+  "publisher": "gematik GmbH",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Appointment",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Appointment",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Appointment",
+        "path": "Appointment",
+        "constraint": [
+          {
+            "key": "ISiK-app-1",
+            "severity": "error",
+            "human": "Der Endzeitpunkt eines Termins MUSS nach dem Startzeitpunkt liegen",
+            "expression": "start <= end",
+            "source": "https://gematik.de/fhir/isik/v3/Terminplanung/StructureDefinition/ISiKTermin"
+          }
+        ]
+      },
+      {
+        "id": "Appointment.meta",
+        "path": "Appointment.meta",
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.meta.tag",
+        "path": "Appointment.meta.tag",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.meta.tag:Source",
+        "path": "Appointment.meta.tag",
+        "sliceName": "Source",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/ValueSet/common-meta-tag-de"
+        }
+      },
+      {
+        "id": "Appointment.extension",
+        "path": "Appointment.extension",
+        "definition": "Bedingtes Must Support - Einschränkung der übergreifenden MS-Definition: Falls ein bestätigungsrelevantes System das ISiK-Profil ISiKNachricht implementiert, MUSS das System auch dieses Element unterstützten. Andernfalls KANN das System dieses Element unterstützen.",
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.extension:Nachricht",
+        "path": "Appointment.extension",
+        "sliceName": "Nachricht",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/isik/v3/Terminplanung/StructureDefinition/ISiKNachrichtExtension"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.extension:replaces",
+        "path": "Appointment.extension",
+        "sliceName": "replaces",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Appointment.replaces"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.status",
+        "path": "Appointment.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.cancelationReason",
+        "path": "Appointment.cancelationReason",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/isik/v3/Terminplanung/ValueSet/ISiKTerminCancelationReason"
+        }
+      },
+      {
+        "id": "Appointment.serviceType",
+        "path": "Appointment.serviceType",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.serviceType.text",
+        "path": "Appointment.serviceType.text",
+        "comment": "Must-Support-Flag: Aufgrund der Bandbreite möglicher Codierungen, soll in jedem Fall der serviceType als Text implementiert werden.",
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.specialty",
+        "path": "Appointment.specialty",
+        "comment": "Optionale Angabe aller Fachbereiche aus denen ein oder mehrere Akteure für die Durchführung des Termins benötigt werden. KANN auch anhand des Kalenders, in dem ein Termin gebucht wird, ermittelt werden.",
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.specialty.coding",
+        "path": "Appointment.specialty.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.specialty.coding:Fachrichtung",
+        "path": "Appointment.specialty.coding",
+        "sliceName": "Fachrichtung",
+        "definition": "Einschränkung der übergreifenden MS-Definition: ein bestätigungsrelevantes System SOLL das ValueSet (http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode) implementieren, MUSS es jedoch NICHT.",
+        "comment": "Hintergrund zum MS: die MS-Änderung erfolgt als Technical Correction in Stufe 3 während der Implementierungsphase, daher ist die Abbildung dieses ValueSets nicht verpflichtend.\n\n  Hintergrund zum ValueSet: Die Wahl des hinterlegten ValueSets (http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode) wurde mit einem Mitglied der IHE Deutschland Arbeitsgruppe XDS ValueSets (https://www.ihe-d.de/projekte/xds-value-sets-fuer-deutschland/) sowie mit der KBV abgestimmt (Stand:13.06.2024).",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode"
+        }
+      },
+      {
+        "id": "Appointment.specialty.coding:Fachspezialisierung",
+        "path": "Appointment.specialty.coding",
+        "sliceName": "Fachspezialisierung",
+        "comment": "Dieses Slice SOLL NICHT genutzt werden und ist nur aufgrund der Kompatibilität beibehalten worden. Es SOLL dagegen das  ValueSet durch den Slice 'Fachrichtung' (http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode) umgesetzt werden (Stand:13.06.2024).",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ihe-d.de/ValueSets/IHEXDSauthorSpeciality"
+        }
+      },
+      {
+        "id": "Appointment.specialty.coding:ErweiterterFachabteilungsschluessel",
+        "path": "Appointment.specialty.coding",
+        "sliceName": "ErweiterterFachabteilungsschluessel",
+        "comment": "Dieses ValueSet KANN über ein Mapping (siehe Abschnitt https://wiki.hl7.de/index.php?title=IG:Value_Sets_f%C3%BCr_XDS#DocumentEntry.practiceSettingCode) mit dem ValueSet der Fachrichtung verknüpft werden und darüber ggf. die Integration von Systemen erleichtern.",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel-erweitert"
+        }
+      },
+      {
+        "id": "Appointment.priority",
+        "path": "Appointment.priority",
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.priority.extension",
+        "path": "Appointment.priority.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.priority.extension:Priority",
+        "path": "Appointment.priority.extension",
+        "sliceName": "Priority",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/isik/v3/Terminplanung/StructureDefinition/ISiKTerminPriorityExtension"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.start",
+        "path": "Appointment.start",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.end",
+        "path": "Appointment.end",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.slot",
+        "path": "Appointment.slot",
+        "comment": "Zur Referenzierung auf eine Slot-Ressource MUSS eine Reference.reference mit einer URL verwendet werden. Das Termin-Repository muss so gestaltet sein, dass es aus Perspektive des Clients nur eine Service-BaseUrl gibt.",
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.slot.reference",
+        "path": "Appointment.slot.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.patientInstruction",
+        "path": "Appointment.patientInstruction",
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.participant",
+        "path": "Appointment.participant",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "actor.resolve()"
+            }
+          ],
+          "rules": "open"
+        },
+        "comment": "Die Kardinalität von actor.display und das MS-Flag von .status wird an die Slices vererbt und diese sind entsprechend zu implementieren.",
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.participant.actor",
+        "path": "Appointment.participant.actor",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.participant.actor.display",
+        "path": "Appointment.participant.actor.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.participant.status",
+        "path": "Appointment.participant.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.participant:AkteurPatient",
+        "path": "Appointment.participant",
+        "sliceName": "AkteurPatient",
+        "comment": "Im ISIK-Kontext MUSS der referenzierte Patient konform zum [ISIKPatient](https://gematik.de/fhir/isik/v3/Basismodul/StructureDefinition/ISiKPatient) des Basismoduls sein.",
+        "min": 1,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.participant:AkteurPatient.actor",
+        "path": "Appointment.participant.actor",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Appointment.participant:AkteurPatient.actor.reference",
+        "path": "Appointment.participant.actor.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.participant:AkteurPersonImGesundheitsberuf",
+        "path": "Appointment.participant",
+        "sliceName": "AkteurPersonImGesundheitsberuf",
+        "comment": "Im ISIK-Kontext MUSS die referenzierte Practitioner-Ressource konform zum [ISiKPersonImGesundheitsberuf](https://gematik.de/fhir/isik/v3/Basismodul/StructureDefinition/ISiKPersonImGesundheitsberuf) des Basismoduls sein.",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.participant:AkteurPersonImGesundheitsberuf.actor",
+        "path": "Appointment.participant.actor",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Appointment.participant:AkteurPersonImGesundheitsberuf.actor.reference",
+        "path": "Appointment.participant.actor.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.participant:AkteurMedizinischeBehandlungseinheit",
+        "path": "Appointment.participant",
+        "sliceName": "AkteurMedizinischeBehandlungseinheit",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.participant:AkteurMedizinischeBehandlungseinheit.actor",
+        "path": "Appointment.participant.actor",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Appointment.participant:AkteurMedizinischeBehandlungseinheit.actor.reference",
+        "path": "Appointment.participant.actor.reference",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}
