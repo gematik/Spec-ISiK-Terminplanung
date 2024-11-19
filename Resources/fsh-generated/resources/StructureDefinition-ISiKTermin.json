@@ -6,7 +6,7 @@
   "name": "ISiKTermin",
   "status": "active",
   "experimental": false,
-  "date": "2024-10-18",
+  "date": "2024-11-11",
   "publisher": "gematik GmbH",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -116,6 +116,12 @@
         "id": "Appointment.serviceType",
         "path": "Appointment.serviceType",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Appointment.serviceType.text",
+        "path": "Appointment.serviceType.text",
+        "comment": "Must-Support-Flag: Aufgrund der Bandbreite möglicher Codierungen, soll in jedem Fall der serviceType als Text implementiert werden.",
         "mustSupport": true
       },
       {
