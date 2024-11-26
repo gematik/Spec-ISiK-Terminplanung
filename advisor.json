@@ -1,0 +1,5 @@
+{ 
+  "suppress" : [
+    "SD_PATH_SLICING_DEPRECATED"
+  ]
+}
