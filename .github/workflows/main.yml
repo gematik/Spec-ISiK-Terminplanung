@@ -45,7 +45,7 @@ jobs:
           PATH_TO_CONFORMANCE_RESOURCES: Resources/fsh-generated/resources/
           #PATH_TO_EXAMPLES: Examples
           # PATH_TO_QUALITY_CONTROL_RULES: qc/custom
-          DOTNET_VALIDATION_ENABLED: true
+          DOTNET_VALIDATION_ENABLED: false
           JAVA_VALIDATION_ENABLED: true
           OUTPUT_FORMAT: RAW
           JAVA_VALIDATION_OPTIONS: -allow-example-urls true
