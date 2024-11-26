@@ -15,7 +15,7 @@ Die Verwendung der [CapabilityStatement-Expectation](https://hl7.org/fhir/R4/ext
 
 ## CapabilityStatement (Requirement) ISiK-Terminplanung
 
-Das nachfolgende CapabilityStatement enthält repräsentiert die Anforderungen an ein Termin-Repository.
+Das nachfolgende CapabilityStatement repräsentiert die Anforderungen an ein Termin-Repository.
 
 [Link Simplifier Profil Übersicht](https://simplifier.net/isik-terminplanung-v4/isikcapabilitystatementterminplanungserver)
 
