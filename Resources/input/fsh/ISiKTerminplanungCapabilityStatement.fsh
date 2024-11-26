@@ -27,7 +27,9 @@ Das CapabilityStatement der Instanz MUSS alle Funktionalitäten auflisten, die i
 Das CapabilityStatement KANN darüber hinaus die mit `MAY` gekennzeichneten Funktionalitäten, sowie weitere Funktionalitäten auflisten, 
 sofern diese in der Instanz implementiert wurden.  
 
-Die Verwendung der CapabilityStatement-Expectation-Extension ist im CapabilityStatement der Server-Instanz nicht erforderlich."
+Die Verwendung der CapabilityStatement-Expectation-Extension ist im CapabilityStatement der Server-Instanz nicht erforderlich.
+
+Dieses CapabilityStatement repräsentiert die Anforderungen an ein Termin-Repository."
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements
 * fhirVersion = #4.0.1
@@ -44,11 +46,9 @@ Die Verwendung der CapabilityStatement-Expectation-Extension ist im CapabilitySt
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #read
-      * documentation = "ToDo"
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #search-type
-      * documentation = "ToDo"
     * insert CommonSearchParameters
     * searchParam[+]
       * insert Expectation (#SHALL)
@@ -92,9 +92,9 @@ Die Verwendung der CapabilityStatement-Expectation-Extension ist im CapabilitySt
         Weitere Details siehe [FHIR-Kernspezifikation](https://hl7.org/fhir/R4/search.html#reference).  " 
 
     * searchRevInclude[+] = "Slot:schedule"
-      * insert Expectation (#SHALL)
+      * insert Expectation (#MAY)
     * searchRevInclude[+] = "Schedule:actor"
-      * insert Expectation (#SHALL)  
+      * insert Expectation (#MAY)  
 
   * resource[+]
     * type = #Slot
@@ -168,15 +168,12 @@ Die Verwendung der CapabilityStatement-Expectation-Extension ist im CapabilitySt
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #read
-      * documentation = "ToDo"
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #search-type
-      * documentation = "ToDo"
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #patch
-      * documentation = "ToDo"
     * insert CommonSearchParameters    
     * searchParam[+]
       * insert Expectation (#SHALL) 
@@ -193,15 +190,12 @@ Die Verwendung der CapabilityStatement-Expectation-Extension ist im CapabilitySt
       * name = "service-type"
       * definition = "http://hl7.org/fhir/SearchParameter/Appointment-service-type"
       * type = #token
-      //TODO: Issue #210
       * documentation = 
         "**Beispiel:**    
         `GET [base]/Appointment?service-type=http://example.org/fhir/CodeSystem/ScheduleServiceType|CT`    
         **Anwendungshinweis:**   
         Anwendungshinweise: Bei einer Suche mit dem `:not`-Modifier MÜSSEN Ressourcen, die keinen Wert für `Appointment.serviceType` enthalten, 
-        im Suchergebnis enthalten sein. 
-        Bei einer Suche ohne den `:not`-Modifier DÜRFEN Ressourcen, die keinen Wert für `Appointment.serviceType` enthalten, 
-        NICHT im Suchergebnis enthalten sein.
+        im Suchergebnis enthalten sein.
         Weitere Details siehe [FHIR-Kernspezifikation](https://hl7.org/fhir/R4/search.html#token).  " 
     * searchParam[+]
       * insert Expectation (#SHALL) 
@@ -214,8 +208,6 @@ Die Verwendung der CapabilityStatement-Expectation-Extension ist im CapabilitySt
         **Anwendungshinweis:** 
         Anwendungshinweise: Bei einer Suche mit dem `:not`-Modifier MÜSSEN Ressourcen, die keinen Wert für `Appointment.specialty` enthalten, 
         im Suchergebnis enthalten sein. 
-        Bei einer Suche ohne den `:not`-Modifier DÜRFEN Ressourcen, die keinen Wert für `Appointment.specialty` enthalten, 
-        NICHT im Suchergebnis enthalten sein.  
         Weitere Details siehe [FHIR-Kernspezifikation](https://hl7.org/fhir/R4/search.html#token).  " 
     * searchParam[+]
       * insert Expectation (#SHALL) 
@@ -253,7 +245,7 @@ Die Verwendung der CapabilityStatement-Expectation-Extension ist im CapabilitySt
       * insert Expectation (#SHALL)
       * name = "book"
       * definition = Canonical(ISiKAppointmentBookOperation)
-      * documentation = "ToDo"
+      * documentation = "Die $book-Operation ermöglicht einem Termin-Requestor einen Termin in einem Termin-Repository zu buchen bzw. zu verschieben."
 
     * searchInclude[+] = "Appointment:slot"
       * insert Expectation (#MAY)
@@ -263,24 +255,20 @@ Die Verwendung der CapabilityStatement-Expectation-Extension ist im CapabilitySt
 
   * resource[+]
     * type = #Communication
-    * insert Expectation (#SHALL)
+    * insert Expectation (#MAY)
     * supportedProfile = "https://gematik.de/fhir/isik/StructureDefinition/ISiKNachricht"
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #read
-      * documentation = "ToDo"
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #create
-      * documentation = "ToDo"
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #update
-      * documentation = "ToDo"
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #search-type
-      * documentation = "ToDo"
     * insert CommonSearchParameters  
     * searchParam[+]
       * insert Expectation (#SHALL) 
@@ -328,11 +316,9 @@ Die Verwendung der CapabilityStatement-Expectation-Extension ist im CapabilitySt
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #read
-      * documentation = "ToDo"
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #search-type
-      * documentation = "ToDo"
     * insert CommonSearchParameters  
     * searchParam[+]
       * insert Expectation (#SHALL) 
@@ -388,8 +374,6 @@ Die Verwendung der CapabilityStatement-Expectation-Extension ist im CapabilitySt
     * interaction[+]
       * insert Expectation (#SHALL) 
       * code = #read
-      * documentation = "ToDo"
     * interaction[+]
       * insert Expectation (#SHALL) 
       * code = #create
-      * documentation = "ToDo"
