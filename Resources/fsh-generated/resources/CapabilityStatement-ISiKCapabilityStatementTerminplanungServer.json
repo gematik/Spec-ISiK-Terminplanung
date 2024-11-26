@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "description": "Dieses CapabilityStatement beschreibt alle Interaktionen \n  die ein ISiK-konformes System unterstützen MUSS bzw. KANN,\n  um das Bestätigungsverfahren für dieses Modul zu bestehen.   \n\n  Jede Instanz eines bestätigungsrelevanten Systems MUSS an ihrem Endpunkt eine CapabilityStatement-Ressource bereitstellen.\nHierzu MUSS die [capabilities-Interaktion gemäß FHIR-Kernspezifikation](https://hl7.org/fhir/R4/http.html#capabilities) unterstützt werden. \nDer `MODE`-Parameter kann ignoriert werden.  \nDas CapabilityStatement in dieser Spezifikation stellt die Anforderungen seitens der gematik dar (`kind = requirements`). \nZur Unterscheidung von Anforderungen, die erfüllt werden MÜSSEN gegenüber jenen, die erfüllt werden KÖNNEN, \nwird die [CapabilityStatement-Expectation-Extension](https://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html) mit den möglichen Werten `SHALL` (=MUSS) und `MAY` (=KANN) verwendet.  \n\nEine Server-Instanz MUSS ihrerseits ein CapabilityStatement vom `kind = instance` liefern und im Element `software` den Namen \nund die Versionsnummer angeben. \nDarüber hinaus MUSS in `CapabilityStatement.instantiates` die Canonical URL des nachfolgenden CapabilityStatements angegeben werden.  \n\nDas CapabilityStatement der Instanz MUSS alle Funktionalitäten auflisten, die im folgenden CapabilityStatement mit `SHALL` gekennzeichnet sind. \nDas CapabilityStatement KANN darüber hinaus die mit `MAY` gekennzeichneten Funktionalitäten, sowie weitere Funktionalitäten auflisten, \nsofern diese in der Instanz implementiert wurden.  \n\nDie Verwendung der CapabilityStatement-Expectation-Extension ist im CapabilityStatement der Server-Instanz nicht erforderlich.",
+  "description": "Dieses CapabilityStatement beschreibt alle Interaktionen \n  die ein ISiK-konformes System unterstützen MUSS bzw. KANN,\n  um das Bestätigungsverfahren für dieses Modul zu bestehen.   \n\n  Jede Instanz eines bestätigungsrelevanten Systems MUSS an ihrem Endpunkt eine CapabilityStatement-Ressource bereitstellen.\nHierzu MUSS die [capabilities-Interaktion gemäß FHIR-Kernspezifikation](https://hl7.org/fhir/R4/http.html#capabilities) unterstützt werden. \nDer `MODE`-Parameter kann ignoriert werden.  \nDas CapabilityStatement in dieser Spezifikation stellt die Anforderungen seitens der gematik dar (`kind = requirements`). \nZur Unterscheidung von Anforderungen, die erfüllt werden MÜSSEN gegenüber jenen, die erfüllt werden KÖNNEN, \nwird die [CapabilityStatement-Expectation-Extension](https://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html) mit den möglichen Werten `SHALL` (=MUSS) und `MAY` (=KANN) verwendet.  \n\nEine Server-Instanz MUSS ihrerseits ein CapabilityStatement vom `kind = instance` liefern und im Element `software` den Namen \nund die Versionsnummer angeben. \nDarüber hinaus MUSS in `CapabilityStatement.instantiates` die Canonical URL des nachfolgenden CapabilityStatements angegeben werden.  \n\nDas CapabilityStatement der Instanz MUSS alle Funktionalitäten auflisten, die im folgenden CapabilityStatement mit `SHALL` gekennzeichnet sind. \nDas CapabilityStatement KANN darüber hinaus die mit `MAY` gekennzeichneten Funktionalitäten, sowie weitere Funktionalitäten auflisten, \nsofern diese in der Instanz implementiert wurden.  \n\nDie Verwendung der CapabilityStatement-Expectation-Extension ist im CapabilityStatement der Server-Instanz nicht erforderlich.\n\nDieses CapabilityStatement repräsentiert die Anforderungen an ein Termin-Repository.",
   "jurisdiction": [
     {
       "coding": [
@@ -63,8 +63,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "read",
-              "documentation": "ToDo"
+              "code": "read"
             },
             {
               "extension": [
@@ -73,8 +72,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "search-type",
-              "documentation": "ToDo"
+              "code": "search-type"
             }
           ],
           "searchParam": [
@@ -182,7 +180,7 @@
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
+                  "valueCode": "MAY"
                 }
               ]
             },
@@ -190,7 +188,7 @@
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
+                  "valueCode": "MAY"
                 }
               ]
             }
@@ -357,8 +355,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "read",
-              "documentation": "ToDo"
+              "code": "read"
             },
             {
               "extension": [
@@ -367,8 +364,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "search-type",
-              "documentation": "ToDo"
+              "code": "search-type"
             },
             {
               "extension": [
@@ -377,8 +373,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "patch",
-              "documentation": "ToDo"
+              "code": "patch"
             }
           ],
           "searchParam": [
@@ -450,7 +445,7 @@
               "name": "service-type",
               "definition": "http://hl7.org/fhir/SearchParameter/Appointment-service-type",
               "type": "token",
-              "documentation": "**Beispiel:**    \n        `GET [base]/Appointment?service-type=http://example.org/fhir/CodeSystem/ScheduleServiceType|CT`    \n        **Anwendungshinweis:**   \n        Anwendungshinweise: Bei einer Suche mit dem `:not`-Modifier MÜSSEN Ressourcen, die keinen Wert für `Appointment.serviceType` enthalten, \n        im Suchergebnis enthalten sein. \n        Bei einer Suche ohne den `:not`-Modifier DÜRFEN Ressourcen, die keinen Wert für `Appointment.serviceType` enthalten, \n        NICHT im Suchergebnis enthalten sein.\n        Weitere Details siehe [FHIR-Kernspezifikation](https://hl7.org/fhir/R4/search.html#token).  "
+              "documentation": "**Beispiel:**    \n        `GET [base]/Appointment?service-type=http://example.org/fhir/CodeSystem/ScheduleServiceType|CT`    \n        **Anwendungshinweis:**   \n        Anwendungshinweise: Bei einer Suche mit dem `:not`-Modifier MÜSSEN Ressourcen, die keinen Wert für `Appointment.serviceType` enthalten, \n        im Suchergebnis enthalten sein.\n        Weitere Details siehe [FHIR-Kernspezifikation](https://hl7.org/fhir/R4/search.html#token).  "
             },
             {
               "extension": [
@@ -462,7 +457,7 @@
               "name": "specialty",
               "definition": "http://hl7.org/fhir/SearchParameter/Appointment-service-type",
               "type": "token",
-              "documentation": "**Beispiel:**    \n        `GET [base]/Appointment?specialty=urn:oid:1.2.276.0.76.5.114|535`    \n        **Anwendungshinweis:** \n        Anwendungshinweise: Bei einer Suche mit dem `:not`-Modifier MÜSSEN Ressourcen, die keinen Wert für `Appointment.specialty` enthalten, \n        im Suchergebnis enthalten sein. \n        Bei einer Suche ohne den `:not`-Modifier DÜRFEN Ressourcen, die keinen Wert für `Appointment.specialty` enthalten, \n        NICHT im Suchergebnis enthalten sein.  \n        Weitere Details siehe [FHIR-Kernspezifikation](https://hl7.org/fhir/R4/search.html#token).  "
+              "documentation": "**Beispiel:**    \n        `GET [base]/Appointment?specialty=urn:oid:1.2.276.0.76.5.114|535`    \n        **Anwendungshinweis:** \n        Anwendungshinweise: Bei einer Suche mit dem `:not`-Modifier MÜSSEN Ressourcen, die keinen Wert für `Appointment.specialty` enthalten, \n        im Suchergebnis enthalten sein. \n        Weitere Details siehe [FHIR-Kernspezifikation](https://hl7.org/fhir/R4/search.html#token).  "
             },
             {
               "extension": [
@@ -511,7 +506,7 @@
               ],
               "name": "book",
               "definition": "https://gematik.de/fhir/isik/OperationDefinition/AppointmentBook",
-              "documentation": "ToDo"
+              "documentation": "Die $book-Operation ermöglicht einem Termin-Requestor einen Termin in einem Termin-Repository zu buchen bzw. zu verschieben."
             }
           ],
           "searchInclude": [
@@ -542,7 +537,7 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-              "valueCode": "SHALL"
+              "valueCode": "MAY"
             }
           ],
           "supportedProfile": [
@@ -556,8 +551,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "read",
-              "documentation": "ToDo"
+              "code": "read"
             },
             {
               "extension": [
@@ -566,8 +560,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "create",
-              "documentation": "ToDo"
+              "code": "create"
             },
             {
               "extension": [
@@ -576,8 +569,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "update",
-              "documentation": "ToDo"
+              "code": "update"
             },
             {
               "extension": [
@@ -586,8 +578,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "search-type",
-              "documentation": "ToDo"
+              "code": "search-type"
             }
           ],
           "searchParam": [
@@ -725,8 +716,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "read",
-              "documentation": "ToDo"
+              "code": "read"
             },
             {
               "extension": [
@@ -735,8 +725,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "search-type",
-              "documentation": "ToDo"
+              "code": "search-type"
             }
           ],
           "searchParam": [
@@ -886,8 +875,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "read",
-              "documentation": "ToDo"
+              "code": "read"
             },
             {
               "extension": [
@@ -896,8 +884,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "create",
-              "documentation": "ToDo"
+              "code": "create"
             }
           ]
         }
