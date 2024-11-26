@@ -314,11 +314,11 @@ Die Verwendung der CapabilityStatement-Expectation-Extension ist im CapabilitySt
         Weitere Details siehe [FHIR-Kernspezifikation](https://hl7.org/fhir/R4/search.html#reference).  " 
 
     * searchInclude[+] = "Communication:recipient"
-      * insert Expectation (#SHALL)
+      * insert Expectation (#MAY)
     * searchInclude[+] = "Communication:sender"
-      * insert Expectation (#SHALL)
+      * insert Expectation (#MAY)
     * searchInclude[+] = "Communication:subject"
-      * insert Expectation (#SHALL)            
+      * insert Expectation (#MAY)            
 
 
   * resource[+]
