@@ -156,9 +156,9 @@ Die Verwendung der CapabilityStatement-Expectation-Extension ist im CapabilitySt
         Weitere Details siehe [FHIR-Kernspezifikation](https://hl7.org/fhir/R4/search.html#date).  " 
 
     * searchInclude[+] = "Slot:schedule"
-      * insert Expectation (#SHALL)
+      * insert Expectation (#MAY)
     * searchRevInclude[+] = "Appointment:slot"
-      * insert Expectation (#SHALL)
+      * insert Expectation (#MAY)
 
 
   * resource[+]
@@ -256,9 +256,9 @@ Die Verwendung der CapabilityStatement-Expectation-Extension ist im CapabilitySt
       * documentation = "ToDo"
 
     * searchInclude[+] = "Appointment:slot"
-      * insert Expectation (#SHALL)
+      * insert Expectation (#MAY)
     * searchInclude[+] = "Appointment:actor"
-      * insert Expectation (#SHALL)
+      * insert Expectation (#MAY)
 
 
   * resource[+]
@@ -375,11 +375,11 @@ Die Verwendung der CapabilityStatement-Expectation-Extension ist im CapabilitySt
         **Anwendungshinweis:**   
         Weitere Details siehe [FHIR-Kernspezifikation](https://hl7.org/fhir/R4/search.html#string).  " 
     * searchInclude[+] = "Schedule:actor"
-      * insert Expectation (#SHALL)  
+      * insert Expectation (#MAY)  
     * searchInclude[+] = "Communication:recipient"
-      * insert Expectation (#SHALL)   
+      * insert Expectation (#MAY)   
     * searchInclude[+] = "Appointment:actor"
-      * insert Expectation (#SHALL)                
+      * insert Expectation (#MAY)                
 
   * resource[+]
     * insert Expectation (#MAY) 
