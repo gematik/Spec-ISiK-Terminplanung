@@ -9,8 +9,7 @@ Für folgende Interaktionen werden im vorliegenden Implementierungsleitfaden Vor
 | **Termin Requestor**  | - Übermittlung von Patienteninformationen <br> - Verfügbare Behandlungsleistungen abrufen <br> - Verfügbare Terminlisten abrufen <br> - Abfrage von (verfügbaren) Terminblöcken <br> - Termin neu buchen (Buchungsmanagement von verfügbaren Terminen) <br> - Termin absagen (ausgehend vom Client) <br> - Termin verschieben (ausgehend vom Client) <br> - Terminzusatzinformationen aktualisieren (ausgehend vom Client) | Optional           |
 | **Termin Consumer**   | - Abfrage von (vereinbarten) Terminen                                                                                      | Optional           |
 
-Termin Repositories übernimmt, jedoch kein terminführendes System ist (z. B. ein Patientenportal) und die Termine mit einem weiteren Termin Repository synchronisiert (z. B. KIS). In diesem Fall übernimmt das System, welches Termine an das terminführende System sendet, die Rolle eines Termin-Requestors. Diese Option steht einem Termin Repository offen, falls es für bestimmte Use Cases notwendig ist; jedoch ist dies nicht verpflichtend für die Rolle des Termin Repositories.
-
+Zudem kann die Situation eintreten, dass ein System die Aufgaben eines Termin Repositories übernimmt, jedoch kein terminführendes System ist (z. B. ein Patientenportal) und die Termine mit einem weiteren Termin Repository synchronisiert (z. B. KIS). In diesem Fall übernimmt das System, welches Termine an das terminführende System sendet, die Rolle eines Termin-Requestors. Diese Option steht einem Termin Repository offen, falls es für bestimmte Use Cases notwendig ist; jedoch ist dies nicht verpflichtend für die Rolle des Termin Repositories.
 
 ---
 
