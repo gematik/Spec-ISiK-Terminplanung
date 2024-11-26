@@ -225,7 +225,7 @@ Folgende Elemente DÜRFEN NICHT durch ein Update der Ressourcen verändert werde
 - Appointment.end
 - Appointment.participant.actor.where(resolve() is Patient)
 
-**Hinweis:** Hinweis: Ein Termin Repository MUSS einen Termin ablehnen, falls der Termin auf einen nicht vorhandenen (gelöscht oder inkativ) Patienten referenziert. Dies gilt insbesondere auch nachträglich für vorläufig angelegte Patienten-Ressourcen.
+**Hinweis:** Ein Termin Repository MUSS einen Termin ablehnen, falls der Termin auf einen nicht vorhandenen (gelöscht oder inkativ) Patienten referenziert. Dies gilt insbesondere auch nachträglich für vorläufig angelegte Patienten-Ressourcen.
 
 Sollte die PATCH-Parameter-Ressource eins dieser Elemente verändern, MUSS die Operation mit einem Status Code "HTTP 400 - Bad Request" zurückgewiesen werden. Eine OperationOutcome Ressource MUSS zurückgegeben werden, die in kodierter Form den entsprechenden Fehler beschreibt.
 

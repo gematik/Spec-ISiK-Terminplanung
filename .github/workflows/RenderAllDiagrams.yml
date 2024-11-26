@@ -3,9 +3,7 @@ name: Render All Diagrams
 on:
   push:
     paths:
-    - '**/Material/images/src/**/*.puml'
     - '**/Material/images/src/**/*.drawio'
-    - '**/Material/images/src/**/*.bpmn'
     branches-ignore:
     - 'main**'
   
@@ -21,45 +19,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      # Installs Java distribution for running the plantUML jar
-      - name: Install Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '21'
-          check-latest: true
-      
-      # Install graphviz for plantuml     
-      - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@v2
-      
-      # Download plantUML jar 
-      - name: Download plantuml file
-        run: |
-          wget -O plantuml.jar "https://github.com/plantuml/plantuml/releases/latest/download/plantuml.jar" 
-                                
-       # Clean Folder
-      - name: Ensure and clean folder
-        run: |
-          img_dir=Material/images/diagrams
-          mkdir -p $img_dir
-          rm -rf Material/images/diagrams/*.svg
-
-      # Generate the SVGs from PUML
-      - name: Render PUML to SVG and Move files
-        run: |
-          FileNamePaths=$(find . -path "*/images/src/*/*.puml" -exec dirname {} \; | sort -u)
-          for dir in $FileNamePaths
-          do
-            # Render SVGs from PUMLs
-            find $dir -name "*.puml" -exec java -jar plantuml.jar -tsvg {} \;
-          done
-      
-      # Remove plantUML jar 
-      - name: remove plantuml file
-        run: |
-          rm -f plantuml.jar
 
       # Generate the SVGs from DrawIO
       - name: Render DrawIO to SVG with predefined action
