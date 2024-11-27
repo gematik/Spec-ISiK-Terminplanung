@@ -110,11 +110,13 @@ Begründung zu Kardinalität und Must Support: Die teilnehmenden Personen mit ei
 
 Extension: ISiKNachrichtExtension
 Id: ISiKNachrichtExtension
+Context: Appointment
 * insert Meta
 * value[x] only Reference(ISiKNachricht)
 
 Extension: ISiKTerminPriorityExtension
 Id: ISiKTerminPriorityExtension
+Context: "Appointment.priority"
 * insert Meta
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
