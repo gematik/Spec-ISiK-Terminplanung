@@ -1,0 +1,40 @@
+name: TC version update
+
+# Controls when the action will run. 
+on:
+    push:
+      branches:
+        - 'TC-*'
+        - 'TC_*'
+
+    
+    # Allows you to run this workflow manually from the Actions tab
+    workflow_dispatch:        
+
+# setup python and run script 
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+          - name: checkout repo content
+            uses: actions/checkout@v2 # checkout the repository content
+
+          - name: setup python
+            uses: actions/setup-python@v4
+            with:
+              python-version: '3.10' # install the python version needed
+
+          - name: install python packages
+            run: |
+              python -m pip install --upgrade pip
+              pip install pyyaml
+    
+          - name: execute py script # run main.py
+            run: python ./scripts/release_publish.py -b
+
+          - name: Add & Commit
+            uses: EndBug/add-and-commit@v9
+            with:
+              committer_name: GitHub Actions Bot
+              committer_email: ActionBot@github.com
+              message: auto-generated file update of TC version by GitHub Actions

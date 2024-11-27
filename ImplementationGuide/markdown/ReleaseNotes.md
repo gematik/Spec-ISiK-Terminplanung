@@ -18,9 +18,9 @@ Datum: tbd.
 
 Version 4.0.0
 
-Datum: 09.09.2024
+Datum: 01.10.2024
 
-* Releaseversion, keine inhaltlichen Änderungen zu 4.0.0-rc2
+* Aktive Version ohne weitere Änderungen 
 
 ----
 
