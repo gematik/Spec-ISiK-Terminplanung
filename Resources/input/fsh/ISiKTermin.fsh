@@ -116,7 +116,7 @@ Context: Appointment
 
 Extension: ISiKTerminPriorityExtension
 Id: ISiKTerminPriorityExtension
-Context: "Appointment.priority"
+Context: Appointment.priority
 * insert Meta
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
