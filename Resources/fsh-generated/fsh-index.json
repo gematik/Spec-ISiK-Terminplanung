@@ -4,40 +4,40 @@
     "fshName": "ISiKTerminExample",
     "fshType": "Instance",
     "fshFile": "ISiKTermin.fsh",
-    "startLine": 121,
-    "endLine": 138
+    "startLine": 97,
+    "endLine": 114
   },
   {
     "outputFile": "Appointment-ISiKTerminExampleExtendedICU.json",
     "fshName": "ISiKTerminExampleExtendedICU",
     "fshType": "Instance",
     "fshFile": "ISiKTermin.fsh",
-    "startLine": 140,
-    "endLine": 158
+    "startLine": 116,
+    "endLine": 134
   },
   {
     "outputFile": "CapabilityStatement-ISiKCapabilityStatementTerminplanungServer.json",
     "fshName": "ISiKCapabilityStatementTerminplanungServer",
     "fshType": "Instance",
     "fshFile": "ISiKTerminplanungCapabilityStatement.fsh",
-    "startLine": 2,
-    "endLine": 259
+    "startLine": 1,
+    "endLine": 395
   },
   {
     "outputFile": "Communication-ISiKNachrichtExample.json",
     "fshName": "ISiKNachrichtExample",
     "fshType": "Instance",
     "fshFile": "ISiKNachricht.fsh",
-    "startLine": 40,
-    "endLine": 49
+    "startLine": 32,
+    "endLine": 41
   },
   {
     "outputFile": "HealthcareService-ISiKMedizinischeBehandlungseinheitExample.json",
     "fshName": "ISiKMedizinischeBehandlungseinheitExample",
     "fshType": "Instance",
     "fshFile": "ISiKMedizinischeBehandlungseinheit.fsh",
-    "startLine": 31,
-    "endLine": 37
+    "startLine": 22,
+    "endLine": 28
   },
   {
     "outputFile": "OperationDefinition-ISiKAppointmentBookOperation.json",
@@ -52,16 +52,16 @@
     "fshName": "ISiKKalenderExample",
     "fshType": "Instance",
     "fshFile": "ISiKKalender.fsh",
-    "startLine": 64,
-    "endLine": 71
+    "startLine": 45,
+    "endLine": 52
   },
   {
     "outputFile": "Slot-ISiKTerminblockExample.json",
     "fshName": "ISiKTerminblockExample",
     "fshType": "Instance",
     "fshFile": "ISiKTerminblock.fsh",
-    "startLine": 25,
-    "endLine": 31
+    "startLine": 19,
+    "endLine": 25
   },
   {
     "outputFile": "StructureDefinition-ISiKKalender.json",
@@ -69,7 +69,7 @@
     "fshType": "Profile",
     "fshFile": "ISiKKalender.fsh",
     "startLine": 1,
-    "endLine": 53
+    "endLine": 34
   },
   {
     "outputFile": "StructureDefinition-ISiKMedizinischeBehandlungseinheit.json",
@@ -77,7 +77,7 @@
     "fshType": "Profile",
     "fshFile": "ISiKMedizinischeBehandlungseinheit.fsh",
     "startLine": 1,
-    "endLine": 29
+    "endLine": 20
   },
   {
     "outputFile": "StructureDefinition-ISiKNachricht.json",
@@ -85,15 +85,15 @@
     "fshType": "Profile",
     "fshFile": "ISiKNachricht.fsh",
     "startLine": 1,
-    "endLine": 38
+    "endLine": 30
   },
   {
     "outputFile": "StructureDefinition-ISiKNachrichtExtension.json",
     "fshName": "ISiKNachrichtExtension",
     "fshType": "Extension",
     "fshFile": "ISiKTermin.fsh",
-    "startLine": 104,
-    "endLine": 107
+    "startLine": 80,
+    "endLine": 83
   },
   {
     "outputFile": "StructureDefinition-ISiKTermin.json",
@@ -101,39 +101,31 @@
     "fshType": "Profile",
     "fshFile": "ISiKTermin.fsh",
     "startLine": 1,
-    "endLine": 101
-  },
-  {
-    "outputFile": "StructureDefinition-ISiKTerminKontaktMitGesundheitseinrichtung.json",
-    "fshName": "ISiKTerminKontaktMitGesundheitseinrichtung",
-    "fshType": "Profile",
-    "fshFile": "ISiKTerminKontaktMitGesundheitseinrichtung.fsh",
-    "startLine": 2,
-    "endLine": 7
+    "endLine": 78
   },
   {
     "outputFile": "StructureDefinition-ISiKTerminPriorityExtension.json",
     "fshName": "ISiKTerminPriorityExtension",
     "fshType": "Extension",
     "fshFile": "ISiKTermin.fsh",
-    "startLine": 109,
-    "endLine": 114
+    "startLine": 85,
+    "endLine": 90
   },
   {
     "outputFile": "StructureDefinition-ISiKTerminblock.json",
     "fshName": "ISiKTerminblock",
     "fshType": "Profile",
     "fshFile": "ISiKTerminblock.fsh",
-    "startLine": 2,
-    "endLine": 18
+    "startLine": 1,
+    "endLine": 12
   },
   {
     "outputFile": "StructureDefinition-ScheduleName.json",
     "fshName": "ScheduleName",
     "fshType": "Extension",
     "fshFile": "ISiKKalender.fsh",
-    "startLine": 57,
-    "endLine": 62
+    "startLine": 38,
+    "endLine": 43
   },
   {
     "outputFile": "ValueSet-ISiKTerminCancelationReason.json",
