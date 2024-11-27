@@ -5,8 +5,8 @@
   "status": "active",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "version": "4.0.0",
-  "date": "2024-10-01",
+  "version": "4.0.1",
+  "date": "2024-11-27",
   "implementationGuide": [
     "https://gematik.de/fhir/isik/ImplementationGuide/ISiK-Terminplanung"
   ],
@@ -86,7 +86,7 @@
               "name": "_id",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
               "type": "token",
-              "documentation": "**Beispiel:**    \r\n        `GET [base]/[Resourcetype]?_id=103270`    \r\n        **Anwendungshinweis:**  \r\n        Der Parameter `_id` wird selten alleinstehend verwendet, da sich zum Abruf einer Ressource \r\n        anhand der `id`  die `READ`-Interaktion besser anbietet. Der Parameter kann jedoch verwendet werden,\r\n        um den Abruf einer Ressource bspw. mit einem `_include` weiterer Ressourcen zu verbinden,\r\n        z.B. zum Abruf eines Encounters in Verbindung mit dem zugehörigen Patienten:    \r\n        `GET [base]/Encounter?_id=103270&_include=Encounter:patient` \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all).  \r\n        Dieser Suchparameter ist für die Umsetzung des IHE PDQm Profils verpflichtend."
+              "documentation": "**Beispiel:**    \n        `GET [base]/[Resourcetype]?_id=103270`    \n        **Anwendungshinweis:**  \n        Der Parameter `_id` wird selten alleinstehend verwendet, da sich zum Abruf einer Ressource \n        anhand der `id`  die `READ`-Interaktion besser anbietet. Der Parameter kann jedoch verwendet werden,\n        um den Abruf einer Ressource bspw. mit einem `_include` weiterer Ressourcen zu verbinden,\n        z.B. zum Abruf eines Encounters in Verbindung mit dem zugehörigen Patienten:    \n        `GET [base]/Encounter?_id=103270&_include=Encounter:patient` \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all).  \n        Dieser Suchparameter ist für die Umsetzung des IHE PDQm Profils verpflichtend."
             },
             {
               "extension": [
@@ -98,7 +98,7 @@
               "name": "_tag",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-tag",
               "type": "token",
-              "documentation": "**Beispiel:**    \r\n        `GET [base]/[Resourcetype]?_tag=https://example.org/codes|needs-review`    \r\n        **Anwendungshinweis:**   \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all) \r\n        sowie Abschnitt [Tags](https://www.hl7.org/fhir/R4/resource.html#simple-tags).  "
+              "documentation": "**Beispiel:**    \n        `GET [base]/[Resourcetype]?_tag=https://example.org/codes|needs-review`    \n        **Anwendungshinweis:**   \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all) \n        sowie Abschnitt [Tags](https://www.hl7.org/fhir/R4/resource.html#simple-tags).  "
             },
             {
               "extension": [
@@ -109,7 +109,7 @@
               ],
               "name": "_count",
               "type": "number",
-              "documentation": "**Beispiel:**    \r\n        `GET [base]/[Resourcetype]?_count=100`    \r\n        **Anwendungshinweis:**   \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Page Count](https://www.hl7.org/fhir/R4/search.html#count).  "
+              "documentation": "**Beispiel:**    \n        `GET [base]/[Resourcetype]?_count=100`    \n        **Anwendungshinweis:**   \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Page Count](https://www.hl7.org/fhir/R4/search.html#count).  "
             },
             {
               "extension": [
@@ -120,7 +120,7 @@
               ],
               "name": "_has",
               "type": "string",
-              "documentation": "**Beispiel:** Suche nach allen Patienten, die eine Observation  mit dem Code '1234-5' haben   \r\n        `GET [base]/Patient?_has:Observation:patient:code=1234-5`    \r\n        **Beispiel:** Suche nach allen Encountern, bei denen die Diagnose 'A12.3' gestellt wurde     \r\n        `GET [base]/Encounter?_has:Condition:encounter:code=A12.3`  \r\n        **Anwendungshinweis:**   \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Reverse Chaining](https://hl7.org/fhir/R4/search.html#has).  "
+              "documentation": "**Beispiel:** Suche nach allen Patienten, die eine Observation  mit dem Code '1234-5' haben   \n        `GET [base]/Patient?_has:Observation:patient:code=1234-5`    \n        **Beispiel:** Suche nach allen Encountern, bei denen die Diagnose 'A12.3' gestellt wurde     \n        `GET [base]/Encounter?_has:Condition:encounter:code=A12.3`  \n        **Anwendungshinweis:**   \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Reverse Chaining](https://hl7.org/fhir/R4/search.html#has).  "
             },
             {
               "extension": [
@@ -236,7 +236,7 @@
               "name": "_id",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
               "type": "token",
-              "documentation": "**Beispiel:**    \r\n        `GET [base]/[Resourcetype]?_id=103270`    \r\n        **Anwendungshinweis:**  \r\n        Der Parameter `_id` wird selten alleinstehend verwendet, da sich zum Abruf einer Ressource \r\n        anhand der `id`  die `READ`-Interaktion besser anbietet. Der Parameter kann jedoch verwendet werden,\r\n        um den Abruf einer Ressource bspw. mit einem `_include` weiterer Ressourcen zu verbinden,\r\n        z.B. zum Abruf eines Encounters in Verbindung mit dem zugehörigen Patienten:    \r\n        `GET [base]/Encounter?_id=103270&_include=Encounter:patient` \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all).  \r\n        Dieser Suchparameter ist für die Umsetzung des IHE PDQm Profils verpflichtend."
+              "documentation": "**Beispiel:**    \n        `GET [base]/[Resourcetype]?_id=103270`    \n        **Anwendungshinweis:**  \n        Der Parameter `_id` wird selten alleinstehend verwendet, da sich zum Abruf einer Ressource \n        anhand der `id`  die `READ`-Interaktion besser anbietet. Der Parameter kann jedoch verwendet werden,\n        um den Abruf einer Ressource bspw. mit einem `_include` weiterer Ressourcen zu verbinden,\n        z.B. zum Abruf eines Encounters in Verbindung mit dem zugehörigen Patienten:    \n        `GET [base]/Encounter?_id=103270&_include=Encounter:patient` \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all).  \n        Dieser Suchparameter ist für die Umsetzung des IHE PDQm Profils verpflichtend."
             },
             {
               "extension": [
@@ -248,7 +248,7 @@
               "name": "_tag",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-tag",
               "type": "token",
-              "documentation": "**Beispiel:**    \r\n        `GET [base]/[Resourcetype]?_tag=https://example.org/codes|needs-review`    \r\n        **Anwendungshinweis:**   \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all) \r\n        sowie Abschnitt [Tags](https://www.hl7.org/fhir/R4/resource.html#simple-tags).  "
+              "documentation": "**Beispiel:**    \n        `GET [base]/[Resourcetype]?_tag=https://example.org/codes|needs-review`    \n        **Anwendungshinweis:**   \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all) \n        sowie Abschnitt [Tags](https://www.hl7.org/fhir/R4/resource.html#simple-tags).  "
             },
             {
               "extension": [
@@ -259,7 +259,7 @@
               ],
               "name": "_count",
               "type": "number",
-              "documentation": "**Beispiel:**    \r\n        `GET [base]/[Resourcetype]?_count=100`    \r\n        **Anwendungshinweis:**   \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Page Count](https://www.hl7.org/fhir/R4/search.html#count).  "
+              "documentation": "**Beispiel:**    \n        `GET [base]/[Resourcetype]?_count=100`    \n        **Anwendungshinweis:**   \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Page Count](https://www.hl7.org/fhir/R4/search.html#count).  "
             },
             {
               "extension": [
@@ -270,7 +270,7 @@
               ],
               "name": "_has",
               "type": "string",
-              "documentation": "**Beispiel:** Suche nach allen Patienten, die eine Observation  mit dem Code '1234-5' haben   \r\n        `GET [base]/Patient?_has:Observation:patient:code=1234-5`    \r\n        **Beispiel:** Suche nach allen Encountern, bei denen die Diagnose 'A12.3' gestellt wurde     \r\n        `GET [base]/Encounter?_has:Condition:encounter:code=A12.3`  \r\n        **Anwendungshinweis:**   \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Reverse Chaining](https://hl7.org/fhir/R4/search.html#has).  "
+              "documentation": "**Beispiel:** Suche nach allen Patienten, die eine Observation  mit dem Code '1234-5' haben   \n        `GET [base]/Patient?_has:Observation:patient:code=1234-5`    \n        **Beispiel:** Suche nach allen Encountern, bei denen die Diagnose 'A12.3' gestellt wurde     \n        `GET [base]/Encounter?_has:Condition:encounter:code=A12.3`  \n        **Anwendungshinweis:**   \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Reverse Chaining](https://hl7.org/fhir/R4/search.html#has).  "
             },
             {
               "extension": [
@@ -387,7 +387,7 @@
               "name": "_id",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
               "type": "token",
-              "documentation": "**Beispiel:**    \r\n        `GET [base]/[Resourcetype]?_id=103270`    \r\n        **Anwendungshinweis:**  \r\n        Der Parameter `_id` wird selten alleinstehend verwendet, da sich zum Abruf einer Ressource \r\n        anhand der `id`  die `READ`-Interaktion besser anbietet. Der Parameter kann jedoch verwendet werden,\r\n        um den Abruf einer Ressource bspw. mit einem `_include` weiterer Ressourcen zu verbinden,\r\n        z.B. zum Abruf eines Encounters in Verbindung mit dem zugehörigen Patienten:    \r\n        `GET [base]/Encounter?_id=103270&_include=Encounter:patient` \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all).  \r\n        Dieser Suchparameter ist für die Umsetzung des IHE PDQm Profils verpflichtend."
+              "documentation": "**Beispiel:**    \n        `GET [base]/[Resourcetype]?_id=103270`    \n        **Anwendungshinweis:**  \n        Der Parameter `_id` wird selten alleinstehend verwendet, da sich zum Abruf einer Ressource \n        anhand der `id`  die `READ`-Interaktion besser anbietet. Der Parameter kann jedoch verwendet werden,\n        um den Abruf einer Ressource bspw. mit einem `_include` weiterer Ressourcen zu verbinden,\n        z.B. zum Abruf eines Encounters in Verbindung mit dem zugehörigen Patienten:    \n        `GET [base]/Encounter?_id=103270&_include=Encounter:patient` \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all).  \n        Dieser Suchparameter ist für die Umsetzung des IHE PDQm Profils verpflichtend."
             },
             {
               "extension": [
@@ -399,7 +399,7 @@
               "name": "_tag",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-tag",
               "type": "token",
-              "documentation": "**Beispiel:**    \r\n        `GET [base]/[Resourcetype]?_tag=https://example.org/codes|needs-review`    \r\n        **Anwendungshinweis:**   \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all) \r\n        sowie Abschnitt [Tags](https://www.hl7.org/fhir/R4/resource.html#simple-tags).  "
+              "documentation": "**Beispiel:**    \n        `GET [base]/[Resourcetype]?_tag=https://example.org/codes|needs-review`    \n        **Anwendungshinweis:**   \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all) \n        sowie Abschnitt [Tags](https://www.hl7.org/fhir/R4/resource.html#simple-tags).  "
             },
             {
               "extension": [
@@ -410,7 +410,7 @@
               ],
               "name": "_count",
               "type": "number",
-              "documentation": "**Beispiel:**    \r\n        `GET [base]/[Resourcetype]?_count=100`    \r\n        **Anwendungshinweis:**   \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Page Count](https://www.hl7.org/fhir/R4/search.html#count).  "
+              "documentation": "**Beispiel:**    \n        `GET [base]/[Resourcetype]?_count=100`    \n        **Anwendungshinweis:**   \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Page Count](https://www.hl7.org/fhir/R4/search.html#count).  "
             },
             {
               "extension": [
@@ -421,7 +421,7 @@
               ],
               "name": "_has",
               "type": "string",
-              "documentation": "**Beispiel:** Suche nach allen Patienten, die eine Observation  mit dem Code '1234-5' haben   \r\n        `GET [base]/Patient?_has:Observation:patient:code=1234-5`    \r\n        **Beispiel:** Suche nach allen Encountern, bei denen die Diagnose 'A12.3' gestellt wurde     \r\n        `GET [base]/Encounter?_has:Condition:encounter:code=A12.3`  \r\n        **Anwendungshinweis:**   \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Reverse Chaining](https://hl7.org/fhir/R4/search.html#has).  "
+              "documentation": "**Beispiel:** Suche nach allen Patienten, die eine Observation  mit dem Code '1234-5' haben   \n        `GET [base]/Patient?_has:Observation:patient:code=1234-5`    \n        **Beispiel:** Suche nach allen Encountern, bei denen die Diagnose 'A12.3' gestellt wurde     \n        `GET [base]/Encounter?_has:Condition:encounter:code=A12.3`  \n        **Anwendungshinweis:**   \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Reverse Chaining](https://hl7.org/fhir/R4/search.html#has).  "
             },
             {
               "extension": [
@@ -592,7 +592,7 @@
               "name": "_id",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
               "type": "token",
-              "documentation": "**Beispiel:**    \r\n        `GET [base]/[Resourcetype]?_id=103270`    \r\n        **Anwendungshinweis:**  \r\n        Der Parameter `_id` wird selten alleinstehend verwendet, da sich zum Abruf einer Ressource \r\n        anhand der `id`  die `READ`-Interaktion besser anbietet. Der Parameter kann jedoch verwendet werden,\r\n        um den Abruf einer Ressource bspw. mit einem `_include` weiterer Ressourcen zu verbinden,\r\n        z.B. zum Abruf eines Encounters in Verbindung mit dem zugehörigen Patienten:    \r\n        `GET [base]/Encounter?_id=103270&_include=Encounter:patient` \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all).  \r\n        Dieser Suchparameter ist für die Umsetzung des IHE PDQm Profils verpflichtend."
+              "documentation": "**Beispiel:**    \n        `GET [base]/[Resourcetype]?_id=103270`    \n        **Anwendungshinweis:**  \n        Der Parameter `_id` wird selten alleinstehend verwendet, da sich zum Abruf einer Ressource \n        anhand der `id`  die `READ`-Interaktion besser anbietet. Der Parameter kann jedoch verwendet werden,\n        um den Abruf einer Ressource bspw. mit einem `_include` weiterer Ressourcen zu verbinden,\n        z.B. zum Abruf eines Encounters in Verbindung mit dem zugehörigen Patienten:    \n        `GET [base]/Encounter?_id=103270&_include=Encounter:patient` \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all).  \n        Dieser Suchparameter ist für die Umsetzung des IHE PDQm Profils verpflichtend."
             },
             {
               "extension": [
@@ -604,7 +604,7 @@
               "name": "_tag",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-tag",
               "type": "token",
-              "documentation": "**Beispiel:**    \r\n        `GET [base]/[Resourcetype]?_tag=https://example.org/codes|needs-review`    \r\n        **Anwendungshinweis:**   \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all) \r\n        sowie Abschnitt [Tags](https://www.hl7.org/fhir/R4/resource.html#simple-tags).  "
+              "documentation": "**Beispiel:**    \n        `GET [base]/[Resourcetype]?_tag=https://example.org/codes|needs-review`    \n        **Anwendungshinweis:**   \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all) \n        sowie Abschnitt [Tags](https://www.hl7.org/fhir/R4/resource.html#simple-tags).  "
             },
             {
               "extension": [
@@ -615,7 +615,7 @@
               ],
               "name": "_count",
               "type": "number",
-              "documentation": "**Beispiel:**    \r\n        `GET [base]/[Resourcetype]?_count=100`    \r\n        **Anwendungshinweis:**   \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Page Count](https://www.hl7.org/fhir/R4/search.html#count).  "
+              "documentation": "**Beispiel:**    \n        `GET [base]/[Resourcetype]?_count=100`    \n        **Anwendungshinweis:**   \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Page Count](https://www.hl7.org/fhir/R4/search.html#count).  "
             },
             {
               "extension": [
@@ -626,7 +626,7 @@
               ],
               "name": "_has",
               "type": "string",
-              "documentation": "**Beispiel:** Suche nach allen Patienten, die eine Observation  mit dem Code '1234-5' haben   \r\n        `GET [base]/Patient?_has:Observation:patient:code=1234-5`    \r\n        **Beispiel:** Suche nach allen Encountern, bei denen die Diagnose 'A12.3' gestellt wurde     \r\n        `GET [base]/Encounter?_has:Condition:encounter:code=A12.3`  \r\n        **Anwendungshinweis:**   \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Reverse Chaining](https://hl7.org/fhir/R4/search.html#has).  "
+              "documentation": "**Beispiel:** Suche nach allen Patienten, die eine Observation  mit dem Code '1234-5' haben   \n        `GET [base]/Patient?_has:Observation:patient:code=1234-5`    \n        **Beispiel:** Suche nach allen Encountern, bei denen die Diagnose 'A12.3' gestellt wurde     \n        `GET [base]/Encounter?_has:Condition:encounter:code=A12.3`  \n        **Anwendungshinweis:**   \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Reverse Chaining](https://hl7.org/fhir/R4/search.html#has).  "
             },
             {
               "extension": [
@@ -739,7 +739,7 @@
               "name": "_id",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
               "type": "token",
-              "documentation": "**Beispiel:**    \r\n        `GET [base]/[Resourcetype]?_id=103270`    \r\n        **Anwendungshinweis:**  \r\n        Der Parameter `_id` wird selten alleinstehend verwendet, da sich zum Abruf einer Ressource \r\n        anhand der `id`  die `READ`-Interaktion besser anbietet. Der Parameter kann jedoch verwendet werden,\r\n        um den Abruf einer Ressource bspw. mit einem `_include` weiterer Ressourcen zu verbinden,\r\n        z.B. zum Abruf eines Encounters in Verbindung mit dem zugehörigen Patienten:    \r\n        `GET [base]/Encounter?_id=103270&_include=Encounter:patient` \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all).  \r\n        Dieser Suchparameter ist für die Umsetzung des IHE PDQm Profils verpflichtend."
+              "documentation": "**Beispiel:**    \n        `GET [base]/[Resourcetype]?_id=103270`    \n        **Anwendungshinweis:**  \n        Der Parameter `_id` wird selten alleinstehend verwendet, da sich zum Abruf einer Ressource \n        anhand der `id`  die `READ`-Interaktion besser anbietet. Der Parameter kann jedoch verwendet werden,\n        um den Abruf einer Ressource bspw. mit einem `_include` weiterer Ressourcen zu verbinden,\n        z.B. zum Abruf eines Encounters in Verbindung mit dem zugehörigen Patienten:    \n        `GET [base]/Encounter?_id=103270&_include=Encounter:patient` \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all).  \n        Dieser Suchparameter ist für die Umsetzung des IHE PDQm Profils verpflichtend."
             },
             {
               "extension": [
@@ -751,7 +751,7 @@
               "name": "_tag",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-tag",
               "type": "token",
-              "documentation": "**Beispiel:**    \r\n        `GET [base]/[Resourcetype]?_tag=https://example.org/codes|needs-review`    \r\n        **Anwendungshinweis:**   \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all) \r\n        sowie Abschnitt [Tags](https://www.hl7.org/fhir/R4/resource.html#simple-tags).  "
+              "documentation": "**Beispiel:**    \n        `GET [base]/[Resourcetype]?_tag=https://example.org/codes|needs-review`    \n        **Anwendungshinweis:**   \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Parameters for all resources](https://hl7.org/fhir/R4/search.html#all) \n        sowie Abschnitt [Tags](https://www.hl7.org/fhir/R4/resource.html#simple-tags).  "
             },
             {
               "extension": [
@@ -762,7 +762,7 @@
               ],
               "name": "_count",
               "type": "number",
-              "documentation": "**Beispiel:**    \r\n        `GET [base]/[Resourcetype]?_count=100`    \r\n        **Anwendungshinweis:**   \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Page Count](https://www.hl7.org/fhir/R4/search.html#count).  "
+              "documentation": "**Beispiel:**    \n        `GET [base]/[Resourcetype]?_count=100`    \n        **Anwendungshinweis:**   \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Page Count](https://www.hl7.org/fhir/R4/search.html#count).  "
             },
             {
               "extension": [
@@ -773,7 +773,7 @@
               ],
               "name": "_has",
               "type": "string",
-              "documentation": "**Beispiel:** Suche nach allen Patienten, die eine Observation  mit dem Code '1234-5' haben   \r\n        `GET [base]/Patient?_has:Observation:patient:code=1234-5`    \r\n        **Beispiel:** Suche nach allen Encountern, bei denen die Diagnose 'A12.3' gestellt wurde     \r\n        `GET [base]/Encounter?_has:Condition:encounter:code=A12.3`  \r\n        **Anwendungshinweis:**   \r\n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Reverse Chaining](https://hl7.org/fhir/R4/search.html#has).  "
+              "documentation": "**Beispiel:** Suche nach allen Patienten, die eine Observation  mit dem Code '1234-5' haben   \n        `GET [base]/Patient?_has:Observation:patient:code=1234-5`    \n        **Beispiel:** Suche nach allen Encountern, bei denen die Diagnose 'A12.3' gestellt wurde     \n        `GET [base]/Encounter?_has:Condition:encounter:code=A12.3`  \n        **Anwendungshinweis:**   \n        Weitere Details siehe FHIR-Kernspezifikation, Abschnitt [Reverse Chaining](https://hl7.org/fhir/R4/search.html#has).  "
             },
             {
               "extension": [

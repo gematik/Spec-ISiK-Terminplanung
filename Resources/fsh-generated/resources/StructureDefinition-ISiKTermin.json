@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "ISiKTermin",
   "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKTermin",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "ISiKTermin",
   "status": "active",
   "experimental": false,
-  "date": "2024-10-01",
+  "date": "2024-11-27",
   "publisher": "gematik GmbH",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -182,6 +182,16 @@
       {
         "id": "Appointment.priority.extension",
         "path": "Appointment.priority.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "comment": "Hinweis: In R5 ist die Priority ein CodeableConcept. \n  \n  Begründung zu Must Support: Dieses Element ist optional (0..1), muss jedoch implementiert werden (MS), um besonders einen Notfall als solchen ausweisen zu können.",
         "mustSupport": true
       },
