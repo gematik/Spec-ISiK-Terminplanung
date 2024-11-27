@@ -865,7 +865,7 @@
           ],
           "type": "Binary",
           "supportedProfile": [
-            "https://gematik.de/fhir/isik/v3/Basismodul/StructureDefinition/ISiKBinary"
+            "https://gematik.de/fhir/isik/StructureDefinition/ISiKBinary"
           ],
           "interaction": [
             {
