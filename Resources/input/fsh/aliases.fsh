@@ -7,3 +7,4 @@ Alias: $IHEAerztlicheFachrichtungen = http://ihe-d.de/CodeSystems/AerztlicheFach
 Alias: $capabilitystatement-expectation = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
 Alias: $FachabteilungsschluesselErweitertCS = http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert
 Alias: $FachabteilungsschluesselErweitertVS = http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel-erweitert
+Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
