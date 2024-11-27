@@ -2,15 +2,15 @@ RuleSet: Meta
 * ^status = #active
 * ^experimental = false
 * ^publisher = "gematik GmbH"
-* ^version = "4.0.0"
-* ^date = "2024-10-01"
+* ^version = "4.0.1"
+* ^date = "2024-11-27"
 
 RuleSet: MetaInstance
 * status = #active
 * experimental = false
 * publisher = "gematik GmbH"
-* version = "4.0.0"
-* date = "2024-10-01"
+* version = "4.0.1"
+* date = "2024-11-27"
 
 RuleSet: Meta-CapabilityStatement
 * insert MetaInstance

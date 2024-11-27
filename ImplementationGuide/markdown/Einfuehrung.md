@@ -1,9 +1,9 @@
 <img src="https://raw.githubusercontent.com/gematik/spec-ISiK-Terminplanung/main-stufe-4/Material/images/Gematik_Logo_Flag.svg" alt="gematik logo" width="400"/>
 
 ----
-Version: 4.0.0
+Version: 4.0.1
 
-Datum: 01.10.2024
+Datum: 27.11.2024
 
 Status: Active
 
