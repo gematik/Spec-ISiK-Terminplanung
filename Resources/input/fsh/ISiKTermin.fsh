@@ -108,7 +108,7 @@ Usage: #example
 * specialty = $IHEAerztlicheFachrichtungen#ALLG
 * participant
   * actor.display = "Test Patient"
-  * actor.reference = "Patient/example"
+  * actor.reference = "Patient/PatientTest"
   * status = #accepted
 
 Instance: ISiKTerminExampleExtendedICU
@@ -128,5 +128,34 @@ Usage: #example
 * specialty[ErweiterterFachabteilungsschluessel] = $FachabteilungsschluesselErweitertCS#3600
 * participant
   * actor.display = "Test Patient"
-  * actor.reference = "Patient/example"
+  * actor.reference = "Patient/PatientTest"
   * status = #accepted
+
+Instance: PatientTest
+InstanceOf: ISiKPatient
+Usage: #example
+* identifier[Patientennummer].type = $v2-0203#MR
+* identifier[Patientennummer].system = "https://example.com/fhir/sid/PID"
+* identifier[Patientennummer].value = "TestPID"
+* active = true
+* name[Name]
+  * family = "Fürstin von Musterfrau"
+    * extension[0].url = "http://fhir.de/StructureDefinition/humanname-namenszusatz"
+    * extension[=].valueString = "Fürstin"
+    * extension[+].url = "http://hl7.org/fhir/StructureDefinition/humanname-own-name"
+    * extension[=].valueString = "Musterfrau"
+    * extension[+].url = "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix"
+    * extension[=].valueString = "von"
+  * given = "Erika"
+  * prefix = "Dr."
+    * extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
+    * extension.valueCode = #AC
+* name[Geburtsname]
+  * family = "Gabler"
+    * extension.url = "http://hl7.org/fhir/StructureDefinition/humanname-own-name"
+    * extension.valueString = "Gabler"
+* gender = #female
+* birthDate = "1964-08-12"
+* address[0].type = #both
+* address[=].line[0] = "Musterweg 2"
+* address[=].line[+] = "3. Etage"
