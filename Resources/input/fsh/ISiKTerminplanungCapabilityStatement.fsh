@@ -370,7 +370,7 @@ Dieses CapabilityStatement repräsentiert die Anforderungen an ein Termin-Reposi
   * resource[+]
     * insert Expectation (#MAY) 
     * type = #Binary
-    * supportedProfile = "https://gematik.de/fhir/isik/StructureDefinition/ISiKBinary"
+    * supportedProfile = Canonical(ISiKBinary)
     * interaction[+]
       * insert Expectation (#SHALL) 
       * code = #read
