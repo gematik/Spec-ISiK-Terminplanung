@@ -14,7 +14,7 @@
   "context": [
     {
       "expression": "Appointment.priority",
-      "type": "fhirpath"
+      "type": "element"
     }
   ],
   "type": "Extension",
