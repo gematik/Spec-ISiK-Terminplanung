@@ -13,8 +13,8 @@
   "abstract": false,
   "context": [
     {
-      "type": "element",
-      "expression": "Element"
+      "expression": "Appointment.priority",
+      "type": "fhirpath"
     }
   ],
   "type": "Extension",

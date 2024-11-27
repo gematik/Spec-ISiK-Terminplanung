@@ -13,8 +13,8 @@
   "abstract": false,
   "context": [
     {
-      "type": "element",
-      "expression": "Element"
+      "expression": "Appointment",
+      "type": "element"
     }
   ],
   "type": "Extension",
