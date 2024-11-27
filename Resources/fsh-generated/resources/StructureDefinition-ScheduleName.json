@@ -13,8 +13,8 @@
   "abstract": false,
   "context": [
     {
-      "type": "element",
-      "expression": "Element"
+      "expression": "Schedule",
+      "type": "element"
     }
   ],
   "type": "Extension",
