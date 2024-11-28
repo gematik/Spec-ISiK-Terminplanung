@@ -16,7 +16,7 @@ Id: ISiKTermin
   * ^comment = "Einschränkung der übergreifenden MS-Definition: Falls ein bestätigungsrelevantes System das ISiK-Profil ISiKNachricht implementiert, MUSS das System auch dieses Element unterstützten. Andernfalls KANN das System dieses Element unterstützen. 
   
   Begründung zum Must Support: Nachrichten die für diesen Termin verfasst wurden können somit direkt abgerufen werden."
-* extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-Appointment.replaces named replaces 0..1 MS
+* extension contains AppointmentReplaces named replaces 0..1 MS
   * ^comment = "Begründung zum Must Support: Termineabsagen sollten verkettbar sein, da am originalen Termin noch weitere Informationen hängen können."
 * status MS
   * ^comment = "Begründung zu Must Support : Im ISiK Kontext ist der Status eines Termins von entscheidender Bedeutung, um den aktuellen Stand und die Verfügbarkeit des Termins zu kommunizieren."
@@ -121,6 +121,16 @@ Context: Appointment.priority
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
 * valueCodeableConcept from ISiKTerminPriority (required)
+
+// This extension can be safely removed as soon as a package for R5 backport extensions is published and referenced by this project
+//WIP
+Extension: AppointmentReplaces
+Id: AppointmentReplaces
+Context: Appointment
+* insert Meta
+* ^url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Appointment.replaces"
+* value[x] only Reference(Appointment)
+* valueReference 0..1
 
 Invariant: ISiK-app-1
 Description: "Der Endzeitpunkt eines Termins MUSS nach dem Startzeitpunkt liegen"
