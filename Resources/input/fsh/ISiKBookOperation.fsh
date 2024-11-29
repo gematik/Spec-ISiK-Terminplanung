@@ -6,7 +6,7 @@ Usage: #example
 * name = "ISiKAppointmentBookOperation"
 * url = "https://gematik.de/fhir/isik/OperationDefinition/AppointmentBook"
 * kind = #operation
-* name = "book"
+* name = "Book"
 * code = #book
 * resource = #Appointment
 * system = false
