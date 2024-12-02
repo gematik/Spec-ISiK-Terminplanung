@@ -1,0 +1,31 @@
+{
+  "resourceType": "HealthcareService",
+  "id": "ISiKMedizinischeBehandlungseinheitExample",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/isik/StructureDefinition/ISiKMedizinischeBehandlungseinheit"
+    ]
+  },
+  "active": true,
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "124",
+          "system": "http://terminology.hl7.org/CodeSystem/service-type"
+        }
+      ]
+    }
+  ],
+  "specialty": [
+    {
+      "coding": [
+        {
+          "code": "ALLG",
+          "system": "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen"
+        }
+      ]
+    }
+  ],
+  "name": "Allgemeine Beratungsstelle der Fachabteilung 0100"
+}

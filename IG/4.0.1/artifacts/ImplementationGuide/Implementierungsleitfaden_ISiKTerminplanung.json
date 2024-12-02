@@ -1,0 +1,128 @@
+{
+  "resourceType": "ImplementationGuide",
+  "url": "https://gematik.de/fhir/isik/ImplementationGuide/ISiK-Terminplanung",
+  "name": "Implementierungsleitfaden ISiK-Terminplanung",
+  "version": "4.0.0-rc",
+  "status": "active",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "packageId": "de.gematik.isik-terminplanung",
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "Appointment/ISiKTerminExample"
+        }
+      }
+    ],
+    "page": {
+      "nameUrl": "ImplementationGuide/markdown/Einfuehrung.md",
+      "title": "Einführung",
+      "generation": "markdown",
+      "page": [
+        {
+          "nameUrl": "ImplementationGuide/markdown/ReleaseNotes.md",
+          "title": "Release Notes",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "ImplementationGuide/markdown/Motivation.md",
+          "title": "Motivation",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "ImplementationGuide/markdown/UseCases.md",
+          "title": "Use Cases",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "ImplementationGuide/markdown/UseCases/UseCases.md",
+              "title": "Anwendungsfälle (Use Cases)",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen.md",
+          "title": "Übergreifende Festlegungen",
+          "generation": "markdown",
+          "page": [
+            {
+              "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen/BestaetigungsrelevanteSysteme.md",
+              "title": "Bestätigungsrelevante Systeme",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen/Kompatibilitaet.md",
+              "title": "Kompatibilität",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen/Akteure.md",
+              "title": "Akteure",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen/Interaktionen.md",
+              "title": "Interaktionen",
+              "generation": "markdown"
+            }
+          ]
+        },
+        {
+          "generation": "markdown",
+          "nameUrl": "ImplementationGuide/markdown/Datenobjekte.md",
+          "title": "Datenobjekte",
+          "page": [
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte/CapabilityStatement.md",
+              "title": "CapabilityStatement",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte/Operations.md",
+              "title": "Operations",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte/ISiKKalenderSchedule.md",
+              "title": "ISiKKalender (Schedule)",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte/ISiKTerminblockSlot.md",
+              "title": "ISiKTerminblock (Slot)",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte/ISiKTerminKontaktMitGesundheitseinrichtung.md",
+              "title": "ISiKTerminKontaktMitGesundheitseinrichtung (Encounter)",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte/ISiKTerminAppointment.md",
+              "title": "ISiKTermin (Appointment)",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte/ISiKNachrichtCommunication.md",
+              "title": "ISiKNachricht (Communication)",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte/ISiKMedizinischeBehandlungseinheitHealthcareService.md",
+              "title": "ISiKMedizinischeBehandlungseinheit (HealthcareService)",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/Datenobjekte/ISiKBinary.md",
+              "title": "ISiKBinary (Binary)",
+              "generation": "markdown"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

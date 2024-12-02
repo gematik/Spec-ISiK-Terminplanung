@@ -1,0 +1,89 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ISiKTerminPriority",
+  "id": "ISiKTerminPriority",
+  "description": "Enthaelt alle SNOMED Codes, die eine valide Priorität für den ISiKTermin sind",
+  "version": "4.0.1",
+  "url": "https://gematik.de/fhir/isik/ValueSet/ISiKTerminPriority",
+  "experimental": false,
+  "publisher": "gematik GmbH",
+  "date": "2024-12-02",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "709122007",
+            "display": "ASAP"
+          },
+          {
+            "code": "441808003",
+            "display": "Delayed priority"
+          },
+          {
+            "code": "103390000",
+            "display": "Elective"
+          },
+          {
+            "code": "25876001",
+            "display": "Emergency"
+          },
+          {
+            "code": "394849002",
+            "display": "High priority"
+          },
+          {
+            "code": "88694003",
+            "display": "Immediate"
+          },
+          {
+            "code": "1251527002",
+            "display": "Low priority"
+          },
+          {
+            "code": "394848005",
+            "display": "Normal priority"
+          },
+          {
+            "code": "76561005",
+            "display": "Reclassified"
+          },
+          {
+            "code": "44408006",
+            "display": "Reclassified and rescheduled"
+          },
+          {
+            "code": "64695001",
+            "display": "Repeat elective"
+          },
+          {
+            "code": "21282002",
+            "display": "Repeat emergency"
+          },
+          {
+            "code": "58334001",
+            "display": "Rescheduled"
+          },
+          {
+            "code": "50811001",
+            "display": "Routine"
+          },
+          {
+            "code": "416774000",
+            "display": "Scheduled - priority"
+          },
+          {
+            "code": "49499008",
+            "display": "Stat"
+          },
+          {
+            "code": "103391001",
+            "display": "Urgent"
+          }
+        ]
+      }
+    ]
+  }
+}

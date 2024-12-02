@@ -1,0 +1,64 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ISiKTerminblock",
+  "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKTerminblock",
+  "version": "4.0.1",
+  "name": "ISiKTerminblock",
+  "status": "active",
+  "experimental": false,
+  "date": "2024-12-02",
+  "publisher": "gematik GmbH",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Slot",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Slot",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Slot",
+        "path": "Slot",
+        "constraint": [
+          {
+            "key": "ISiK-slot-1",
+            "severity": "error",
+            "human": "Der Endzeitpunkt eines Terminsblocks MUSS nach dem Startzeitpunkt liegen",
+            "expression": "start <= end",
+            "source": "https://gematik.de/fhir/isik/StructureDefinition/ISiKTerminblock"
+          }
+        ]
+      },
+      {
+        "id": "Slot.schedule",
+        "path": "Slot.schedule",
+        "comment": "Begründung Kardinalität und MS: Die Kardinalität der reference-Eigenschaft wird auf 1..* festgelegt, um sicherzustellen, dass ein Kalender eindeutig referenziert und identifiziert werden kann.",
+        "mustSupport": true
+      },
+      {
+        "id": "Slot.schedule.reference",
+        "path": "Slot.schedule.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Slot.status",
+        "path": "Slot.status",
+        "comment": "Begründung Must Support: Dies ist wichtig, um die Verfügbarkeit von Terminen zu gewährleisten, eine Überbuchung zu verhindern und zudem einem Termin-Requestor die Möglichkeit zu bieten nur freie Termine bei der Terminbuchung anzuzeigen.",
+        "mustSupport": true
+      },
+      {
+        "id": "Slot.start",
+        "path": "Slot.start",
+        "comment": "Begründung Must Support: Dies ist wichtig, um den Zeitpunkt des Termins an einen Termin-Requestor / Termin-Consumer zu kommunizieren.",
+        "mustSupport": true
+      },
+      {
+        "id": "Slot.end",
+        "path": "Slot.end",
+        "comment": "Begründung Must Support: Dies ist wichtig, um die Länge des Termins an einen Termin-Requestor / Termin-Consumer zu kommunizieren.",
+        "mustSupport": true
+      }
+    ]
+  }
+}
