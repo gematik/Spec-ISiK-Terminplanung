@@ -6,7 +6,7 @@
   "name": "ISiKNachricht",
   "status": "active",
   "experimental": false,
-  "date": "2024-11-28",
+  "date": "2024-12-02",
   "publisher": "gematik GmbH",
   "fhirVersion": "4.0.1",
   "kind": "resource",
