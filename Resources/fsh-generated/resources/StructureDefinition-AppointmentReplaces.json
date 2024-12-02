@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "ScheduleName",
-  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Schedule.name",
+  "id": "AppointmentReplaces",
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Appointment.replaces",
   "version": "4.0.1",
-  "name": "ScheduleName",
+  "name": "AppointmentReplaces",
   "status": "active",
   "experimental": false,
   "date": "2024-12-02",
@@ -13,7 +13,7 @@
   "abstract": false,
   "context": [
     {
-      "expression": "Schedule",
+      "expression": "Appointment",
       "type": "element"
     }
   ],
@@ -30,14 +30,17 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Schedule.name"
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Appointment.replaces"
       },
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "type": [
           {
-            "code": "string"
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Appointment"
+            ]
           }
         ]
       }

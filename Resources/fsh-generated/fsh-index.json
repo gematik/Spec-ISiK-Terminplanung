@@ -4,16 +4,16 @@
     "fshName": "ISiKTerminExample",
     "fshType": "Instance",
     "fshFile": "ISiKTermin.fsh",
-    "startLine": 95,
-    "endLine": 112
+    "startLine": 97,
+    "endLine": 114
   },
   {
     "outputFile": "Appointment-ISiKTerminExampleExtendedICU.json",
     "fshName": "ISiKTerminExampleExtendedICU",
     "fshType": "Instance",
     "fshFile": "ISiKTermin.fsh",
-    "startLine": 114,
-    "endLine": 132
+    "startLine": 116,
+    "endLine": 134
   },
   {
     "outputFile": "CapabilityStatement-ISiKCapabilityStatementTerminplanungServer.json",
@@ -21,7 +21,7 @@
     "fshType": "Instance",
     "fshFile": "ISiKTerminplanungCapabilityStatement.fsh",
     "startLine": 1,
-    "endLine": 258
+    "endLine": 395
   },
   {
     "outputFile": "Communication-ISiKNachrichtExample.json",
@@ -36,8 +36,8 @@
     "fshName": "ISiKMedizinischeBehandlungseinheitExample",
     "fshType": "Instance",
     "fshFile": "ISiKMedizinischeBehandlungseinheit.fsh",
-    "startLine": 20,
-    "endLine": 26
+    "startLine": 22,
+    "endLine": 28
   },
   {
     "outputFile": "OperationDefinition-ISiKAppointmentBookOperation.json",
@@ -52,8 +52,8 @@
     "fshName": "ISiKKalenderExample",
     "fshType": "Instance",
     "fshFile": "ISiKKalender.fsh",
-    "startLine": 41,
-    "endLine": 48
+    "startLine": 45,
+    "endLine": 52
   },
   {
     "outputFile": "Slot-ISiKTerminblockExample.json",
@@ -69,7 +69,7 @@
     "fshType": "Profile",
     "fshFile": "ISiKKalender.fsh",
     "startLine": 1,
-    "endLine": 30
+    "endLine": 34
   },
   {
     "outputFile": "StructureDefinition-ISiKMedizinischeBehandlungseinheit.json",
@@ -77,7 +77,7 @@
     "fshType": "Profile",
     "fshFile": "ISiKMedizinischeBehandlungseinheit.fsh",
     "startLine": 1,
-    "endLine": 18
+    "endLine": 20
   },
   {
     "outputFile": "StructureDefinition-ISiKNachricht.json",
@@ -92,8 +92,8 @@
     "fshName": "ISiKNachrichtExtension",
     "fshType": "Extension",
     "fshFile": "ISiKTermin.fsh",
-    "startLine": 78,
-    "endLine": 81
+    "startLine": 80,
+    "endLine": 83
   },
   {
     "outputFile": "StructureDefinition-ISiKTermin.json",
@@ -101,23 +101,15 @@
     "fshType": "Profile",
     "fshFile": "ISiKTermin.fsh",
     "startLine": 1,
-    "endLine": 76
-  },
-  {
-    "outputFile": "StructureDefinition-ISiKTerminKontaktMitGesundheitseinrichtung.json",
-    "fshName": "ISiKTerminKontaktMitGesundheitseinrichtung",
-    "fshType": "Profile",
-    "fshFile": "ISiKTerminKontaktMitGesundheitseinrichtung.fsh",
-    "startLine": 1,
-    "endLine": 5
+    "endLine": 78
   },
   {
     "outputFile": "StructureDefinition-ISiKTerminPriorityExtension.json",
     "fshName": "ISiKTerminPriorityExtension",
     "fshType": "Extension",
     "fshFile": "ISiKTermin.fsh",
-    "startLine": 83,
-    "endLine": 88
+    "startLine": 85,
+    "endLine": 90
   },
   {
     "outputFile": "StructureDefinition-ISiKTerminblock.json",
@@ -132,8 +124,8 @@
     "fshName": "ScheduleName",
     "fshType": "Extension",
     "fshFile": "ISiKKalender.fsh",
-    "startLine": 34,
-    "endLine": 39
+    "startLine": 38,
+    "endLine": 43
   },
   {
     "outputFile": "ValueSet-ISiKTerminCancelationReason.json",
@@ -149,6 +141,6 @@
     "fshType": "ValueSet",
     "fshFile": "valueSets.fsh",
     "startLine": 11,
-    "endLine": 15
+    "endLine": 31
   }
 ]

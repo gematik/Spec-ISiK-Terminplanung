@@ -4,6 +4,25 @@ Im Rahmen der ISiK-Veröffentlichungen wird das [Semantic Versioning](https://se
 
 Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von Releases. Die dritte Ziffer Y (Release x.0.y) bezeichnet eine technische Korrektur und versioniert kleinere Änderungen (Packages) während eines Jahres, z. B. 1.0.1.
 
+Version 4.0.1
+
+Datum: 02.12.2024
+
+* Implizites ValueSet expandiert https://github.com/gematik/spec-ISiK-Terminplanung/pull/207
+* Dokumentation zur Begründung der Kardinalitäten und Must-Support-Flags ergänzt https://github.com/gematik/spec-ISiK-Terminplanung/pull/209
+* Für ISiKTermin Verschiebung des Slicing auf .specialty.coding. https://github.com/gematik/spec-ISiK-Terminplanung/pull/204
+* Kardinalität für Schedule.actor.display geschwächt https://github.com/gematik/spec-ISiK-Terminplanung/pull/206
+* Anforderungen an die Kodierung von Appointment/Schedule.serviceType geschwächt https://github.com/gematik/spec-ISiK-Terminplanung/pull/227
+* Schwächung der Kardinalität von actor.display im Profil StructureDefinition-ISiKTermin https://github.com/gematik/spec-ISiK-Terminplanung/pull/233
+ * Ergänzung von Anforderungen an Akteure https://github.com/gematik/spec-ISiK-Terminplanung/pull/236
+ * Fix der Canonical URL im Capability-Statement des Terminplanungsserver https://github.com/gematik/spec-ISiK-Terminplanung/pull/238
+ * Hinzufügen der Extension "Appointment Replaces" zum Profil ISiKTermin https://github.com/gematik/spec-ISiK-Terminplanung/pull/242
+ * Update der Dependency de.ihe-d.terminology auf Version 3.0.1 https://github.com/gematik/spec-ISiK-Terminplanung/pull/240
+* Korrektur des Extension Kontext in ISiKKalender https://github.com/gematik/spec-ISiK-Terminplanung/pull/239
+* Aktualisierung der Operation ISiKBookOperation https://github.com/gematik/spec-ISiK-Terminplanung/pull/245
+
+----
+
 Version 4.0.0
 
 Datum: 01.10.2024
