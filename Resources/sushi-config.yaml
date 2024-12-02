@@ -4,6 +4,6 @@ FSHOnly: true
 applyExtensionMetadataToRoot: false
 version: 4.0.1
 dependencies:
-  de.gematik.isik-basismodul: 4.0.0
+  de.gematik.isik-basismodul: 4.0.x
   de.ihe-d.terminology: 3.0.1
   hl7.fhir.extensions.r5: 4.0.1
