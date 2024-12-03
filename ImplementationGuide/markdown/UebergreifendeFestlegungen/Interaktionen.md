@@ -6,7 +6,7 @@ Für folgende Interaktionen werden im vorliegenden Implementierungsleitfaden Vor
 
 {{render:Material/images/Interaktionen/1. Übermittelung Patienteninformationen - zum Termin zugehörige Vorabinformationen.png}}
 
-Für die Auswahl eines verfügbaren Terminblocks kann es notwendig sein, dass das Termin Repository vorab durch den Termin Requestor Vorabinformationen (z.B. für die Krankenversicherung) erhält. Diese können über eine schreibende Schnittstelle an das Terminrepository übermittelt werden. Es ist zu beachten, dass das Termin Repository gegebenenfalls diese Informationen separat von eigens erstellten Datenobjekten vorhält und/oder die Information dauerhaft erst nach einer manuellen Überprüfung durch eine BenutzerIn freigibt.
+Für die Auswahl eines verfügbaren Terminblocks kann es notwendig sein, dass das Termin Repository vorab durch den Termin Requestor Vorabinformationen (z.B. für die Krankenversicherung) erhält. Diese können über eine schreibende Schnittstelle an das Terminrepository übermittelt werden. Es ist zu beachten, dass das Termin Repository gegebenenfalls diese Informationen separat von eigens erstellten Datenobjekten vorhält und/oder die Information dauerhaft erst nach einer manuellen Überprüfung durch eine Benutzer freigibt.
 
 Gleichermaßen können Informationen zum Patienten vorab übermittelt werden, sodass gewisse Basisangaben bereits im Terminrepository vorliegen.
 
@@ -40,7 +40,7 @@ Siehe {{pagelink:ImplementationGuide/markdown/Datenobjekte/ISiKTerminblockSlot.m
 
 {{render:Material/images/Interaktionen/5. Termin neu buchen - Buchungsmanagemnent von verfügbaren Terminen.png}}
 
-Für einen durch die BenutzerIn ausgewählten Terminblock bzw. mehreren aufeinander folgenden Terminblöcken kann durch den Termin Requestor ein Termin angefragt werden. Dieser kann direkt oder erst nach manueller Bestätigung durch das Termin Repository freigegeben werden.
+Für einen durch den Benutzer ausgewählten Terminblock bzw. mehreren aufeinander folgenden Terminblöcken kann durch den Termin Requestor ein Termin angefragt werden. Dieser kann direkt oder erst nach manueller Bestätigung durch das Termin Repository freigegeben werden.
 
 Es ist zu beachten, dass innerhalb dieser Aktion ein terminführendes Termin Repository die Rolle des Termin Requestors übernehmen kann und den neu-angelegten Termin in ein weiteres Terminrepository spiegelt.
 
