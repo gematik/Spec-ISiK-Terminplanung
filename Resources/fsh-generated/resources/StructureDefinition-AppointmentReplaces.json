@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "ISiKTerminPriorityExtension",
-  "url": "https://gematik.de/fhir/isik/StructureDefinition/ISiKTerminPriorityExtension",
+  "id": "AppointmentReplaces",
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Appointment.replaces",
   "version": "4.0.2",
-  "name": "ISiKTerminPriorityExtension",
+  "name": "AppointmentReplaces",
   "status": "active",
   "experimental": false,
   "date": "2024-12-05",
@@ -13,7 +13,7 @@
   "abstract": false,
   "context": [
     {
-      "expression": "Appointment.priority",
+      "expression": "Appointment",
       "type": "element"
     }
   ],
@@ -30,22 +30,19 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://gematik.de/fhir/isik/StructureDefinition/ISiKTerminPriorityExtension"
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Appointment.replaces"
       },
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
-        "min": 1,
         "type": [
           {
-            "code": "CodeableConcept"
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Appointment"
+            ]
           }
-        ],
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/isik/ValueSet/ISiKTerminPriority"
-        }
+        ]
       }
     ]
   }

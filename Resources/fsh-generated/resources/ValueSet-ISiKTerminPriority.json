@@ -4,11 +4,11 @@
   "name": "ISiKTerminPriority",
   "id": "ISiKTerminPriority",
   "description": "Enthaelt alle SNOMED Codes, die eine valide Priorität für den ISiKTermin sind",
-  "version": "4.0.0",
+  "version": "4.0.2",
   "url": "https://gematik.de/fhir/isik/ValueSet/ISiKTerminPriority",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2024-09-09",
+  "date": "2024-12-05",
   "compose": {
     "include": [
       {

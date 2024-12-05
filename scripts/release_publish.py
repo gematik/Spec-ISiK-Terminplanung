@@ -28,6 +28,13 @@ def get_new_release_version_from_branch_name() -> str:
     return git_branch
 
 
+def modify_TC_branch_name_to_version(git_branch): 
+    if git_branch.startswith('TC-'):
+        version = git_branch.lstrip('TC-')
+    elif git_branch.startswith('TC_'):
+        version = git_branch.lstrip('TC_')
+    return version
+
 def create_files_to_update_list(config):
     files_to_update = []
     for filename, replacements in config.items():
@@ -135,6 +142,8 @@ def main():
         new_release_version = args.version
     elif args.branch:
         new_release_version = get_new_release_version_from_branch_name()
+        if new_release_version.startswith('TC'):
+            new_release_version = modify_TC_branch_name_to_version(new_release_version)
     else:
         parser.error('No new release version specified. Please use either -v or -b to specify the new release version.')
 

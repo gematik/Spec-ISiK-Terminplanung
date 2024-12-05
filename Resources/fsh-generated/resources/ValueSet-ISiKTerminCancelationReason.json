@@ -4,11 +4,11 @@
   "name": "ISiKTerminCancelationReason",
   "id": "ISiKTerminCancelationReason",
   "description": "Enthaelt alle erlaubten Gruende fuer eine Stornierung eines ISiKTermins",
-  "version": "4.0.0",
+  "version": "4.0.2",
   "url": "https://gematik.de/fhir/isik/ValueSet/ISiKTerminCancelationReason",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2024-09-09",
+  "date": "2024-12-05",
   "compose": {
     "include": [
       {
