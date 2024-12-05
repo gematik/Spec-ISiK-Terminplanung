@@ -18,7 +18,7 @@ on:
     
 jobs:
   call-tool-update:
-    uses: gematik/spec-isik-basismodul/.github/workflows/main.yml@main-stufe-4
+    uses: gematik/spec-isik-basismodul/.github/workflows/main.yml@main-isik-stufe-4
     secrets:
       SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
       SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
