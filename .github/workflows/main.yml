@@ -45,6 +45,7 @@ jobs:
       - name: pwd
         run: |
           pwd
+          ls
         
       # Java and .NET are already installed on ubuntu-latest
         
