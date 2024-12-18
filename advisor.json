@@ -1,11 +1,11 @@
 { 
-  "suppress" : [
+  "suppress" : 
     "SD_PATH_SLICING_DEPRECATED",
     "TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE@CapabilityStatement.implementationGuide",
-    "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6",
+    "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"
     "Terminology_TX_NoValid_3_CC@HealthcareService.specialty",
     "Terminology_TX_NoValid_3_CC@Appointment.specialty",
     "Terminology_TX_NoValid_3_CC@Schedule.specialty",
     "This_element_does_not_match_any_known_slice_"
-  ]
+  
 }
