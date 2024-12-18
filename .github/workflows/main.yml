@@ -46,11 +46,10 @@ jobs:
 
       - name: pwd
         run: |
-          pwd
-          ls
           echo $LANG
+          echo 'LANG'
           echo $LC_ALL
-          echo 'Test'
+          echo 'LC_ALL'
         
       # Java and .NET are already installed on ubuntu-latest
         
