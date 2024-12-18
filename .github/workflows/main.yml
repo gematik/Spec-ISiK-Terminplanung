@@ -50,7 +50,7 @@ jobs:
       # Java and .NET are already installed on ubuntu-latest
         
       - name: Firely.Terminal (GitHub Actions)
-        uses: FirelyTeam/firely-terminal-pipeline@v0.4.6
+        uses: FirelyTeam/firely-terminal-pipeline@v0.4.7-alpha3
         with:
           PATH_TO_CONFORMANCE_RESOURCES: Resources/fsh-generated/resources/
           #PATH_TO_EXAMPLES: Examples
@@ -64,6 +64,7 @@ jobs:
           SUSHI_ENABLED: true
           SUSHI_OPTIONS: Resources/
           EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_CONFORMANCE_JAVA VALIDATION_EXAMPLES_JAVA
+          JAVA_VALIDATOR_DOWNLOAD_LOCATION: https://ig.fhir.de/download/org.hl7.fhir.validation.cli-6.5.2-SNAPSHOT.jar
 
       - name: Add & Commit
         uses: EndBug/add-and-commit@v9
