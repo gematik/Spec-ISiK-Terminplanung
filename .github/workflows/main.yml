@@ -48,6 +48,9 @@ jobs:
         run: |
           pwd
           ls
+          echo $LANG
+          echo $LC_ALL
+          echo 'Test'
         
       # Java and .NET are already installed on ubuntu-latest
         
