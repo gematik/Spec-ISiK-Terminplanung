@@ -5,10 +5,10 @@
   "status": "active",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "version": "3.0.6",
-  "date": "2024-11-19",
+  "version": "3.0.7",
+  "date": "2025-01-03",
   "implementationGuide": [
-    "https://gematik.de/fhir/isik/v3/Terminplanung/ImplementationGuide|3.0.6"
+    "https://gematik.de/fhir/isik/v3/Terminplanung/ImplementationGuide|3.0.7"
   ],
   "name": "ISiKCapabilityStatementTerminplanungServer",
   "title": "ISiK CapabilityStatement Terminplanung Server",
@@ -76,6 +76,15 @@
                 }
               ],
               "code": "search-type"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
             }
           ],
           "searchParam": [
@@ -133,6 +142,17 @@
               "name": "actor",
               "definition": "http://hl7.org/fhir/SearchParameter/Schedule-actor",
               "type": "reference"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "gender",
+              "definition": "http://hl7.org/fhir/SearchParameter/individual-gender",
+              "type": "token"
             }
           ],
           "searchRevInclude": [
@@ -427,9 +447,9 @@
               "valueCode": "MAY"
             }
           ],
-          "type": "Communication",
+          "type": "Encounter",
           "supportedProfile": [
-            "https://gematik.de/fhir/isik/v3/Terminplanung/StructureDefinition/ISiKNachricht"
+            "https://gematik.de/fhir/isik/v3/Terminplanung/StructureDefinition/ISiKTerminKontaktMitGesundheitseinrichtung"
           ],
           "interaction": [
             {
