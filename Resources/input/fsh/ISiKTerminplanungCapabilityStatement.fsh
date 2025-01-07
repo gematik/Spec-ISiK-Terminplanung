@@ -29,7 +29,14 @@ sofern diese in der Instanz implementiert wurden.
 
 Die Verwendung der CapabilityStatement-Expectation-Extension ist im CapabilityStatement der Server-Instanz nicht erforderlich.
 
-Dieses CapabilityStatement repräsentiert die Anforderungen an ein Termin-Repository."
+Dieses CapabilityStatement repräsentiert die Anforderungen an ein Termin-Repository.
+
+**HISTORIE:**    
+ 
+* `change` Die Verbindlichkeit des Suchaparameters `subject` in Communication wurde von SHALL auf MAY reduziert. 
+Statt dessen wird der neue verbindliche Suchparameter `patient` eingeführt. Die geschieht zur Harmonisierung der Suchparameter mit den anderen ISiK-Modulen.  
+* `change` Die Verbindlichkeit von Include und RevInclude wurde von SHALL auf MAY reduziert, außer bei den Parameter `patient` und `encounter`, da diese für ISiK-Zwecke ausreichend sind.  
+"
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements
 * fhirVersion = #4.0.1
@@ -271,13 +278,23 @@ Dieses CapabilityStatement repräsentiert die Anforderungen an ein Termin-Reposi
       * code = #search-type
     * insert CommonSearchParameters  
     * searchParam[+]
-      * insert Expectation (#SHALL) 
+      * insert Expectation (#MAY) 
       * name = "subject"
       * definition = "http://hl7.org/fhir/SearchParameter/Communication-subject"
       * type = #reference
       * documentation = 
         "**Beispiel:**    
         `GET [base]/Communication?subject=Patient/ISiKPatientExample`    
+        **Anwendungshinweis:**   
+        Weitere Details siehe [FHIR-Kernspezifikation](https://hl7.org/fhir/R4/search.html#reference).  " 
+    * searchParam[+]
+      * insert Expectation (#SHALL) 
+      * name = "patient"
+      * definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
+      * type = #reference
+      * documentation = 
+        "**Beispiel:**    
+        `GET [base]/Communication?patient=Patient/ISiKPatientExample`    
         **Anwendungshinweis:**   
         Weitere Details siehe [FHIR-Kernspezifikation](https://hl7.org/fhir/R4/search.html#reference).  " 
     * searchParam[+]
