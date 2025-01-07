@@ -58,8 +58,6 @@ Datum: 4.4.2024
 * Fix CpS by @alexzautke in https://github.com/gematik/spec-ISiK-Terminplanung/pull/179
 * Klarstellung cancelled-appt-id by @alexzautke in https://github.com/gematik/spec-ISiK-Terminplanung/pull/177
 
-**Full Changelog**: https://github.com/gematik/spec-ISiK-Terminplanung/compare/v3.0.3...v.4.0.0-rc
-
 ----
 
 Version: 3.0.4
@@ -90,8 +88,6 @@ Datum: 03.01.2024
 * Klärung zur Verwendung der Ressourcen aus dem Basismodul: Feature/ptdata 723 update interactions by @f-peverali in https://github.com/gematik/spec-ISiK-Terminplanung/pull/158
 * Klärung zur Nutzung der ISiKNachricht;  Feature/clarify bidirectional anfisk 178 by @f-peverali in https://github.com/gematik/spec-ISiK-Terminplanung/pull/160
 
-**Full Changelog**: https://github.com/gematik/spec-ISiK-Terminplanung/compare/v3.0.1...v3.0.2
-
 ----
 Version: 3.0.1
 
@@ -113,11 +109,6 @@ Mit dem Release der Stufe 3.0.1 werden die unten gelisteten Änderungen normativ
 * BookOperation Anforderung von KANN zu SOLLTE by @alexzautke in https://github.com/gematik/spec-ISiK-Terminplanung/pull/143
 * Austausch der Communication/Binary-Ressourcen genauer beschrieben by @alexzautke in https://github.com/gematik/spec-ISiK-Terminplanung/pull/140
 * Enhancement: Appointment and Slot reference MS by @f-peverali in https://github.com/gematik/spec-ISiK-Terminplanung/pull/133
-
-
-**Full Changelog**: https://github.com/gematik/spec-ISiK-Terminplanung/compare/v.2.0.3...v3.0.1
-
-
 
 ----
 Version: 3.0.0
@@ -159,8 +150,6 @@ Datum: 04.04.2023
   * Hinweise zu den erwarteten Ergebnissen bei Suchanfragen auf "sepcialty" und "serviceType" in Fällen, bei denen diese Elemente keinen Wert haben.
 * ISiKBookOperation : Für die Abbildung eines manuellen Buchungsprozesses wurden die Vorgaben zu den Return Values beim Appointment.status um "pending" erweitert
   * in  Enhancement/appointment by @jcaumann in <https://github.com/gematik/spec-ISiK-Terminplanung/pull/79>
-
-**Full Changelog**: <https://github.com/gematik/spec-ISiK-Terminplanung/compare/master...3.0.0-rc1>
 
 ____
 Version: 2.0.3
