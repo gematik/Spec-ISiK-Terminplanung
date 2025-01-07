@@ -7,7 +7,14 @@ Usage: #definition
 * title = "ISiK CapabilityStatement Terminplanung Server"
 * contact.telecom.system = #url
 * contact.telecom.value = "https://www.gematik.de"
-* description = "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein ISiK-konformes System unterstützen muss um das Bestätigungsverfahren des Moduls 'Terminplanung' zu bestehen."
+* description = "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein ISiK-konformes System unterstützen muss um das Bestätigungsverfahren des Moduls 'Terminplanung' zu bestehen.  
+
+**HISTORIE:**    
+
+* `change` Die Verbindlichkeit des Suchaparameters `subject` in Communication wurde von SHALL auf MAY reduziert. 
+Statt dessen wird der neue verbindliche Suchparameter `patient` eingeführt. Die geschieht zur Harmonisierung der Suchparameter mit den anderen ISiK-Modulen.  
+* `change` Die Verbindlichkeit von Include und RevInclude wurde von SHALL auf MAY reduziert, außer bei den Parameter `patient` und `encounter`, da diese für ISiK-Zwecke ausreichend sind.  
+"
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements
 * fhirVersion = #4.0.1
@@ -149,10 +156,10 @@ Usage: #definition
 * rest.resource[=].operation[=].definition = Canonical(ISiKAppointmentBookOperation)
 * rest.resource[=].searchInclude = "Appointment:slot"
 * rest.resource[=].searchInclude[=].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchInclude[=].extension.valueCode = #MAY
 * rest.resource[=].searchInclude[+] = "Appointment:actor"
 * rest.resource[=].searchInclude[=].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchInclude[=].extension.valueCode = #MAY
 * rest.resource[+].extension.url = $capabilitystatement-expectation
 * rest.resource[=].extension.valueCode = #MAY
 * rest.resource[=].type = #Communication
@@ -175,9 +182,13 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
+* rest.resource[=].searchParam[=].extension.valueCode = #MAY
 * rest.resource[=].searchParam[=].name = "subject"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Communication-subject"
+* rest.resource[=].searchParam[+].extension.url = $capabilitystatement-expectation
+* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
+* rest.resource[=].searchParam[=].name = "patient"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = $capabilitystatement-expectation
 * rest.resource[=].searchParam[=].extension.valueCode = #SHALL
@@ -191,10 +202,10 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchInclude = "Communication:recipient"
 * rest.resource[=].searchInclude[=].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchInclude[=].extension.valueCode = #MAY
 * rest.resource[=].searchInclude = "Communication:sender"
 * rest.resource[=].searchInclude[=].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchInclude[=].extension.valueCode = #MAY
 * rest.resource[=].searchInclude[+] = "Communication:subject"
 * rest.resource[=].searchInclude[=].extension.url = $capabilitystatement-expectation
 * rest.resource[=].searchInclude[=].extension.valueCode = #SHALL
