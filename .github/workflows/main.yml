@@ -50,7 +50,7 @@ jobs:
       - name: DownloadValidator
         run: |
           mkdir -p ~/.fhir/validators
-          curl -L -o ~/.fhir/validators/validator_cli.jar https://ig.fhir.de/download/validator_cli.jar
+          curl -L -o ~/.fhir/validators/validator_cli.jar https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar
           echo "FHIR Validator downloaded."
 
       - name: Validate Resources with FHIR Validator
