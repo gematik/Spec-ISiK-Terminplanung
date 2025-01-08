@@ -46,30 +46,49 @@ jobs:
         run: |
           pwd
           ls
+
+      - name: DownloadValidator
+        run: |
+          mkdir -p ~/.fhir/validators
+          curl -L -o ~/.fhir/validators/validator_cli.jar https://ig.fhir.de/download/validator_cli.jar
+          echo "FHIR Validator downloaded."
+
+      - name: Validate Resources with FHIR Validator
+        run: |
+          java -jar ~/.fhir/validators/validator_cli.jar \
+          Resources/fsh-generated/resources \
+          -version 4.0 \
+          -ig Resources/fsh-generated/resources \
+          -ig de.gematik.isik-basismodul \
+          -ig de.ihe-d.terminology \
+          -advisor-file advisor.json \
+          -allow-example-urls true \
+          -output-style compact \
+          -show-message-ids
         
       # Java and .NET are already installed on ubuntu-latest
         
-      - name: Firely.Terminal (GitHub Actions)
-        uses: FirelyTeam/firely-terminal-pipeline@v0.4.7-alpha4
-        with:
-          PATH_TO_CONFORMANCE_RESOURCES: Resources/fsh-generated/resources/
-          #PATH_TO_EXAMPLES: Examples
-          # PATH_TO_QUALITY_CONTROL_RULES: qc/custom
-          DOTNET_VALIDATION_ENABLED: false
-          JAVA_VALIDATION_ENABLED: true
-          OUTPUT_FORMAT: RAW
-          JAVA_VALIDATION_OPTIONS: -allow-example-urls true -advisor-file advisor.json -output-style compact -show-message-ids
-          SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
-          SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
-          SUSHI_ENABLED: true
-          SUSHI_OPTIONS: Resources/
-          EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_CONFORMANCE_JAVA VALIDATION_EXAMPLES_JAVA
-          JAVA_VALIDATOR_DOWNLOAD_LOCATION: https://ig.fhir.de/download/validator_cli.jar
-
-      - name: Add & Commit
-        uses: EndBug/add-and-commit@v9
-        with:
-          committer_name: GitHub Actions Bot
-          committer_email: ActionBot@github.com
-          add: 'Resources/fsh-generated/resources/'
-          message: auto-generated FHIR files by GitHub Actions (CI FSH to FHIR Validation)
+#      - name: Firely.Terminal (GitHub Actions)
+#        uses: FirelyTeam/firely-terminal-pipeline@v0.4.7-alpha4
+#        with:
+#          PATH_TO_CONFORMANCE_RESOURCES: Resources/fsh-generated/resources/
+#          #PATH_TO_EXAMPLES: Examples
+#          # PATH_TO_QUALITY_CONTROL_RULES: qc/custom
+#          DOTNET_VALIDATION_ENABLED: false
+#          JAVA_VALIDATION_ENABLED: true
+#          OUTPUT_FORMAT: RAW
+#          JAVA_VALIDATION_OPTIONS: -allow-example-urls true -advisor-file advisor.json -output-style compact -show-message-ids
+#          SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
+#          SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
+#          SUSHI_ENABLED: true
+#          SUSHI_OPTIONS: Resources/
+#          EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_CONFORMANCE_JAVA VALIDATION_EXAMPLES_JAVA
+#          JAVA_VALIDATOR_DOWNLOAD_LOCATION: https://ig.fhir.de/download/validator_cli.jar
+#
+#      - name: Add & Commit
+#        uses: EndBug/add-and-commit@v9
+#        with:
+#          committer_name: GitHub Actions Bot
+#          committer_email: ActionBot@github.com
+#          add: 'Resources/fsh-generated/resources/'
+#          message: auto-generated FHIR files by GitHub Actions (CI FSH to FHIR Validation)
