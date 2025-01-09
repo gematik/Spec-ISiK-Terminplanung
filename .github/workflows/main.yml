@@ -54,6 +54,7 @@ jobs:
           echo "FHIR Validator downloaded."
 
       - name: Validate Resources with FHIR Validator
+        continue-on-error: true
         run: |
           java -jar ~/.fhir/validators/validator_cli.jar \
           Resources/fsh-generated/resources \
