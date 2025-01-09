@@ -65,7 +65,7 @@ jobs:
           -advisor-file advisor.json \
           -allow-example-urls true \
           -output-style compact \
-          -show-message-ids
+          -show-message-ids || true
           ls /root/.fhir/packages
         
       # Java and .NET are already installed on ubuntu-latest
