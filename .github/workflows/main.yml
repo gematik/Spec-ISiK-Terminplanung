@@ -60,8 +60,8 @@ jobs:
           Resources/fsh-generated/resources \
           -version 4.0 \
           -ig Resources/fsh-generated/resources \
-          -ig de.gematik.isik-basismodul \
-          -ig de.ihe-d.terminology \
+          -ig de.gematik.isik-basismodul#4.0.1 \
+          -ig de.ihe-d.terminology#3.0.1 \
           -advisor-file advisor.json \
           -allow-example-urls true \
           -output-style compact \
