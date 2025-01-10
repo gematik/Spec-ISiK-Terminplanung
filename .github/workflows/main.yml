@@ -96,7 +96,7 @@ jobs:
           message: auto-generated FHIR files by GitHub Actions (CI FSH to FHIR Validation)
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: fhir-package-cache
           path: |
