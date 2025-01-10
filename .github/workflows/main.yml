@@ -94,3 +94,10 @@ jobs:
           committer_email: ActionBot@github.com
           add: 'Resources/fsh-generated/resources/'
           message: auto-generated FHIR files by GitHub Actions (CI FSH to FHIR Validation)
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: fhir-package-cache
+          path: |
+            /home/runner/.fhir/packages/*
