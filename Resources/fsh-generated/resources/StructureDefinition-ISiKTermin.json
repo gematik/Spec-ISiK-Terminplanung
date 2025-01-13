@@ -182,16 +182,6 @@
       {
         "id": "Appointment.priority.extension",
         "path": "Appointment.priority.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
         "comment": "Hinweis: In R5 ist die Priority ein CodeableConcept. \n  \n  Begründung zu Must Support: Dieses Element ist optional (0..1), muss jedoch implementiert werden (MS), um besonders einen Notfall als solchen ausweisen zu können.",
         "mustSupport": true
       },
