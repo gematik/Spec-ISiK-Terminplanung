@@ -175,3 +175,10 @@ Usage: #example
   * actor.display = "Test Patient"
   * actor.reference = "Patient/example"
   * status = #accepted
+
+Instance: ISiKPatientTest
+InstanceOf: Patient
+Usage: #example
+* active = true
+* name[+].family = "Test"
+* name[=].given[0] = "Patient"
