@@ -153,7 +153,7 @@ Usage: #example
 * specialty = $IHEAerztlicheFachrichtungen#ALLG
 * participant
   * actor.display = "Test Patient"
-  * actor.reference = "Patient/example"
+  * actor.reference = "Patient/ISiKPatientTest"
   * status = #accepted
 
 Instance: ISiKTerminExampleExtendedICU
@@ -173,12 +173,12 @@ Usage: #example
 * specialty.coding[ErweiterterFachabteilungsschluessel] = $FachabteilungsschluesselErweitertCS#3600
 * participant
   * actor.display = "Test Patient"
-  * actor.reference = "Patient/example"
+  * actor.reference = "Patient/ISiKPatientTest"
   * status = #accepted
 
 Instance: ISiKPatientTest
 InstanceOf: Patient
 Usage: #example
 * active = true
-* name[+].family = "Test"
-* name[=].given[0] = "Patient"
+* name[+].family = "Patient"
+* name[=].given[0] = "Test"
