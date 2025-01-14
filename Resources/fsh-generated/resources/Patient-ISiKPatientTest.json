@@ -4,9 +4,9 @@
   "active": true,
   "name": [
     {
-      "family": "Test",
+      "family": "Patient",
       "given": [
-        "Patient"
+        "Test"
       ]
     }
   ]
