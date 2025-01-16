@@ -1,8 +1,6 @@
-# This is a basic workflow to help you get started with Actions
+name: Use Basis main Stufe 4 main.yml
 
-name: CI (FHIR Validation)
-
-# Controls when the action will run. 
+# Controls when the action will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
@@ -14,51 +12,13 @@ on:
     branches:
     - 'main**'
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  # Allows you to run this workflow manually from the Actions tab      
+  workflow_dispatch: 
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-
-  # Validate all resources using Firely Terminal 
-  CI_FHIR_VALIDATION:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-    
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      - name: Checkout code (PR)
-        uses: actions/checkout@v4
-        if: github.event_name == 'pull_request'
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
-      
-      - name: Checkout code (Main)
-        uses: actions/checkout@v4
-        if: github.event_name != 'pull_request'
-        
-      # Java and .NET are already installed on ubuntu-latest
-        
-      - name: Firely.Terminal (GitHub Actions)
-        uses: FirelyTeam/firely-terminal-pipeline@v0.4.5
-        with:
-          PATH_TO_CONFORMANCE_RESOURCES: Resources/fsh-generated/resources/
-          #PATH_TO_EXAMPLES: Examples
-          # PATH_TO_QUALITY_CONTROL_RULES: qc/custom
-          DOTNET_VALIDATION_ENABLED: false
-          JAVA_VALIDATION_ENABLED: true
-          OUTPUT_FORMAT: RAW
-          JAVA_VALIDATION_OPTIONS: -allow-example-urls true
-          SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
-          SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
-          SUSHI_ENABLED: true
-          SUSHI_OPTIONS: Resources/
-          EXPECTED_FAILS: VALIDATION_CONFORMANCE_DOTNET VALIDATION_CONFORMANCE_JAVA VALIDATION_EXAMPLES_JAVA
-
-      - name: Add & Commit
-        uses: EndBug/add-and-commit@v9
-        with:
-          committer_name: GitHub Actions Bot
-          committer_email: ActionBot@github.com
-          add: 'Resources/fsh-generated/resources/'
-          message: auto-generated FHIR files by GitHub Actions (CI FSH to FHIR Validation)
+  call-tool-update:
+    uses: gematik/spec-isik-basismodul/.github/workflows/main.yml@main-isik-stufe-4
+    secrets:
+      SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
+      SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
+      WORKFLOW_PERMISSION_GITHUB: ${{ secrets.WORKFLOW_PERMISSION_GITHUB }}      
