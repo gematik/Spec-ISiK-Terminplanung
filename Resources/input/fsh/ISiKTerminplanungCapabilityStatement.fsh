@@ -271,7 +271,7 @@ Dieses CapabilityStatement repräsentiert die Anforderungen an ein Termin-Reposi
       * code = #search-type
     * insert CommonSearchParameters  
     * searchParam[+]
-      * insert Expectation (#SHALL) 
+      * insert Expectation (#MAY) 
       * name = "subject"
       * definition = "http://hl7.org/fhir/SearchParameter/Communication-subject"
       * type = #reference
@@ -280,6 +280,16 @@ Dieses CapabilityStatement repräsentiert die Anforderungen an ein Termin-Reposi
         `GET [base]/Communication?subject=Patient/ISiKPatientExample`    
         **Anwendungshinweis:**   
         Weitere Details siehe [FHIR-Kernspezifikation](https://hl7.org/fhir/R4/search.html#reference).  " 
+    * searchParam[+]
+      * insert Expectation (#SHALL) 
+      * name = "patient"
+      * definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
+      * type = #reference
+      * documentation = 
+        "**Beispiel:**    
+        `GET [base]/Communication?patient=Patient/ISiKPatientExample`    
+        **Anwendungshinweis:**   
+        Weitere Details siehe [FHIR-Kernspezifikation](https://hl7.org/fhir/R4/search.html#reference).  "    
     * searchParam[+]
       * insert Expectation (#SHALL) 
       * name = "recipient"
