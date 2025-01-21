@@ -6,3 +6,8 @@ The [CI pipeline]((https://github.com/gematik/spec-ISiK-Terminplanung/blob/main-
 
 To facilitate easier identification of issues within profiles, ValueSets, CodeSystems, and examples, the validation pipeline aims to remain "clean." This means the validation output should be free of errors, warnings, and unnecessary informational messages, as cluttered outputs can obscure critical issues. The validator supports this goal through its ["advisor" framework]((https://confluence.hl7.org/display/FHIR/Validator+Advisor+Framework)), which allows specific messages to be suppressed. All suppressions are defined in the advisor.json file, located alongside this README. The following messages have been suppressed for the current ISiK module:
 
+* SD_PATH_SLICING_DEPRECATED - In FHIR R5 "pattern" discriminator has been deprecated and is being consolidated with the "value"  discriminator. To avoid unintended side effects in R4, we will keep the current slicing.
+* TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE - Simplifier does not publish a valid FHIR ImplementationGuide resource. Therefore the canonical cannot be found.
+* http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6 - ISiK resources do not contain a narrative. Ignore this best practice warning for now.
+* Terminology_TX_NoValid_3_CC - Ignore warnings about preferred bindings in certain contexts
+
