@@ -55,7 +55,7 @@ jobs:
           -output-style compact \
           -resolution-context file:Resources/fsh-generated/resources/ \
           -show-message-ids || true
-#          rm -rf /home/runner/.fhir/packages
+          rm -rf /home/runner/.fhir/packages
         
       # Java and .NET are already installed on ubuntu-latest
         
