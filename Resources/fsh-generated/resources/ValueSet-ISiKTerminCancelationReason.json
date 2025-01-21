@@ -8,7 +8,7 @@
   "url": "https://gematik.de/fhir/isik/ValueSet/ISiKTerminCancelationReason",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2024-12-05",
+  "date": "2025-01-16",
   "compose": {
     "include": [
       {
