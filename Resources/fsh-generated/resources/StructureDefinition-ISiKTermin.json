@@ -6,7 +6,7 @@
   "name": "ISiKTermin",
   "status": "active",
   "experimental": false,
-  "date": "2025-01-03",
+  "date": "2025-01-16",
   "publisher": "gematik GmbH",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -191,16 +191,6 @@
       {
         "id": "Appointment.priority.extension",
         "path": "Appointment.priority.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
         "mustSupport": true
       },
       {
@@ -222,13 +212,13 @@
       {
         "id": "Appointment.start",
         "path": "Appointment.start",
-        "min": 1,
+        "comment": "Begründung zu Kardinalität und Must Support: Der Startzeitpunkt eines Termins ist von entscheidender Bedeutung, um die Verfügbarkeit und Planung des Termins zu gewährleisten. Daher muss dieses Feld unterstützt werden (MS). Das Feld ist in den meisten Fällen verpflichtend, nur für die Status 'proposed', 'cancelled', 'waitlist' existiert kein Wert.",
         "mustSupport": true
       },
       {
         "id": "Appointment.end",
         "path": "Appointment.end",
-        "min": 1,
+        "comment": "Begründung zu Kardinalität und Must Support: Der Endzeitpunkt eines Termins ist von entscheidender Bedeutung, um die Verfügbarkeit und Planung des Termins zu gewährleisten. Daher muss dieses Feld unterstützt werden (MS). Das Feld ist in den meisten Fällen verpflichtend, nur für die Status 'proposed', 'cancelled', 'waitlist' existiert kein Wert.",
         "mustSupport": true
       },
       {
