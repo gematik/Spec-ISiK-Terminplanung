@@ -34,6 +34,29 @@ jobs:
       - name: Checkout code (Main)
         uses: actions/checkout@v4
         if: github.event_name != 'pull_request'
+
+      - name: DownloadValidator
+        run: |
+          mkdir -p ~/.fhir/validators
+#          curl -L -o ~/.fhir/validators/validator_cli.jar https://ig.fhir.de/download/validator_cli.jar
+         curl -L -o ~/.fhir/validators/validator_cli.jar https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar
+          echo "FHIR Validator downloaded."
+
+      - name: Validate Resources with FHIR Validator
+        continue-on-error: true
+        run: |
+          java -jar ~/.fhir/validators/validator_cli.jar \
+          Resources/fsh-generated/resources \
+          -version 4.0 \
+          -ig Resources/fsh-generated/resources \
+          -ig de.gematik.isik-basismodul#4.0.1 \
+          -ig de.ihe-d.terminology#3.0.1 \
+          -advisor-file advisor.json \
+          -allow-example-urls true \
+          -output-style compact \
+          -resolution-context file:Resources/fsh-generated/resources/ \
+          -show-message-ids || true
+#          rm -rf /home/runner/.fhir/packages
         
       # Java and .NET are already installed on ubuntu-latest
         
@@ -43,7 +66,7 @@ jobs:
           PATH_TO_CONFORMANCE_RESOURCES: Resources/fsh-generated/resources/
           DOTNET_VALIDATION_ENABLED: false
           JAVA_VALIDATION_ENABLED: true
-          JAVA_VALIDATION_OPTIONS: -allow-example-urls true -advisor-file advisor.json -output-style compact -show-message-ids -resolution-context Resources/fsh-generated/resources/
+          JAVA_VALIDATION_OPTIONS: -allow-example-urls true -advisor-file advisor.json -output-style compact -show-message-ids -resolution-context file:Resources/fsh-generated/resources/
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
           SUSHI_ENABLED: true
