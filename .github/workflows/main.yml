@@ -34,16 +34,16 @@ jobs:
       - name: Checkout code (Main)
         uses: actions/checkout@v4
         if: github.event_name != 'pull_request'
-        
+
       # Java and .NET are already installed on ubuntu-latest
         
       - name: Firely.Terminal (GitHub Actions)
-        uses: FirelyTeam/firely-terminal-pipeline@v0.6.5
+        uses: FirelyTeam/firely-terminal-pipeline@v0.6.6
         with:
           PATH_TO_CONFORMANCE_RESOURCES: Resources/fsh-generated/resources/
           DOTNET_VALIDATION_ENABLED: false
           JAVA_VALIDATION_ENABLED: true
-          JAVA_VALIDATION_OPTIONS: -allow-example-urls true -advisor-file advisor.json -output-style compact -show-message-ids
+          JAVA_VALIDATION_OPTIONS: -allow-example-urls true -advisor-file advisor.json -output-style compact -show-message-ids -resolution-context file:Resources/fsh-generated/resources/
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
           SUSHI_ENABLED: true

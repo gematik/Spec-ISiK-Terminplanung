@@ -48,6 +48,14 @@
     "endLine": 52
   },
   {
+    "outputFile": "Patient-ISiKPatientTest.json",
+    "fshName": "ISiKPatientTest",
+    "fshType": "Instance",
+    "fshFile": "ISiKTermin.fsh",
+    "startLine": 179,
+    "endLine": 184
+  },
+  {
     "outputFile": "Schedule-ISiKKalenderExample.json",
     "fshName": "ISiKKalenderExample",
     "fshType": "Instance",

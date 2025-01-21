@@ -5,6 +5,7 @@ CapabilityStatement-ISiKCapabilityStatementTerminplanungServer.json  ISiKCapabil
 Communication-ISiKNachrichtExample.json                              ISiKNachrichtExample                        Instance   ISiKNachricht.fsh                               45 - 54
 HealthcareService-ISiKMedizinischeBehandlungseinheitExample.json     ISiKMedizinischeBehandlungseinheitExample   Instance   ISiKMedizinischeBehandlungseinheit.fsh          44 - 50
 OperationDefinition-ISiKAppointmentBookOperation.json                Book                                        Instance   ISiKBookOperation.fsh                           1 - 52
+Patient-ISiKPatientTest.json                                         ISiKPatientTest                             Instance   ISiKTermin.fsh                                  179 - 184
 Schedule-ISiKKalenderExample.json                                    ISiKKalenderExample                         Instance   ISiKKalender.fsh                                65 - 72
 Slot-ISiKTerminblockExample.json                                     ISiKTerminblockExample                      Instance   ISiKTerminblock.fsh                             22 - 28
 StructureDefinition-AppointmentReplaces.json                         AppointmentReplaces                         Extension  ISiKTermin.fsh                                  127 - 133
