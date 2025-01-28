@@ -6,7 +6,7 @@
   "name": "ISiKKalender",
   "status": "active",
   "experimental": false,
-  "date": "2025-01-03",
+  "date": "2025-01-27",
   "publisher": "gematik GmbH",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -170,7 +170,7 @@
       {
         "id": "Schedule.actor.display",
         "path": "Schedule.actor.display",
-        "comment": "Hinweis: Für alle Target-Ressourcen SOLL ein Displaywert für die Referenz angegeben werden, sodass Systeme eine Übersicht der am Termin beteiligten Akteure anzeigen können ohne die Referenzen auflösen zu müssen.",
+        "comment": "Begründung zu Must Support: Dieses Feld ist optional (0..1), muss jedoch implementiert werden (MS), um die Möglichkeit zu bieten, einen Display-Wert (z.B. Namen) für einen Akteur zu verarbeiten und zu persistieren, dem der Kalender zugewiesen ist.\n    \n    Hinweis: Für alle Target-Ressourcen SOLL ein Displaywert für die Referenz angegeben werden, sodass Systeme eine Übersicht der am Termin beteiligten Akteure anzeigen können ohne die Referenzen auflösen zu müssen.",
         "mustSupport": true
       },
       {
