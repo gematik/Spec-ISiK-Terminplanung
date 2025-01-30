@@ -20,7 +20,7 @@ Dieses Profil MUSS im Rahmen der Bestätigung NICHT unterstützt werden. Falls d
 
 ### Kompabilität
 
-Siehe {{pagelink:ImplementationGuide/markdown/UebergreifendeFestlegungen/Kompatibilitaet.md, text:Kompabilität}}.
+Siehe {{pagelink:ImplementationGuide/markdown/UseCases/Kompatibilitaet.md, text:Kompabilität}}.
 
 ---
 
