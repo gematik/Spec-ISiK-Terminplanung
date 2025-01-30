@@ -10,3 +10,7 @@ Dies umfasst:
 - Buchungsmanagement von verfügbaren Terminen (Zusage, Absage, Temporäre Buchung, Wiederholende Termine)
 - Benachrichtigungen bei Terminänderungen
 - Anlage eines neues Patienten im KIS
+
+Darüber hinaus gelten in diesem Modul Festlegungen:
+
+{{index:current}}

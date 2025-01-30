@@ -37,8 +37,18 @@
           "generation": "markdown",
           "page": [
             {
-              "nameUrl": "ImplementationGuide/markdown/UseCases/UseCases.md",
-              "title": "Anwendungsfälle (Use Cases)",
+              "nameUrl": "ImplementationGuide/markdown/UseCases/Kompatibilitaet.md",
+              "title": "Kompatibilität zu FHIR-Spezifikationen",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/UseCases/Akteure.md",
+              "title": "Akteure",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/UseCases/Interaktionen.md",
+              "title": "Interaktionen",
               "generation": "markdown"
             }
           ]
@@ -51,21 +61,6 @@
             {
               "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen/BestaetigungsrelevanteSysteme.md",
               "title": "Bestätigungsrelevante Systeme",
-              "generation": "markdown"
-            },
-            {
-              "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen/Kompatibilitaet.md",
-              "title": "Kompatibilität",
-              "generation": "markdown"
-            },
-            {
-              "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen/Akteure.md",
-              "title": "Akteure",
-              "generation": "markdown"
-            },
-            {
-              "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen/Interaktionen.md",
-              "title": "Interaktionen",
               "generation": "markdown"
             }
           ]
