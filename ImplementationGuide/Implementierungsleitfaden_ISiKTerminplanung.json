@@ -56,14 +56,7 @@
         {
           "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen.md",
           "title": "Übergreifende Festlegungen",
-          "generation": "markdown",
-          "page": [
-            {
-              "nameUrl": "ImplementationGuide/markdown/UebergreifendeFestlegungen/BestaetigungsrelevanteSysteme.md",
-              "title": "Bestätigungsrelevante Systeme",
-              "generation": "markdown"
-            }
-          ]
+          "generation": "markdown"
         },
         {
           "generation": "markdown",
