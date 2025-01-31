@@ -37,18 +37,23 @@
           "generation": "markdown",
           "page": [
             {
-              "nameUrl": "ImplementationGuide/markdown/UseCases/Kompatibilitaet.md",
-              "title": "Kompatibilität zu FHIR-Spezifikationen",
-              "generation": "markdown"
-            },
-            {
               "nameUrl": "ImplementationGuide/markdown/UseCases/Akteure.md",
               "title": "Akteure",
               "generation": "markdown"
             },
             {
+              "nameUrl": "ImplementationGuide/markdown/UseCases/Prozesse.md",
+              "title": "Prozesse und Workflows",
+              "generation": "markdown"
+            },
+            {
               "nameUrl": "ImplementationGuide/markdown/UseCases/Interaktionen.md",
               "title": "Interaktionen",
+              "generation": "markdown"
+            },
+            {
+              "nameUrl": "ImplementationGuide/markdown/UseCases/Kompatibilitaet.md",
+              "title": "Kompatibilität zu FHIR-Spezifikationen",
               "generation": "markdown"
             }
           ]
