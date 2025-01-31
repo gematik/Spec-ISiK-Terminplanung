@@ -15,6 +15,6 @@ Darüber hinaus gelten in diesem Modul Festlegungen:
 
 {{index:current}}
 
-Eine grafische Übersicht über die Use Cases und ihre zusammenhänge bietet folgendes Diagramm:
+Eine grafische Übersicht über die Use Cases und ihre Zusammenhänge bietet folgendes Diagramm:
 
 {{render:Material/images/diagrams/patient-buchung-UseCase.png}}
