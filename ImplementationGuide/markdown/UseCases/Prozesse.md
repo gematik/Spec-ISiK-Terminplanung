@@ -34,3 +34,5 @@ Insbesondere für die Verifizierung des Patienten im Laufe der Registrierung im 
 Der Nachweis-Workflow soll die Übernahme validierter Patienten-Identitäten unter der Annahme von Read-Only Operationen (GET) zwischen den daten-führenden Systemen zur Übernahme sowie vorgelagerter Identifizierung eines Patienten mittels IDP (z.B. gID) skizzieren:
 
 {{render:Material/images/diagrams/identitaetsnachweis-sequenz.png}}
+
+Die Abfragen von Patientendaten gegenüber dem Basis-Server dienen anknüpfenden Workflows (z.B. zur Bereitstellung von Dokumenten Vitaldaten etc.). Das Zugriffsmanagement bleibt bei dieser Skizze jedoch noch offen.
