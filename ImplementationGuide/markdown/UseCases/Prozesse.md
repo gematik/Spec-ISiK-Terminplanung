@@ -19,6 +19,8 @@ offen bleibt hier allerdings noch der Ablauf zum Austausch von Patientendaten zw
  
 {{render:Material/images/diagrams/patient-buchung-sequenz.png}}
 
+Einzelne Interaktionen, die in diesem Sequenzdiagramm skizziert werden und für die der vorliegende Implementierungsleitfaden spezifischere Festlegungen trifft, sind unter Siehe {{pagelink:ImplementationGuide/markdown/UseCases/Interaktionen.md, text:Interaktionen}} gelistet.
+
 
 ## Identitätsnachweis der Patienten
 
