@@ -35,4 +35,4 @@ Der Nachweis-Workflow soll die Übernahme validierter Patienten-Identitäten unt
 
 {{render:Material/images/diagrams/identitaetsnachweis-sequenz.png}}
 
-Die Abfragen von Patientendaten gegenüber dem Basis-Server dienen anknüpfenden Workflows (z.B. zur Bereitstellung von Dokumenten Vitaldaten etc.). Das Zugriffsmanagement bleibt bei dieser Skizze jedoch noch offen.
+Die Abfragen von Patientendaten gegenüber dem Basis-Server dienen anknüpfenden Workflows (z.B. zur Bereitstellung von Dokumenten, Vitaldaten etc.). Das Zugriffsmanagement bleibt bei dieser Skizze jedoch noch offen.
