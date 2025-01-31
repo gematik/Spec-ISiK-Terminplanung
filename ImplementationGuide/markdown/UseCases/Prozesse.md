@@ -1,6 +1,6 @@
 # {{page-title}}
 
-Ein effektiver Patienten-Onboarding-Prozess in einem Krankenhaus muss sowohl digitale als auch manuelle Schritte umfassen, um eine nahtlose Terminbuchung und Terminwahrnehmung für Patienten zu gewährleisten. Hier finden sich Skizzen zu entsprechenden Prozessen.
+Ein Terminbuchungsprozess in einem Krankenhaus kann sowohl automatisierte als auch manuelle Zwischenschritte umfassen, um eine nahtlose Terminbuchung und Terminwahrnehmung für Patienten zu gewährleisten. Hier finden sich Skizzen zu einem entsprechenden Prozessen.
 
 ## Allgemeiner Prozess (Übersicht)
 
