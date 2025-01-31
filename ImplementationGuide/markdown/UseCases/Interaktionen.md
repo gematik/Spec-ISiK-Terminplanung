@@ -3,7 +3,7 @@
 Für folgende Interaktionen werden im vorliegenden Implementierungsleitfaden Vorgaben für die Umsetzung innerhalb der ISiK-Schnittstelle definiert:
 
 
-| Akteure             | Transaktionen                                                                                                                   | Optionalität |
+| Akteure             | Transaktionen                                                                                                                   | Festlegungsstatus |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------|-------------|
 | **Termin Repository** | - Übermittlung von Patienteninformationen <br> - Verfügbare Behandlungsleistungen abrufen <br> - Verfügbare Terminlisten abrufen <br> - Abfrage von (verfügbaren) Terminblöcken <br> - Termin neu buchen (Buchungsmanagement von verfügbaren Terminen) <br> - Termin absagen (ausgehend vom Client) <br> - Termin verschieben (ausgehend vom Client) <br> - Terminzusatzinformationen aktualisieren (ausgehend vom Client) | Verplichtend           |
 | **Termin Requestor**  | - Übermittlung von Patienteninformationen <br> - Verfügbare Behandlungsleistungen abrufen <br> - Verfügbare Terminlisten abrufen <br> - Abfrage von (verfügbaren) Terminblöcken <br> - Termin neu buchen (Buchungsmanagement von verfügbaren Terminen) <br> - Termin absagen (ausgehend vom Client) <br> - Termin verschieben (ausgehend vom Client) <br> - Terminzusatzinformationen aktualisieren (ausgehend vom Client) | Optional           |
