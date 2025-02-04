@@ -11,6 +11,7 @@ Datum: tbd.
 * `change` Die Verbindlichkeit des Suchaparameters `subject` in Communication wurde von SHALL auf MAY reduziert. 
 Statt dessen wird der neue verbindliche Suchparameter `patient` eingeführt. Die geschieht zur Harmonisierung der Suchparameter mit den anderen ISiK-Modulen. 
 * ´improve´ Falscher Satz über keine notwendige Verbindlichkeit entfernt und Formulierung verbessert https://github.com/gematik/spec-ISiK-Terminplanung/pull/248
+* `fix``test stable` Display Values ISiKTerminCancelationReason https://github.com/gematik/spec-ISiK-Terminplanung/pull/264
 
 
 ---
