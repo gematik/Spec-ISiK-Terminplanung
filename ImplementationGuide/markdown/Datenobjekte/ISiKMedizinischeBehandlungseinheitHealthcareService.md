@@ -17,7 +17,7 @@ Hintergrund: Die Suche nach verfügbaren Terminenblöcken (Slot) unter Einbezieh
 
 ### Kompatibilität
 
-Siehe {{pagelink:ImplementationGuide/markdown/UebergreifendeFestlegungen/Kompatibilitaet.md, text:Kompatibilität}}.
+Siehe {{pagelink:ImplementationGuide/markdown/UseCases/Kompatibilitaet.md, text:Kompatibilität}}.
 
 ---
 
