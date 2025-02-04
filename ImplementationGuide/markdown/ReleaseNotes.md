@@ -9,6 +9,7 @@ Version: 3.0.7
 Datum: tbd.
 
 * `change` Die Verbindlichkeit der Suchparameter `subject`  in Communication sowie `include` (für `Communication:recipient` und `Communication:sender`) wurde von SHALL auf MAY reduziert https://github.com/gematik/spec-ISiK-Terminplanung/pull/256/files
+* `fix``test stable` Display Values ISiKTerminCancelationReason https://github.com/gematik/spec-ISiK-Terminplanung/pull/265
 
 ---
 
