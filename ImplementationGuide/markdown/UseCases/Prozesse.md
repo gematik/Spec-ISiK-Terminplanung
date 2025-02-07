@@ -11,7 +11,7 @@ Ein grobes Prozessmodell gewährt eine Übersicht zu drei möglichen Sub-Prozess
 - Planung und Buchung eines Termins durch KH-Personal
 - Authentisierung externer Patient 
 
-{{render:Material/images/diagrams/prozess-allgemein.png}}
+{{render:Material/images/diagrams/process-allgemein.png}}
 
 ## Registrierung und Terminbuchung (happy path)
 
