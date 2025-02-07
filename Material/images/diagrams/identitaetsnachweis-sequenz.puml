@@ -1,13 +1,13 @@
 @startuml
 
-actor Buchender
+actor Buchende
 participant "Termin Requestor (Patientenportal)" as TR
 participant "IDP (Identitätsprovider)" as IDP
 participant "Termin Repository" as TRP
 participant "MPI (Master Patient Index)" as MPI
 participant "BasisServer" as BS
 
-Buchender -> TR: Registrierung mit Name, Geburtsdatum, Adresse, Versicherung
+Buchende -> TR: Registrierung mit Name, Geburtsdatum, Adresse, Versicherung
 TR -> IDP: Identify User Request (z.B. gID, KVNR)
 IDP --> TR: Identify Patient (validierte Identität, KVNR)
 note right of TR: Identität verifiziert
@@ -17,9 +17,9 @@ TRP -> MPI: Lookup Patient (basierend auf KVNR)
 MPI -> MPI: Match Patient
 MPI -> TRP: Patientendaten zurückliefern
 TRP -> TR: Rückgabe verfügbarer Termine
-TR -> Buchender: Visualisierung der verfügbaren Termine
+TR -> Buchende: Visualisierung der verfügbaren Termine
 
-Buchender -> TR: Auswahl eines Termins
+Buchende -> TR: Auswahl eines Termins
 TR -> TRP: Erstellen des Termins (vorläufig)
 note right of TRP: Termin ist angelegt, Patient verifiziert
 TR -> MPI: GET Patientendaten zur Verknüpfung
@@ -29,6 +29,6 @@ MPI -> TR: Patientendaten zurückgeben
 TR -> TRP: Verknüpfung des Termins mit Patientendaten
 
 TRP -> TR: Buchungsbestätigung
-TR -> Buchender: Bestätigung per E-Mail/SMS
+TR -> Buchende: Bestätigung per E-Mail/SMS
 
 @enduml

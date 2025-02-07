@@ -7,6 +7,10 @@ Ein Terminbuchungsprozess in einem Krankenhaus kann sowohl automatisierte als au
 
 Ein grobes Prozessmodell gewährt eine Übersicht zu drei möglichen Sub-Prozessen der Terminbuchung:
 
+- Planung und Buchung eines Termins durch einen externen Patienten
+- Planung und Buchung eines Termins durch KH-Personal
+- Authentisierung externer Patient 
+
 {{render:Material/images/diagrams/prozess-allgemein.png}}
 
 ## Registrierung und Terminbuchung (happy path)
@@ -27,7 +31,7 @@ Einzelne Interaktionen, die in diesem Sequenzdiagramm skizziert werden und für 
 
 Insbesondere zur nahtlosen Integration von Prozessen über verschiedene Systeme (z.B. Patientenportal und KIS), die sich in gekapselten Zugriffsumgebungen befinden, sind Workflows zum Identitätsnachweis von Patienten unabdinglich.
 
-Folgende Alternativen zum Identitätsnachweis können schematisch angeführt werden:
+Folgende Alternativen zur Erbringung eines Identitätsnachweises können schematisch angeführt werden:
 
 {{render:Material/images/diagrams/identitaetsnachweis-bpmn.png}}
 

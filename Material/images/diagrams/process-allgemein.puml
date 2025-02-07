@@ -1,0 +1,26 @@
+@startuml
+
+|Patient|
+
+start
+note
+    Patientseitiger Terminbedarf
+end note
+fork
+
+:Authentisierung externer Patient \n [Sub-Prozess] ;
+
+fork again
+if (selbstständiges Einchecken) then (ja)
+
+:Planung und Buchung eines Termins \n durch Patient oder Angehörige \n [Sub-Prozess];
+else (nein)
+:Planung und Buchung eines Termins \n durch KH Personal \n [Sub-Prozess] ;
+endif
+end fork
+
+stop
+note right
+    Termin gebucht und Patient authentisiert
+end note
+@enduml
