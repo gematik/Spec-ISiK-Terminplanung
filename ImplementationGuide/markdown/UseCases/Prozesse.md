@@ -7,10 +7,6 @@ Ein Terminbuchungsprozess in einem Krankenhaus kann sowohl automatisierte als au
 
 Ein grobes Prozessmodell gewährt eine Übersicht zu drei möglichen Sub-Prozessen der Terminbuchung:
 
-- Planung und Buchung eines Termins durch einen externen Patienten
-- Planung und Buchung eines Termins durch KH-Personal
-- Authentisierung externer Patient 
-
 {{render:Material/images/diagrams/process-allgemein.png}}
 
 ## Registrierung und Terminbuchung (happy path)
