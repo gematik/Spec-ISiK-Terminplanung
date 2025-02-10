@@ -6,7 +6,7 @@
   "name": "ISiKTermin",
   "status": "active",
   "experimental": false,
-  "date": "2025-01-16",
+  "date": "2025-02-04",
   "publisher": "gematik GmbH",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -262,7 +262,7 @@
       {
         "id": "Appointment.participant.actor.display",
         "path": "Appointment.participant.actor.display",
-        "min": 1,
+        "comment": "Begründung zu Must Support: Dieses Feld ist optional (0..1), muss jedoch implementiert werden (MS), um die Möglichkeit zu bieten, einen Display-Wert für einen am Termin teilnehmenden Akteur zu verarbeiten und zu persistieren.",
         "mustSupport": true
       },
       {

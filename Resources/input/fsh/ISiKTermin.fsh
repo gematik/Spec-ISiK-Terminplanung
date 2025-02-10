@@ -27,7 +27,8 @@ Id: ISiKTermin
 * patientInstruction 0..1 MS
 * participant 1..* MS
   * actor 1..1 MS
-  * actor.display 1..1 MS
+  * actor.display MS
+  * actor.display ^comment = "Begründung zu Must Support: Dieses Feld ist optional (0..1), muss jedoch implementiert werden (MS), um die Möglichkeit zu bieten, einen Display-Wert für einen am Termin teilnehmenden Akteur zu verarbeiten und zu persistieren."
   * status 1..1 MS
   * ^slicing.discriminator.type = #type
   * ^slicing.discriminator.path = "actor.resolve()"
