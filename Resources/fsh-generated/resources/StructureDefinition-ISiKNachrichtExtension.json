@@ -6,7 +6,6 @@
   "name": "ISiKNachrichtExtension",
   "status": "active",
   "experimental": false,
-
   "date": "2025-02-04",
   "publisher": "gematik GmbH",
   "fhirVersion": "4.0.1",
