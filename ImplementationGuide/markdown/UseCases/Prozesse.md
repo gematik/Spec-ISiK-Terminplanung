@@ -13,7 +13,7 @@ Ein grobes Prozessmodell gewährt eine Übersicht zu drei möglichen Sub-Prozess
 
 Folgendes BPMN-Diagramm gibt eine Übersicht zu einer Terminbuchung durch einen User mittels Patientenportal:
 
-{{render:Material/images/diagrams/patient-terminbuchung-bpmn.png}}
+{{render:Material/images/diagrams/buchung-termin-portal.drawio.png}}
 
 Folgendes Sequenzdiagramm detailliert den Ablauf unter Berücksichtigung der Akteure Termin Requestor (z.B. Patientenportal) und Termin Repository (z.B. KIS); 
 offen bleibt hier allerdings noch der Ablauf zum Austausch von Patientendaten zwischen den Systemen:

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mxfile host="wiki.gematik.de" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" version="24.9.3">
   <diagram id="P-2ZAhrDOD_awumW4EPT" name="Seite-1">
-    <mxGraphModel dx="2714" dy="1549" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2234" dy="1129" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -93,8 +93,8 @@
         <mxCell id="p5BR3oeMNQs2LMMgvMCY-3" value="Empfang Patient durch KH zum Termin" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;" parent="1" vertex="1">
           <mxGeometry x="970" y="205" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="p5BR3oeMNQs2LMMgvMCY-5" value="Patient" style="swimlane;startSize=20;horizontal=0;html=1;whiteSpace=wrap;strokeColor=#33FF33;" parent="1" vertex="1">
-          <mxGeometry x="-470" y="-50" width="1770" height="150" as="geometry" />
+        <mxCell id="p5BR3oeMNQs2LMMgvMCY-5" value="Buchende Person&lt;br&gt;(ggf. Patient)" style="swimlane;startSize=30;horizontal=0;html=1;whiteSpace=wrap;strokeColor=#33FF33;" parent="1" vertex="1">
+          <mxGeometry x="-480" y="-50" width="1780" height="150" as="geometry" />
         </mxCell>
         <mxCell id="vSX12nftA5oCXbcCMVYV-24" value="Übermittlung Unterlagen und Vorabinformationen" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;isLoopSub=1;" parent="p5BR3oeMNQs2LMMgvMCY-5" vertex="1">
           <mxGeometry x="950" y="25" width="120" height="80" as="geometry" />
@@ -125,10 +125,10 @@
           <mxGeometry x="480" y="120" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="p5BR3oeMNQs2LMMgvMCY-16" value="Krankenhaus" style="swimlane;startSize=20;horizontal=0;html=1;whiteSpace=wrap;strokeColor=#000099;" parent="1" vertex="1">
-          <mxGeometry x="-470" y="380" width="1770" height="240" as="geometry" />
+          <mxGeometry x="-480" y="380" width="1780" height="240" as="geometry" />
         </mxCell>
         <mxCell id="p5BR3oeMNQs2LMMgvMCY-4" value="Vorbereitung Termin" style="points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];shape=mxgraph.bpmn.task;whiteSpace=wrap;rectStyle=rounded;size=10;html=1;container=1;expand=0;collapsible=0;taskMarker=abstract;" parent="p5BR3oeMNQs2LMMgvMCY-16" vertex="1">
-          <mxGeometry x="1255" y="70" width="120" height="80" as="geometry" />
+          <mxGeometry x="1265" y="70" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="p5BR3oeMNQs2LMMgvMCY-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="p5BR3oeMNQs2LMMgvMCY-25" target="p5BR3oeMNQs2LMMgvMCY-3" edge="1">
           <mxGeometry relative="1" as="geometry">
