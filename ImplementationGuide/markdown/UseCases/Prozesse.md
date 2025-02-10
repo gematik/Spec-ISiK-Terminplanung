@@ -7,7 +7,7 @@ Ein Terminbuchungsprozess in einem Krankenhaus kann sowohl automatisierte als au
 
 Ein grobes Prozessmodell gewährt eine Übersicht zu drei möglichen Sub-Prozessen der Terminbuchung:
 
-{{render:Material/images/diagrams/process-allgemein.png}}
+{{render:Material/images/diagrams/process-allgemein.svg}}
 
 ## Registrierung und Terminbuchung (happy path)
 
