@@ -19,7 +19,7 @@ TRP -> TR: Buchungsbestätigung
 
 TR -> Buchende: Bestätigung per E-Mail/SMS
 
-TR <-> TRP :  "<font color=red><b>Austausch Patienteninformation ?  "
+TR <-> TRP :  <font color=red>Austausch Patienteninformation ?
 note right of TRP: Termin ist angelegt, Patient evtl. noch unverifiziert 
 
 @enduml
