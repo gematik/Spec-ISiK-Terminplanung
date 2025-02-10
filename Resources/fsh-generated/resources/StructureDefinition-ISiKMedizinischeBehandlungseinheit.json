@@ -6,7 +6,7 @@
   "name": "ISiKMedizinischeBehandlungseinheit",
   "status": "active",
   "experimental": false,
-  "date": "2025-01-28",
+  "date": "2025-02-10",
   "publisher": "gematik GmbH",
   "fhirVersion": "4.0.1",
   "kind": "resource",
