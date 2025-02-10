@@ -2,11 +2,11 @@ ValueSet: ISiKTerminCancelationReason
 Id: ISiKTerminCancelationReason
 Description: "Enthaelt alle erlaubten Gruende fuer eine Stornierung eines ISiKTermins"
 * insert Meta
-* $cancelationReason#pat
-* $cancelationReason#prov
-* $cancelationReason#maint
-* $cancelationReason#meds-inc
-* $cancelationReason#other
+* $cancelationReason#pat "Patient"
+* $cancelationReason#prov "Provider"
+* $cancelationReason#maint "Equipment Maintenance/Repair"
+* $cancelationReason#meds-inc "Prep/Med Incomplete"
+* $cancelationReason#other "Other"
 
 ValueSet: ISiKTerminPriority
 Id: ISiKTerminPriority

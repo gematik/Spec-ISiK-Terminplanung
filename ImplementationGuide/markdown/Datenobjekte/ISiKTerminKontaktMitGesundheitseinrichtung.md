@@ -14,7 +14,7 @@ Hieraus folgt, dass das Datenobjekt nur relevant ist, falls das bestätigungsrel
 
 ### Kompabilität
 
-Siehe {{pagelink:ImplementationGuide/markdown/UebergreifendeFestlegungen/Kompatibilitaet.md, text:Kompabilität}}.
+Siehe {{pagelink:ImplementationGuide/markdown/UseCases/Kompatibilitaet.md, text:Kompabilität}}.
 
 ---
 

@@ -10,7 +10,7 @@ Das Datenobjekte ISiKTermin repräsentiert einen gebuchten Termin, sowie einen T
 
 ### Kompatibilität
 
-Siehe {{pagelink:ImplementationGuide/markdown/UebergreifendeFestlegungen/Kompatibilitaet.md, text:Kompatibilität}}.
+Siehe {{pagelink:ImplementationGuide/markdown/UseCases/Kompatibilitaet.md, text:Kompatibilität}}.
 
 ---
 

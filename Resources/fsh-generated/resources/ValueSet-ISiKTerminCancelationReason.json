@@ -8,26 +8,31 @@
   "url": "https://gematik.de/fhir/isik/ValueSet/ISiKTerminCancelationReason",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "date": "2025-01-16",
+  "date": "2025-01-28",
   "compose": {
     "include": [
       {
         "system": "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason",
         "concept": [
           {
-            "code": "pat"
+            "code": "pat",
+            "display": "Patient"
           },
           {
-            "code": "prov"
+            "code": "prov",
+            "display": "Provider"
           },
           {
-            "code": "maint"
+            "code": "maint",
+            "display": "Equipment Maintenance/Repair"
           },
           {
-            "code": "meds-inc"
+            "code": "meds-inc",
+            "display": "Prep/Med Incomplete"
           },
           {
-            "code": "other"
+            "code": "other",
+            "display": "Other"
           }
         ]
       }

@@ -1,0 +1,75 @@
+@startuml
+
+actor Buchende
+participant "Termin Requestor (Patientenportal)" as TR
+participant "Termin Repository" as TRP
+
+Buchende -> TR: Registrierung mit Name, Geburtsdatum, E-Mail (ggf. Adresse, Versicherung)
+TR -> Buchende: Bestätigungsmail
+note right of TR: Account angelegt, aber Identität nicht verifiziert
+
+Buchende -> TR: Auswahl Fachbereich / Behandlungstermin
+TR -> TRP: Anfrage verfügbare Termine für Fachbereich
+TRP -> TR: Rückgabe verfügbarer Termine
+TR -> Buchende: Visualisierung der verfügbaren Termine
+
+Buchende -> TR: Auswahl eines Termins
+TR -> TRP: Erstellen des Termins (vorläufig) 
+TRP -> TR: Buchungsbestätigung
+
+TR -> Buchende: Bestätigung per E-Mail/SMS
+
+TR <-> TRP :  <font color=red>Austausch Patienteninformation ?
+note right of TRP: Termin ist angelegt, Patient evtl. noch unverifiziert 
+
+@enduml
+
+
+/' #TODO für interaktionen zwischen Requestor und Repository: FHIR Suchparameter (als Beispiel)
+
+/' --- UML auf folgenden Annahmen generiert (und dann erweitert): 
+1. Registierung im Patientenportal / Terminbuchungsportal
+Der Patient hat die Möglichkeit, über ein Online-Portal Zugang zu den verschiedenen Services des Krankenhauses zu erhalten.
+
+Beschreibung (Erste Anmeldung / Registrierung):
+Der Patient registriert sich auf dem Patientenportal und gibt grundlegende Informationen wie Name, Geburtsdatum, Adresse und Versicherung an.
+Eine Bestätigungsmail oder SMS wird verschickt, um die Anmeldung abzuschließen und den Account des Patienten grundlegend zu verifizieren. Achtung: Dies bedeutet noch nicht, dass die Identität des Patienten verifiziert ist!
+Output
+Account ist angelegt
+Patient ist angemeldet
+Interaktionen
+Keine
+2. Auswahl des gewünschten Services / Fachbereichs
+Beschreibung (Wahl des Fachbereichs / Behandlungstermins):
+Der Patient kann sich durch das Patientenportal navigieren und den entsprechenden Fachbereich auswählen (z. B. Allgemeinmedizin, Orthopädie, Kardiologie).
+Es gibt eine Übersicht über verfügbare Ärzte, Behandlungsarten oder Operationen, die zur Auswahl stehen.
+Input
+das Portal visualisiert Fachrichtungen (als Liste etc.) 
+User wählt Fachrichtung aus und gibt Überweisung/Überweisungs-Anlass / Erkrankung an
+Output
+Visualisierung der verfügbaren Termine
+Interaktionen
+Portal fragt Slots für Fachrichtung beim KIS ab (ggf. Suche auf Schedules und Slots)
+3. Terminbuchung über das Portal
+Der Patient hat nun die Möglichkeit, einen Termin direkt über das Patientenportal zu buchen.
+
+Beschreibung:
+Verfügbare Termine:
+
+Das System zeigt dem Patienten verfügbare Termine an, die sowohl mit den Fachbereichen als auch mit den spezifischen Ärzten abgestimmt sind.
+Der Patient kann Datum, Uhrzeit und Ort (z. B. verschiedene Klinikstandorte) auswählen.
+Buchungsbestätigung:
+
+Nach Auswahl des Termins erhält der Patient eine automatische Bestätigung des Termins per E-Mail/SMS und eine Zusammenfassung der Buchungsdetails.
+Input
+Auswahl eines Termins aus der Liste der visualisierten Termine
+Output
+Die Patienteninformationen sind in allen relevanten System verfügbar und abrufbar
+Patientenportal als Termin-Repo: Die Patienteninformation wird an alle weiteren relevanten Subsysteme (z.B. KIS) weitergereicht
+Patient ist bereits durch KH verifiziert: Termin ist mit korrekter Patient-Instanz verknüpft
+Patient ist unverifiziert: Patientinformationen wurden an das terminführende Termin-Repository übermittelt und als unverifiziert gekennzeichnet
+Termin ist im Termin-Repo (vorläufig) angelegt
+Interaktionen
+Create-Interaktion durch den Termin-Requestor an das Termin-Repository, sowie weitere Create-Interaktion durch den Termin-Requestor zur Weitergabe der Patienteninformation an weitere relevante Subsysteme
+
+'/
