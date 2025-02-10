@@ -1,6 +1,8 @@
 # {{page-title}}
 
-|![Diskussion](render:Material\images\piktogramme\Betriebskoordination_Gruen_gematik.svg)|
+**Diskussion**: Dieser Abschnitt fasst einen Diskussionsstand mit beteiligten Stakeholdern zusammen und enthält keine normativen Festlegungen.
+<img src="https://github.com/gematik/spec-ISiK-Terminplanung/blob/c604c61a3887bd5532d2c7392eb20d8c79403028/Material/images/piktogramme/Betriebskoordination_Gruen_gematik.svg" width="40"/>
+
 
 Ein Terminbuchungsprozess in einem Krankenhaus kann sowohl automatisierte als auch manuelle Zwischenschritte umfassen, um eine nahtlose Terminbuchung und Terminwahrnehmung für Patienten zu gewährleisten. Hier finden sich Skizzen zu entsprechenden Prozessen.
 
