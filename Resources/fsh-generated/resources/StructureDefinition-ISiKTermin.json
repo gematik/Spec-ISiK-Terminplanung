@@ -212,13 +212,13 @@
       {
         "id": "Appointment.start",
         "path": "Appointment.start",
-        "min": 1,
+        "comment": "Begründung zu Kardinalität und Must Support: Der Startzeitpunkt eines Termins ist von entscheidender Bedeutung, um die Verfügbarkeit und Planung des Termins zu gewährleisten. Daher muss dieses Feld unterstützt werden (MS). Das Feld ist in den meisten Fällen verpflichtend, nur für die Status 'proposed', 'cancelled', 'waitlist' existiert kein Wert.",
         "mustSupport": true
       },
       {
         "id": "Appointment.end",
         "path": "Appointment.end",
-        "min": 1,
+        "comment": "Begründung zu Kardinalität und Must Support: Der Endzeitpunkt eines Termins ist von entscheidender Bedeutung, um die Verfügbarkeit und Planung des Termins zu gewährleisten. Daher muss dieses Feld unterstützt werden (MS). Das Feld ist in den meisten Fällen verpflichtend, nur für die Status 'proposed', 'cancelled', 'waitlist' existiert kein Wert.",
         "mustSupport": true
       },
       {
