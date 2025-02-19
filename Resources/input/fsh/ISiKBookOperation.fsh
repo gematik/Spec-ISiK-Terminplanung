@@ -37,6 +37,20 @@ Usage: #example
   * documentation	= "Im Falle dass ein Appointment keine Referenz auf ein oder mehrere Slots enthält, MUSS der Server die benötigten Slots auf Basis der Referenz auf Schedule, sowie dem Start- und Endzeitpunkt im Appointment ermitteln."
   * targetProfile = Canonical(ISiKKalender)
 * parameter[+]
+  * name = #patient
+  * use = #in
+  * min = 1
+  * max = "1"
+  * documentation	= "Eine Patient-Ressource, die die Person identifiziert, für die der Termin gemäß dem Parameter 'appt-resource' gebucht werden soll. Die Ressource KANN vom ISiKPatient-Profil abweichen, falls für die Terminbuchung irrelevante Pflichtangaben aus dem Profil nicht bekannt sind. Invalide Ressourcen MÜSSEN vom Termin-Repository abgelehnt werden (zur Form der Ablehnung s.u.). Dieser Parameter dient der Übermittlung der Patienteninformationen, falls diese dem Termin-Repository noch nicht bekannt sind. Das Termin-Repository SOLL im bestätigten Termin eine Referenz auf einen Patienten zurückgeben, sofern kein Patient unter Appointment.participant im 'appt-resource'-Parameter referenziert ist."
+  * type = #Patient
+* parameter[+]
+  * name = #related-person
+  * use = #in
+  * min = 1
+  * max = "1"
+  * documentation	= "Eine RelatedPerson-Ressource, die eine Person identifiziert, die den Termin im Namen des Patienten bucht. Die Ressource KANN vom ISiKRelatedPerson-Profil abweichen, falls für die Terminbuchung irrelevante Pflichtangaben aus dem Profil nicht bekannt sind. Invalide Ressourcen MÜSSEN vom Termin-Repository abgelehnt werden (siehe Form der Ablehnung unten). Dieser Parameter dient der Übermittlung der RelatedPerson-Informationen, falls diese dem Termin-Repository noch nicht bekannt sind. Das Termin-Repository SOLL im bestätigten Termin eine Referenz auf eine RelatedPerson zurückgeben, sofern keine RelatedPerson unter Appointment.participant im 'appt-resource'-Parameter referenziert ist."
+  * type = #Patient
+* parameter[+]
   * name = #return
   * use = #out
   * min = 0
