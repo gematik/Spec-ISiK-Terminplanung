@@ -6,7 +6,7 @@ Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von R
 
 Version: 3.0.7
 
-Datum: tbd.
+Datum: 20.02.2025
 
 * `change` Die Verbindlichkeit der Suchparameter `subject`  in Communication sowie `include` (für `Communication:recipient` und `Communication:sender`) wurde von SHALL auf MAY reduziert https://github.com/gematik/spec-ISiK-Terminplanung/pull/257
 * `fix` Display Values ISiKTerminCancelationReason https://github.com/gematik/spec-ISiK-Terminplanung/pull/265
