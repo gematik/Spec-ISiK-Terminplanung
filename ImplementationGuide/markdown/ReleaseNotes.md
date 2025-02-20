@@ -6,13 +6,13 @@ Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von R
 
 Version 4.0.2
 
-Datum: tbd.
+Datum: 20.02.2025
 
 
-* `change` Die Verbindlichkeit des Suchaparameters `subject` in Communication wurde von SHALL auf MAY reduziert. 
+* `change` Die Verbindlichkeit des Suchaparameters `subject` in Communication wurde von SHALL auf MAY reduziert. https://github.com/gematik/spec-ISiK-Terminplanung/pull/247
 Statt dessen wird der neue verbindliche Suchparameter `patient` eingeführt. Die geschieht zur Harmonisierung der Suchparameter mit den anderen ISiK-Modulen. 
 * `improve` Falscher Satz über keine notwendige Verbindlichkeit entfernt und Formulierung verbessert https://github.com/gematik/spec-ISiK-Terminplanung/pull/248
-* `fix``test stable` Display Values ISiKTerminCancelationReason https://github.com/gematik/spec-ISiK-Terminplanung/pull/264
+* `fix` Display Values ISiKTerminCancelationReason https://github.com/gematik/spec-ISiK-Terminplanung/pull/264
 * `improve` Reiter-Struktur vereinfacht https://github.com/gematik/spec-ISiK-Terminplanung/pull/266
 * `documentation` Neue Seite zur Zusammenfassung rund um Prozesse des Patient-Onboardings https://github.com/gematik/spec-ISiK-Terminplanung/pull/267
 
