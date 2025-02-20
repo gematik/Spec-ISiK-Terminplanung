@@ -3,6 +3,6 @@
 ^http://hl7\.org/fhir/StructureDefinition/condition-related
 ^http://hl7\.org/fhir/5\.0/StructureDefinition/extension-Encounter\.plannedStartDate
 ^http://hl7\.org/fhir/5\.0/StructureDefinition/extension-Encounter\.plannedEndDate
-^https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator
-^https://confluence.hl7.org/display/FHIR/Validator+Advisor+Framework
-^https://github.com/gematik/spec-ISiK-Terminplanung/blob/main-stufe-4/.github/workflows/main.yml
+^https:/confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator
+^https:/confluence.hl7.org/display/FHIR/Validator+Advisor+Framework
+^https:/github.com/gematik/spec-ISiK-Terminplanung/blob/main-stufe-4/.github/workflows/main.yml
