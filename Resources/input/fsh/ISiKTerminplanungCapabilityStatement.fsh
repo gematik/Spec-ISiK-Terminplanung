@@ -149,10 +149,10 @@ Usage: #definition
 * rest.resource[=].operation[=].definition = Canonical(ISiKAppointmentBookOperation)
 * rest.resource[=].searchInclude = "Appointment:slot"
 * rest.resource[=].searchInclude[=].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchInclude[=].extension.valueCode = #MAY
 * rest.resource[=].searchInclude[+] = "Appointment:actor"
 * rest.resource[=].searchInclude[=].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchInclude[=].extension.valueCode = #MAY
 * rest.resource[+].extension.url = $capabilitystatement-expectation
 * rest.resource[=].extension.valueCode = #MAY
 * rest.resource[=].type = #Communication
@@ -175,9 +175,14 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
+* rest.resource[=].searchParam[=].extension.valueCode = #MAY
 * rest.resource[=].searchParam[=].name = "subject"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Communication-subject"
+* rest.resource[=].searchParam[=].type = #reference
+* rest.resource[=].searchParam[+].extension.url = $capabilitystatement-expectation
+* rest.resource[=].searchParam[=].extension.valueCode = #SHALL
+* rest.resource[=].searchParam[=].name = "patient"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].extension.url = $capabilitystatement-expectation
 * rest.resource[=].searchParam[=].extension.valueCode = #SHALL
@@ -191,13 +196,13 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchInclude = "Communication:recipient"
 * rest.resource[=].searchInclude[=].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchInclude[=].extension.valueCode = #MAY
 * rest.resource[=].searchInclude = "Communication:sender"
 * rest.resource[=].searchInclude[=].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchInclude[=].extension.valueCode = #MAY
 * rest.resource[=].searchInclude[+] = "Communication:subject"
 * rest.resource[=].searchInclude[=].extension.url = $capabilitystatement-expectation
-* rest.resource[=].searchInclude[=].extension.valueCode = #SHALL
+* rest.resource[=].searchInclude[=].extension.valueCode = #MAY
 
 * rest.resource[+].extension.url = $capabilitystatement-expectation
 * rest.resource[=].extension.valueCode = #SHALL

@@ -4,6 +4,18 @@ Im Rahmen der ISiK-Veröffentlichungen wird das [Semantic Versioning](https://se
 
 Die erste Ziffer X bezeichnet ein Major-Release und regelt die Gültigkeit von Releases. Die dritte Ziffer Y (Release x.0.y) bezeichnet eine technische Korrektur und versioniert kleinere Änderungen (Packages) während eines Jahres, z. B. 1.0.1.
 
+Version: 3.0.7
+
+Datum: 20.02.2025
+
+* `change` Die Verbindlichkeit der Suchparameter `subject`  in Communication sowie `include` (für `Communication:recipient` und `Communication:sender`) wurde von SHALL auf MAY reduziert https://github.com/gematik/spec-ISiK-Terminplanung/pull/257
+* `fixed` Display Values ISiKTerminCancelationReason https://github.com/gematik/spec-ISiK-Terminplanung/pull/265
+* `fixed` Korektur des Constraints zur Kardinalität im Sinne der Kohärenz mit Schedule (Kalender) auch bei Appointment.participant.actor.display https://github.com/gematik/spec-ISiK-Terminplanung/pull/263
+* `fixed` Anpassung der Kardinalität von Appointment.start/end um 'proposed', 'cancelled', 'waitlist' als Status zu ermöglichen https://github.com/gematik/spec-ISiK-Terminplanung/pull/261
+
+---
+
+
 Version: 3.0.6
 
 Datum: 19.11.2024

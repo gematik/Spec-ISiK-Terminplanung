@@ -5,10 +5,10 @@
   "status": "active",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "version": "3.0.6",
-  "date": "2024-11-19",
+  "version": "3.0.7",
+  "date": "2025-02-20",
   "implementationGuide": [
-    "https://gematik.de/fhir/isik/v3/Terminplanung/ImplementationGuide|3.0.6"
+    "https://gematik.de/fhir/isik/v3/Terminplanung/ImplementationGuide|3.0.7"
   ],
   "name": "ISiKCapabilityStatementTerminplanungServer",
   "title": "ISiK CapabilityStatement Terminplanung Server",
@@ -406,7 +406,7 @@
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
+                  "valueCode": "MAY"
                 }
               ]
             },
@@ -414,7 +414,7 @@
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
+                  "valueCode": "MAY"
                 }
               ]
             }
@@ -485,11 +485,22 @@
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
+                  "valueCode": "MAY"
                 }
               ],
               "name": "subject",
               "definition": "http://hl7.org/fhir/SearchParameter/Communication-subject",
+              "type": "reference"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "patient",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-patient",
               "type": "reference"
             },
             {
@@ -524,7 +535,7 @@
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
+                  "valueCode": "MAY"
                 }
               ]
             },
@@ -532,7 +543,7 @@
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
+                  "valueCode": "MAY"
                 }
               ]
             }
