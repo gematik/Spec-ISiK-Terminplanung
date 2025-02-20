@@ -6,7 +6,7 @@
   "name": "AppointmentReplaces",
   "status": "active",
   "experimental": false,
-  "date": "2025-02-04",
+  "date": "2025-02-20",
   "publisher": "gematik GmbH",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
