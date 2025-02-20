@@ -10,7 +10,7 @@ Die Slot-Ressource repräsentiert die Verbindung eines Termins (Appointment) und
 
 ### Kompabilität
 
-Siehe {{pagelink:ImplementationGuide/markdown/UebergreifendeFestlegungen/Kompatibilitaet.md, text:Kompabilität}}.
+Siehe {{pagelink:ImplementationGuide/markdown/UseCases/Kompatibilitaet.md, text:Kompabilität}}.
 
 ---
 

@@ -5,8 +5,8 @@
   "status": "active",
   "experimental": false,
   "publisher": "gematik GmbH",
-  "version": "4.0.1",
-  "date": "2024-12-02",
+  "version": "4.0.2",
+  "date": "2025-02-20",
   "implementationGuide": [
     "https://gematik.de/fhir/isik/ImplementationGuide/ISiK-Terminplanung"
   ],
@@ -632,13 +632,25 @@
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
+                  "valueCode": "MAY"
                 }
               ],
               "name": "subject",
               "definition": "http://hl7.org/fhir/SearchParameter/Communication-subject",
               "type": "reference",
               "documentation": "**Beispiel:**    \n        `GET [base]/Communication?subject=Patient/ISiKPatientExample`    \n        **Anwendungshinweis:**   \n        Weitere Details siehe [FHIR-Kernspezifikation](https://hl7.org/fhir/R4/search.html#reference).  "
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "patient",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-patient",
+              "type": "reference",
+              "documentation": "**Beispiel:**    \n        `GET [base]/Communication?patient=Patient/ISiKPatientExample`    \n        **Anwendungshinweis:**   \n        Weitere Details siehe [FHIR-Kernspezifikation](https://hl7.org/fhir/R4/search.html#reference).  "
             },
             {
               "extension": [
