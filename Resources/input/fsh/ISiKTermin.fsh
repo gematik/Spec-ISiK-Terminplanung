@@ -17,8 +17,10 @@ Id: ISiKTermin
 * status 1..1 MS
 * cancelationReason 0..1 MS
 * cancelationReason from ISiKTerminCancelationReason (required)
-* start 1..1 MS
-* end 1..1 MS
+* start MS
+  * ^comment = "Begründung zu Kardinalität und Must Support: Der Startzeitpunkt eines Termins ist von entscheidender Bedeutung, um die Verfügbarkeit und Planung des Termins zu gewährleisten. Daher muss dieses Feld unterstützt werden (MS). Das Feld ist in den meisten Fällen verpflichtend, nur für die Status 'proposed', 'cancelled', 'waitlist' existiert kein Wert."
+* end MS
+  * ^comment = "Begründung zu Kardinalität und Must Support: Der Endzeitpunkt eines Termins ist von entscheidender Bedeutung, um die Verfügbarkeit und Planung des Termins zu gewährleisten. Daher muss dieses Feld unterstützt werden (MS). Das Feld ist in den meisten Fällen verpflichtend, nur für die Status 'proposed', 'cancelled', 'waitlist' existiert kein Wert."
 * slot 0..* MS
   * reference 1.. MS
 * slot ^comment = "Zur Referenzierung auf eine Slot-Ressource MUSS eine Reference.reference mit einer URL verwendet werden. Das Termin-Repository muss so gestaltet sein, dass es aus Perspektive des Clients nur eine Service-BaseUrl gibt." //Zur Begründung: verschiedene Referenzierungs-Arten (z.B. mit Business-Identifiern) sind ggf. nicht interoperabel
