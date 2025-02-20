@@ -15,6 +15,7 @@ Statt dessen wird der neue verbindliche Suchparameter `patient` eingeführt. Die
 * `fix` Display Values ISiKTerminCancelationReason https://github.com/gematik/spec-ISiK-Terminplanung/pull/264
 * `improve` Reiter-Struktur vereinfacht https://github.com/gematik/spec-ISiK-Terminplanung/pull/266
 * `documentation` Neue Seite zur Zusammenfassung rund um Prozesse des Patient-Onboardings https://github.com/gematik/spec-ISiK-Terminplanung/pull/267
+* `fixed` Anpassung Kardinalität Appointment.start/end https://github.com/gematik/spec-ISiK-Terminplanung/pull/260
 
 
 
