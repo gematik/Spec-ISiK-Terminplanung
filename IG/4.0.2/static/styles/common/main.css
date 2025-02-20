@@ -1,0 +1,29 @@
+.cool-tabs .nav-tabs {
+  border-bottom: 1px solid #e0e0e0; }
+
+.cool-tabs .nav-tabs > li.active > a,
+.cool-tabs .nav-tabs > li.active > a:focus,
+.cool-tabs .nav-tabs > li.active > a:hover {
+  color: #fff;
+  background-color: #16a2c5;
+  border-radius: 0px; }
+
+.cool-tabs .tab-content {
+  border: 1px solid #e0e0e0;
+  border-top: none; }
+  .cool-tabs .tab-content .tab-pane {
+    padding-bottom: 0px; }
+
+html, body {
+  height: 100%; }
+
+html #preview-content pre, body #preview-content pre {
+  font-family: Consolas, Menlo, Monaco, "Courier New", monospace !important; }
+
+html #preview-content {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+@media screen and (max-width: 1300px) {
+  #ig-view-treetable {
+    width: 90% !important; } }
