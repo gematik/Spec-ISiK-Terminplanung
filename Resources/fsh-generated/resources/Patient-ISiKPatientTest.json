@@ -1,0 +1,13 @@
+{
+  "resourceType": "Patient",
+  "id": "ISiKPatientTest",
+  "active": true,
+  "name": [
+    {
+      "family": "Patient",
+      "given": [
+        "Test"
+      ]
+    }
+  ]
+}

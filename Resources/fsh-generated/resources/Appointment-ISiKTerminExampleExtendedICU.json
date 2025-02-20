@@ -56,7 +56,7 @@
     {
       "actor": {
         "display": "Test Patient",
-        "reference": "Patient/example"
+        "reference": "Patient/ISiKPatientTest"
       },
       "status": "accepted"
     }
