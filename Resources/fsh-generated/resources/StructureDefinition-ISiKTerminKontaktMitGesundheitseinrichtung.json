@@ -6,7 +6,7 @@
   "name": "ISiKTerminKontaktMitGesundheitseinrichtung",
   "status": "active",
   "experimental": false,
-  "date": "2025-02-10",
+  "date": "2025-02-20",
   "publisher": "gematik GmbH",
   "fhirVersion": "4.0.1",
   "kind": "resource",
