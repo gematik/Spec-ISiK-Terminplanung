@@ -1,31 +1,29 @@
 @startuml
 
 actor Buchende
-participant "Termin Requestor (Patientenportal)" as TR
 participant "IDP (Identitätsprovider)" as IDP
+participant "Termin Requestor (z.B. Patientenportal, Providerportal etc.)" as TR
 participant "Termin Repository" as TRP
-participant "MPI (Master Patient Index)" as MPI
-participant "BasisServer" as BS
+participant "BasisServer (ggf. 'Patientenführendes Sytem' etc.)" as BS
 
-Buchende -> TR: Registrierung mit Name, Geburtsdatum, Adresse, Versicherung
-TR -> IDP: Identify User Request (z.B. gID, KVNR)
-IDP --> TR: Identify Patient (validierte Identität, KVNR)
+Buchende -> IDP: Registrierung mit Name und E-Mail \n (ggf. Geburtsdatum, Adresse, Versicherung, gID, KVNR, HBA etc.) 
+note right of IDP: ggf. IDP nur für Identitätsprüfung auf E-Mail-Ebene, \n fortgeschritten wäre gID mit KVNR, ggf. externer Arzt mit HBA etc)
+IDP --> TR: Validiere Identität Buchende Person (validierte Identität, z.B. KVNR)
 note right of TR: Identität verifiziert
 
 TR -> TRP: Anfrage verfügbare Termine für Fachbereich
-TRP -> MPI: Lookup Patient (basierend auf KVNR)
-MPI -> MPI: Match Patient
-MPI -> TRP: Patientendaten zurückliefern
+TRP -> BS: Lookup Patient (ggf. basierend auf KVNR)
+BS -> BS: Match Patient
+note right of BS: ggf. mit vorgeschaltetem MPI
+BS -> TRP: Patientendaten zurückliefern
 TRP -> TR: Rückgabe verfügbarer Termine
 TR -> Buchende: Visualisierung der verfügbaren Termine
 
 Buchende -> TR: Auswahl eines Termins
 TR -> TRP: Erstellen des Termins (vorläufig)
 note right of TRP: Termin ist angelegt, Patient verifiziert
-TR -> MPI: GET Patientendaten zur Verknüpfung
-MPI -> BS: GET Patientendaten
-BS -> MPI: Rückgabe Patientendaten
-MPI -> TR: Patientendaten zurückgeben
+TR -> BS: GET Patientendaten zur Verknüpfung
+BS -> TR: Patientendaten zurückgeben
 TR -> TRP: Verknüpfung des Termins mit Patientendaten
 
 TRP -> TR: Buchungsbestätigung
