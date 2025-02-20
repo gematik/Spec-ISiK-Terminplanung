@@ -1,0 +1,61 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ISiKTerminblock",
+  "url": "https://gematik.de/fhir/isik/v3/Terminplanung/StructureDefinition/ISiKTerminblock",
+  "version": "3.0.7",
+  "name": "ISiKTerminblock",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-02-20",
+  "publisher": "gematik GmbH",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Slot",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Slot",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Slot",
+        "path": "Slot",
+        "constraint": [
+          {
+            "key": "ISiK-slot-1",
+            "severity": "error",
+            "human": "Der Endzeitpunkt eines Terminsblocks MUSS nach dem Startzeitpunkt liegen",
+            "expression": "start <= end",
+            "source": "https://gematik.de/fhir/isik/v3/Terminplanung/StructureDefinition/ISiKTerminblock"
+          }
+        ]
+      },
+      {
+        "id": "Slot.schedule",
+        "path": "Slot.schedule",
+        "comment": "Zur Referenzierung auf eine Schedule-Ressource MUSS eine Reference.reference mit einer URL verwendet werden. Das Termin-Repository muss so gestaltet sein, dass es aus Perspektive des Clients nur eine Service-BaseUrl gibt.",
+        "mustSupport": true
+      },
+      {
+        "id": "Slot.schedule.reference",
+        "path": "Slot.schedule.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Slot.status",
+        "path": "Slot.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Slot.start",
+        "path": "Slot.start",
+        "mustSupport": true
+      },
+      {
+        "id": "Slot.end",
+        "path": "Slot.end",
+        "mustSupport": true
+      }
+    ]
+  }
+}
