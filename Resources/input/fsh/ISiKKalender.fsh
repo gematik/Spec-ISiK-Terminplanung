@@ -48,6 +48,7 @@ Id: ISiKKalender
   * ^comment = "Begründung Kardinalität: Die Kardinalität der Akteur-Eigenschaft wird auf 1..1 festgelegt, um sicherzustellen, dass ein eindeutiger Akteur vorhanden ist."
 * extension MS
 * extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-Schedule.name named KalenderName 0..1 MS
+* extension[KalenderName]
   * ^comment = "Begründung Must-Support-Flag (MS): Die KalenderName-Extension ermöglicht es einen menschenlesbaren Namen zu definieren, welcher zur Wiedererkennbarkeit des Kalenders im Rahmen der Terminplanung dient."
   * valueString 1..1
 

@@ -1,0 +1,40 @@
+name: Check Links
+# This workflow checks for broken links in the repository.
+
+on:
+  pull_request:
+    # Trigger the workflow on any pull request targeting any branch.
+    branches:
+      - '**'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  link_checker:
+    # Define a job named "link_checker" that runs the link-checking process.
+    runs-on: ubuntu-latest
+    # Specify the virtual machine environment to run the job (latest Ubuntu).
+
+    steps:
+      - name: Checkout repository
+        # Step 1: Checkout the repository code into the workflow environment.
+        uses: actions/checkout@v3
+        # Use the official GitHub checkout action (version 3).
+
+      - name: Run Link Checker
+        # Step 2: Run the Lychee link-checking tool.
+        uses: lycheeverse/lychee-action@v2
+        # Use the Lychee GitHub Action (version 2) for link checking.
+
+        with:  
+          fail: true
+          # Configure the workflow to fail if broken links are found.
+          # Run the link checker on the current directory and all its contents.
+          # Exclude links matching the pattern for Jira links (e.g., HL7 Jira).
+          # Exclude all links in the "ImplementationGuide/style" directory.
+          # Exclude all links in the "Material" directory.
+          args: >
+            .
+            --exclude-path ImplementationGuide/style
+            --exclude-path Material
+            
